@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="night">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,11 +14,55 @@
     </noscript>
     <style>
         :root {
-            --background-color: #0a0a1f;
-            --text-color: #ffffff;
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --font-family: 'Poppins', sans-serif;
+            --bg-main: #0a0a1f;
+            --text-main: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --text-highlight: #93C5FD;
+            --glass-bg: rgba(22, 22, 50, 0.55);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --header-bg: rgba(10, 10, 30, 0.65);
+            --card-bg: rgba(255, 255, 255, 0.08);
+            --card-bg-hover: rgba(255, 255, 255, 0.15);
+            --input-bg: rgba(255, 255, 255, 0.08);
+            --input-border: rgba(255, 255, 255, 0.2);
+            --input-placeholder: rgba(255, 255, 255, 0.6);
+            --sphere-grad: radial-gradient(circle, #4f46e5, #7c3aed, #a855f7);
+            --accent-color: #8B5CF6;
+            --cta-border: white;
+            --cta-text: white;
+            --cta-bg-hover: white;
+            --cta-text-hover: black;
+            --separator-color: rgba(255, 255, 255, 0.2);
+            --modal-bg: rgba(25, 25, 40, 0.85);
+            --nav-button-bg: rgba(0, 0, 0, 0.3);
+            --nav-button-bg-hover: rgba(0, 0, 0, 0.5);
+            --nav-button-border: rgba(255, 255, 255, 0.2);
+        }
+
+        html[data-theme="day"] {
+            --bg-main: #FFF8F0;
+            --text-main: #1f2937;
+            --text-secondary: #4b5563;
+            --text-highlight: #f97316;
+            --glass-bg: rgba(255, 255, 255, 0.45);
+            --glass-border: rgba(0, 0, 0, 0.1);
+            --header-bg: rgba(255, 250, 245, 0.55);
+            --card-bg: rgba(0, 0, 0, 0.04);
+            --card-bg-hover: rgba(0, 0, 0, 0.08);
+            --input-bg: rgba(0, 0, 0, 0.04);
+            --input-border: rgba(0, 0, 0, 0.1);
+            --input-placeholder: rgba(0, 0, 0, 0.5);
+            --sphere-grad: radial-gradient(circle, #ffca28, #ff9800, #fb8c00);
+            --accent-color: #f97316;
+            --cta-border: #1f2937;
+            --cta-text: #1f2937;
+            --cta-bg-hover: #1f2937;
+            --cta-text-hover: #ffffff;
+            --separator-color: rgba(0, 0, 0, 0.1);
+            --modal-bg: rgba(255, 255, 255, 0.75);
+            --nav-button-bg: rgba(255, 255, 255, 0.3);
+            --nav-button-bg-hover: rgba(255, 255, 255, 0.5);
+            --nav-button-border: rgba(0, 0, 0, 0.1);
         }
 
         *, *::before, *::after {
@@ -31,11 +75,12 @@
             height: 100%;
             width: 100%;
             overflow: hidden;
+            transition: background-color 0.5s ease;
         }
 
         body {
-            background-color: var(--background-color);
-            color: var(--text-color);
+            background-color: var(--bg-main);
+            color: var(--text-main);
             font-family: var(--font-family);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
@@ -64,9 +109,10 @@
         .sphere {
             position: absolute;
             border-radius: 50%;
-            background: radial-gradient(circle, #4f46e5, #7c3aed, #a855f7);
+            background: var(--sphere-grad);
             filter: blur(50px);
             animation: move 25s infinite ease-in-out;
+            transition: background 0.5s ease;
         }
         
         @keyframes move {
@@ -94,30 +140,30 @@
           background: transparent;
         }
         .scrollable-card::-webkit-scrollbar-thumb, .modal-content::-webkit-scrollbar-thumb {
-          background-color: rgba(255, 255, 255, 0.2);
+          background-color: var(--separator-color);
           border-radius: 10px;
-          border: 1px solid rgba(255, 255, 255, 0.3);
+          border: 1px solid var(--separator-color);
         }
         .scrollable-card, .modal-content {
             scrollbar-width: thin;
-            scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+            scrollbar-color: var(--separator-color) transparent;
         }
 
         /* Form Placeholder Styling */
         input::placeholder,
         textarea::placeholder {
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--input-placeholder);
             opacity: 1; /* Firefox */
         }
 
         input:-ms-input-placeholder,
         textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--input-placeholder);
         }
 
         input::-ms-input-placeholder,
         textarea::-ms-input-placeholder { /* Microsoft Edge */
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--input-placeholder);
         }
         
         /* Text Animation Styles */
@@ -167,14 +213,43 @@
             font-weight: 600;
             margin-top: 20px;
             margin-bottom: 10px;
-            color: #93C5FD;
+            color: var(--text-highlight);
         }
 
         .project-details-content p {
             font-size: 0.9rem;
             line-height: 1.7;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-secondary);
             margin-bottom: 15px;
+        }
+
+        .cta-button {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: var(--cta-bg-hover) !important;
+            color: var(--cta-text-hover) !important;
+        }
+
+        .slider-nav-button {
+            transition: background-color 0.3s ease;
+        }
+        .slider-nav-button:hover {
+            background-color: var(--nav-button-bg-hover) !important;
+        }
+
+        .social-icon-link {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-icon-link:hover {
+            transform: scale(1.1);
+        }
+
+        .modal-close-button {
+            transition: opacity 0.2s ease;
+        }
+        .modal-close-button:hover {
+            opacity: 1 !important;
         }
 
     </style>
