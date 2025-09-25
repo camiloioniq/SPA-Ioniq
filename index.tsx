@@ -329,7 +329,7 @@ const App: React.FC = () => {
             modalImage: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
             products: [
                 { name: 'Matriz de Video 4K', description: 'Distribuye cualquier fuente de video (Apple TV, Blu-ray) a cualquier pantalla de la casa en calidad 4K.', image: 'https://images.unsplash.com/photo-1606228379983-52431ea4193f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80' },
-                { name: 'Altavoces Arquitectónicos', description: 'Sonido de alta fidelidad que se integra perfectamente en paredes y techos, desapareciendo visualmente.', image: 'https://images.unsplash.com/photo-1618366712173-8451f53c193a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80' },
+                { name: 'Altavoces Arquitectónicos', description: 'Sonido de alta fidelidad que se integra perfectamente en paredes y techos, desapareciendo visualmente.', image: 'https://images.unsplash.com/photo-1618366712173-8451f5s3c193a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80' },
                 { name: 'Control Remoto Universal', description: 'Un solo mando para gobernarlos a todos. Controla tu TV, sistema de sonido, luces y más.', image: 'https://images.unsplash.com/photo-1557088426-111166b2a3c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80' },
             ]
         },
@@ -391,11 +391,11 @@ const App: React.FC = () => {
             image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
             features: ['Iluminación', 'Climatización', 'Seguridad'],
             details: `
-                <h3>El Desafío: Elegancia y Simplicidad</h3>
+                <h2>El Desafío: Elegancia y Simplicidad</h2>
                 <p>El propietario de la Residencia "Armonía" buscaba una solución que unificara todos los sistemas de su hogar sin comprometer la estética minimalista del diseño de interiores. El principal reto fue integrar dispositivos de múltiples fabricantes (iluminación, audio, seguridad y climatización) en una sola plataforma intuitiva y fácil de usar para toda la familia.</p>
-                <h3>Nuestra Solución: Un Cerebro Central a Medida</h3>
+                <h2>Nuestra Solución: Un Cerebro Central a Medida</h2>
                 <p>Desarrollamos un controlador central y una aplicación móvil personalizada bajo la marca ioniq. Esto nos permitió crear una comunicación fluida entre todos los dispositivos. Se instalaron sensores de presencia y luminosidad que automatizan las luces y la temperatura, aprendiendo de las rutinas de los habitantes para maximizar el confort y la eficiencia energética. El cableado se ocultó meticulosamente para mantener la pureza visual de cada habitación.</p>
-                <h3>Resultado: Un Hogar que Responde</h3>
+                <h2>Resultado: Un Hogar que Responde</h2>
                 <p>El resultado es un hogar que parece anticipar las necesidades de sus ocupantes. Con un solo toque, se activan "escenas" como "Noche de cine" o "Buenos días", ajustando luces, cortinas, temperatura y música. El cliente destacó la sencillez de la interfaz como el mayor logro, permitiendo que la tecnología avanzada se sienta completamente natural y accesible.</p>
             `,
             gallery: [
@@ -410,11 +410,11 @@ const App: React.FC = () => {
             image: 'https://images.unsplash.com/photo-1572021335469-31706a17aaef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
             features: ['Eficiencia Energética', 'Automatización', 'Gestión'],
             details: `
-                <h3>El Desafío: Productividad y Sostenibilidad</h3>
+                <h2>El Desafío: Productividad y Sostenibilidad</h2>
                 <p>El Corporativo "Nexus" necesitaba modernizar sus instalaciones para reducir su huella de carbono y, al mismo tiempo, crear un entorno de trabajo más productivo. El reto era implementar un sistema de gestión de edificios (BMS) que no interrumpiera las operaciones diarias y que fuera escalable para futuras expansiones.</p>
-                <h3>Nuestra Solución: Inteligencia Operativa</h3>
+                <h2>Nuestra Solución: Inteligencia Operativa</h2>
                 <p>Implementamos una red de sensores IoT para monitorear en tiempo real el consumo de energía, la calidad del aire y la ocupación de los espacios. Nuestro software personalizado analiza estos datos para optimizar el uso del aire acondicionado y la iluminación, apagando sistemas en áreas desocupadas. Las salas de reuniones se equiparon con un sistema de reserva inteligente que prepara la sala automáticamente (proyector, luces, videoconferencia) minutos antes de una reunión programada.</p>
-                <h3>Resultado: Un Espacio de Trabajo Eficiente</h3>
+                <h2>Resultado: Un Espacio de Trabajo Eficiente</h2>
                 <p>Tras seis meses, el Corporativo "Nexus" reportó una reducción del 35% en su consumo energético. La automatización de las salas de reuniones eliminó los tiempos de preparación técnica, aumentando la puntualidad y eficiencia de los equipos. La gestión centralizada permite al personal de mantenimiento resolver problemas de forma proactiva, a menudo antes de que los empleados los noten.</p>
             `,
             gallery: [
@@ -429,11 +429,11 @@ const App: React.FC = () => {
             image: 'https://images.unsplash.com/photo-1618221195710-dd6b41fa2047?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
             features: ['Audio & Video', 'Control por Voz', 'Inmersivo'],
             details: `
-                <h3>El Desafío: Entretenimiento sin Complicaciones</h3>
+                <h2>El Desafío: Entretenimiento sin Complicaciones</h2>
                 <p>El dueño del Penthouse "Vista", un apasionado del cine y la música, quería un sistema de entretenimiento de alta fidelidad que se extendiera por toda la propiedad, pero sin la complejidad de múltiples controles remotos y sistemas dispares. La acústica del espacio, con grandes ventanales y techos altos, presentaba un desafío significativo para la calidad del sonido.</p>
-                <h3>Nuestra Solución: Una Sinfonía Tecnológica</h3>
+                <h2>Nuestra Solución: Una Sinfonía Tecnológica</h2>
                 <p>Diseñamos e instalamos un sistema de audio y video distribuido con fuentes centralizadas, permitiendo reproducir contenido diferente en cada zona o sincronizarlo en toda la casa. Realizamos un estudio acústico para calibrar los altavoces y colocar paneles discretos para una calidad de sonido óptima. Se integraron motores silenciosos para las cortinas y un sistema de control por voz que permite manejar todo, desde seleccionar una película hasta ajustar el volumen, con simples comandos.</p>
-                <h3>Resultado: Inmersión Total</h3>
+                <h2>Resultado: Inmersión Total</h2>
                 <p>La experiencia es cinematográfica. El sistema de sonido envuelve al oyente y la calidad de video 4K es espectacular. La facilidad del control por voz ha sido el factor más elogiado, eliminando cualquier barrera tecnológica. El cliente ahora disfruta de su contenido favorito con una calidad y comodidad que superaron ampliamente sus expectativas.</p>
             `,
             gallery: [
@@ -448,11 +448,11 @@ const App: React.FC = () => {
             image: 'https://images.unsplash.com/photo-1542254317-a83d0c9a8711?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
             features: ['Riego Inteligente', 'Iluminación Exterior', 'Adaptativo'],
             details: `
-                <h3>El Desafío: Un Ecosistema Vivo y Autónomo</h3>
+                <h2>El Desafío: Un Ecosistema Vivo y Autónomo</h2>
                 <p>El proyecto "Edén" consistía en un extenso jardín con una variedad de plantas con diferentes necesidades hídricas. El cliente quería un sistema de riego y de iluminación que no solo fuera automático, sino verdaderamente inteligente: que se adaptara al clima en tiempo real para ahorrar agua y que realzara la belleza del paisaje por la noche.</p>
-                <h3>Nuestra Solución: Tecnología que Nutre</h3>
+                <h2>Nuestra Solución: Tecnología que Nutre</h2>
                 <p>Creamos un sistema a medida que integra sensores de humedad en el suelo y una estación meteorológica local. El software, desarrollado por ioniq, cruza estos datos con pronósticos del tiempo para decidir exactamente cuánta agua usar y en qué zonas, evitando el riego en días de lluvia. Para la iluminación, diseñamos escenas lumínicas que cambian sutilmente a lo largo de la noche, destacando diferentes árboles y flores. Todo el sistema utiliza hardware resistente a la intemperie y de bajo consumo.</p>
-                <h3>Resultado: Belleza Sostenible</h3>
+                <h2>Resultado: Belleza Sostenible</h2>
                 <p>El jardín está más saludable que nunca, y el consumo de agua se ha reducido en un 50% en comparación con un sistema de riego tradicional. Por la noche, el jardín se transforma en una obra de arte lumínica, creando una atmósfera mágica. El cliente puede monitorear y ajustar todo desde su tablet, pero rara vez lo necesita, ya que el sistema gestiona el jardín de forma autónoma y eficiente.</p>
             `,
             gallery: [
@@ -1416,7 +1416,7 @@ const App: React.FC = () => {
                                         e.currentTarget.style.boxShadow = 'none';
                                     }}>
                                    <GlowIcon color1={feature.color1} color2={feature.color2}>{feature.icon}</GlowIcon>
-                                   <h3 style={styles.featureCardTitle}>{feature.title}</h3>
+                                   <h2 style={styles.featureCardTitle}>{feature.title}</h2>
                                </div>
                            ))}
                         </div>
@@ -1444,7 +1444,7 @@ const App: React.FC = () => {
                                         onMouseLeave={() => setHoveredService(null)}
                                     >
                                         {service.icon}
-                                        <h3 style={styles.serviceTitle}>{service.title}</h3>
+                                        <h2 style={styles.serviceTitle}>{service.title}</h2>
                                         <p style={styles.serviceDescription}>{service.description}</p>
                                     </div>
                                 );
@@ -1476,7 +1476,7 @@ const App: React.FC = () => {
                                             }}
                                         >
                                             <div style={{ ...styles.projectColumnContent, opacity: isActive ? 1 : 0 }} id={`project-content-${index}`}>
-                                                <h3 style={{...styles.projectTitle, fontSize: '1.2rem', textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{project.title}</h3>
+                                                <h2 style={{...styles.projectTitle, fontSize: '1.2rem', textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{project.title}</h2>
                                                 <p style={{...styles.description, fontSize: '0.85rem', marginBottom: '15px', maxWidth: '100%', textAlign: 'left', textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{project.description}</p>
                                                 <div style={{...styles.projectFeaturesContainer, marginBottom: '20px'}}>
                                                     {project.features.map((feature, fIndex) => (
@@ -1499,7 +1499,7 @@ const App: React.FC = () => {
                                             <div key={index} style={{...styles.projectCard, flex: '0 0 90%', scrollSnapAlign: 'center'}} className="project-card" onClick={() => setSelectedProject(project)}>
                                                 <img src={project.image} alt={project.title} style={styles.projectImage} />
                                                 <div style={styles.projectCardContent}>
-                                                    <h3 style={styles.projectTitle}>{project.title}</h3>
+                                                    <h2 style={styles.projectTitle}>{project.title}</h2>
                                                     <p style={{...styles.description, fontSize: '0.8rem', marginBottom: '15px', maxWidth: '100%', textAlign: 'left'}}>{project.description}</p>
                                                     <div style={{...styles.projectFeaturesContainer, marginBottom: '20px'}}>
                                                         {project.features.map((feature, fIndex) => (
