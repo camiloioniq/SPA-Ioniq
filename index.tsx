@@ -89,8 +89,8 @@ const IconInstagram: React.FC<{ style: CSSProperties }> = ({ style }) => (
 );
 
 const IconWhatsApp: React.FC<{ style: CSSProperties }> = ({ style }) => (
-    <svg style={style} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    <svg style={style} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.043 4.957c-2.26-2.26-5.283-3.515-8.485-3.515C4.54 1.442 0 5.982 0 12.001c0 2.021.523 3.938 1.48 5.636L0 24l6.364-1.48c1.698.957 3.615 1.48 5.637 1.48h.001c6.018 0 10.958-4.94 10.958-10.958 0-3.203-1.255-6.226-3.516-8.485zM12.001 22.123c-1.84 0-3.593-.485-5.116-1.385l-.366-.218-3.81 1.057 1.074-3.722-.24-.378c-.997-1.574-1.52-3.41-1.52-5.32 0-5.183 4.226-9.409 9.41-9.409 2.522 0 4.896.98 6.654 2.738s2.738 4.132 2.738 6.654c-.001 5.183-4.227 9.409-9.41 9.409zm5.34-6.958c-.28-.141-1.652-.814-1.908-.908-.256-.094-.442-.14-.628.14-.186.281-.721.908-.883 1.094-.162.186-.324.205-.604.064-.28-.141-1.183-.436-2.253-1.39-.834-.744-1.394-1.652-1.556-1.928-.162-.281-.019-.436.122-.578.129-.129.281-.324.422-.486.141-.162.186-.281.28-.467.094-.186.047-.35-.018-.492-.065-.141-.628-1.513-.86-2.075-.22-.544-.442-.467-.604-.475-.15-.009-.324-.009-.496-.009s-.422.065-.65.324c-.227.256-.883.86-.883 2.094s.908 2.426 1.033 2.593c.125.168 1.793 2.738 4.343 3.822.595.256 1.057.41 1.42.536.604.205 1.144.177 1.565.105.467-.082 1.652-.676 1.887-1.332.235-.656.235-1.215.162-1.332-.072-.117-.258-.186-.538-.328z"/>
     </svg>
 );
 
@@ -193,11 +193,11 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     { 
         title: 'Iluminación Inteligente', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(99, 102, 241, 0.4)' : 'rgba(251, 191, 36, 0.4)',
-        color2: theme === 'night' ? '#6366F1' : '#FBBF24',
+        color1: theme === 'night' ? 'rgba(99, 102, 241, 0.4)' : 'rgba(250, 204, 21, 0.4)',
+        color2: theme === 'night' ? '#6366F1' : '#FACC15',
         modalTitle: 'Control Lumínico Total',
         modalDescription: 'Desde la calidez de una cena romántica hasta la energía de una mañana productiva, ajusta la intensidad y el color de cada luz. Crea escenas personalizadas que se activan con tu voz, un toque en la app o automáticamente según la hora del día.',
-        modalImage: 'https://images.unsplash.com/photo-1588854337236-6889d631f389?auto=format&fit=crop&w=870&q=80',
+        modalImage: 'https://images.unsplash.com/photo-1678054463388-34a1a87b5a?auto=format&fit=crop&w=1974&q=80',
         products: [
             { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', image: 'https://images.unsplash.com/photo-1628151325983-e2879a7545a9?auto=format&fit=crop&w=870&q=80' },
             { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', image: 'https://images.unsplash.com/photo-1603565437143-b81639d6ea4f?auto=format&fit=crop&w=870&q=80' },
@@ -207,8 +207,8 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     { 
         title: 'Climatización Avanzada', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2l2.121 2.121L12 6.243 9.879 4.121 12 2zm0 20l-2.121-2.121L12 17.757l2.121 2.122L12 22zM2 12l2.121-2.121L6.243 12l-2.122 2.121L2 12zm20 0l-2.121 2.121L17.757 12l2.122-2.121L22 12zM5.636 5.636l1.414 1.414L8.464 8.464 7.05 7.05 5.636 5.636zm12.728 12.728l-1.414-1.414L15.536 15.536l1.414 1.414-1.414-1.414zM5.636 18.364l1.414-1.414L8.464 15.536 7.05 16.95l-1.414 1.414zm12.728-12.728l-1.414 1.414L15.536 8.464l1.414-1.414 1.414 1.414z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(59, 130, 246, 0.4)' : 'rgba(52, 211, 153, 0.4)',
-        color2: theme === 'night' ? '#3B82F6' : '#34D399',
+        color1: theme === 'night' ? 'rgba(59, 130, 246, 0.4)' : 'rgba(56, 189, 248, 0.4)',
+        color2: theme === 'night' ? '#3B82F6' : '#38BDF8',
         modalTitle: 'Confort Climático Inteligente',
         modalDescription: 'Nuestro sistema aprende tus preferencias y se anticipa a tus necesidades. Geofencing activa el clima ideal antes de que llegues a casa y los sensores optimizan el consumo energético, garantizando confort absoluto con máxima eficiencia.',
         modalImage: 'https://images.unsplash.com/photo-1617103996237-703083b16335?auto=format&fit=crop&w=870&q=80',
@@ -221,8 +221,8 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     { 
         title: 'Entretenimiento Inmersivo', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(236, 72, 153, 0.4)' : 'rgba(239, 68, 68, 0.4)',
-        color2: theme === 'night' ? '#EC4899' : '#EF4444',
+        color1: theme === 'night' ? 'rgba(236, 72, 153, 0.4)' : 'rgba(244, 63, 94, 0.4)',
+        color2: theme === 'night' ? '#EC4899' : '#F43F5E',
         modalTitle: 'Cine en Casa, Sonido Envolvente',
         modalDescription: 'Distribuye audio y video 4K a cualquier habitación. Inicia tu película favorita en el salón y termínala en tu dormitorio sin interrupciones. Calibramos cada sistema para una acústica perfecta, creando una experiencia verdaderamente inmersiva.',
         modalImage: 'https://images.unsplash.com/photo-1608303598249-3734e555b7a2?auto=format&fit=crop&w=870&q=80',
@@ -235,8 +235,8 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     { 
         title: 'Seguridad Incondicional', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(139, 92, 246, 0.4)' : 'rgba(14, 165, 233, 0.4)',
-        color2: theme === 'night' ? '#8B5CF6' : '#0EA5E9',
+        color1: theme === 'night' ? 'rgba(139, 92, 246, 0.4)' : 'rgba(79, 70, 229, 0.4)',
+        color2: theme === 'night' ? '#8B5CF6' : '#4F46E5',
         modalTitle: 'Tranquilidad, Donde Quiera Que Estés',
         modalDescription: 'Vigila tu hogar con cámaras de alta definición, recibe alertas de movimiento en tiempo real y controla accesos de forma remota. Simula presencia cuando estás fuera y duerme tranquilo sabiendo que tu hogar está protegido 24/7.',
         modalImage: 'https://images.unsplash.com/photo-1558991341-c1170b208e9d?auto=format&fit=crop&w=870&q=80',
@@ -249,22 +249,22 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     { 
         title: 'Eficiencia Energética', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(16, 185, 129, 0.4)' : 'rgba(132, 204, 22, 0.4)',
-        color2: theme === 'night' ? '#10B981' : '#84CC16',
+        color1: theme === 'night' ? 'rgba(16, 185, 129, 0.4)' : 'rgba(74, 222, 128, 0.4)',
+        color2: theme === 'night' ? '#10B981' : '#4ADE80',
         modalTitle: 'Hogar Sostenible, Ahorro Inteligente',
         modalDescription: 'Monitorea tu consumo en tiempo real y deja que el sistema tome decisiones inteligentes. Apaga luces olvidadas, ajusta el termostato y optimiza el uso de electrodomésticos. Reduce tu huella de carbono y tu factura eléctrica sin esfuerzo.',
         modalImage: 'https://images.unsplash.com/photo-1586799059437-30a7d5b9ba4b?auto=format&fit=crop&w=870&q=80',
         products: [
             { name: 'Medidor de Consumo', description: 'Monitorea el gasto energético de toda tu casa o de circuitos individuales en tiempo real.', image: 'https://images.unsplash.com/photo-1621358252061-807a0445b90f?auto=format&fit=crop&w=870&q=80' },
             { name: 'Enchufes Inteligentes', description: 'Controla y programa el encendido/apagado de cualquier electrodoméstico desde tu móvil.', image: 'https://images.unsplash.com/photo-1616423923363-27b019310a43?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Controlador de Cargas', description: 'Gestiona dispositivos de alto consumo, como calentadores, para que funcionen en horas de menor coste energético.', image: 'https://images.unsplash.com/photo-1509390214234-e36b856c82a2?auto=format&fit=crop&w=870&q=80' },
+            { name: 'Controlador de Cargas', description: 'Gestiona dispositivos de alto consumo, como calentadores, para que funcionen en horas de menor coste energético.', image: 'https://images.unsplash.com/photo-1509390214234-e36b856c670b35?auto=format&fit=crop&w=870&q=80' },
         ]
     },
     { 
         title: 'Acceso por Voz y Remoto', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(217, 70, 239, 0.4)' : 'rgba(249, 115, 22, 0.4)',
-        color2: theme === 'night' ? '#D946EF' : '#F97316',
+        color1: theme === 'night' ? 'rgba(217, 70, 239, 0.4)' : 'rgba(192, 132, 252, 0.4)',
+        color2: theme === 'night' ? '#D946EF' : '#C084FC',
         modalTitle: 'Tu Voz es el Mando',
         modalDescription: 'Integramos los principales asistentes de voz para un control manos libres total. Desde apagar todas las luces al acostarte hasta pedir tu playlist favorita, tu hogar obedece tus palabras. Y con nuestra app, el control viaja contigo a cualquier parte del mundo.',
         modalImage: 'https://images.unsplash.com/photo-1533750247785-50a781a75b28?auto=format&fit=crop&w=870&q=80',
@@ -401,7 +401,7 @@ const App: React.FC = () => {
     const exclusiveFeaturesData = [
         { text: 'Software y hardware personalizados para tus necesidades exactas.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg> },
         { text: 'Interfaces de usuario diseñadas exclusivamente para tu proyecto.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg> },
-        { text: 'Integración profunda y sin fisuras entre todos los sistemas.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg> },
+        { text: 'IA que aprenden de tus hábitos y optimizan las automatizaciones.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg> },
         { text: 'Plataforma escalable que crece y evoluciona contigo.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg> },
     ];
 
@@ -508,7 +508,7 @@ const App: React.FC = () => {
             modalDetails: [
                 "Una sola app para controlar iluminación, clima, audio/video, seguridad y más.",
                 "Diseño gráfico personalizado que refleja la estética de tu hogar o marca.",
-                "Creación de escenas complejas que se activan con un solo toque (ej: 'Modo Cine', 'Llegar a Casa').",
+                "Creación de escenas complexas que se activan con un solo toque (ej: 'Modo Cine', 'Llegar a Casa').",
                 "Interfaces adaptadas a diferentes usuarios: desde un control simple para niños hasta vistas avanzadas para administradores.",
                 "Compatibilidad total con control por voz (Alexa, Google Assistant, Siri)."
             ]
@@ -551,8 +551,7 @@ const App: React.FC = () => {
             display: 'flex',
             flexDirection: 'column',
             color: 'var(--text-main)',
-            overflowY: 'auto',
-            scrollBehavior: 'smooth',
+            overflow: 'hidden',
             position: 'relative',
             transition: 'background 0.5s ease, border 0.5s ease, color 0.5s ease',
         },
@@ -562,13 +561,12 @@ const App: React.FC = () => {
             alignItems: 'center',
             width: '100%',
             padding: '30px 40px',
-            position: 'sticky',
-            top: 0,
             zIndex: 100,
             background: 'var(--header-bg)',
             backdropFilter: 'blur(15px)',
             WebkitBackdropFilter: 'blur(15px)',
             transition: 'background 0.5s ease',
+            flexShrink: 0,
         },
         headerControls: {
             display: 'flex',
@@ -1309,7 +1307,7 @@ const App: React.FC = () => {
                 })}
             </div>
             
-            <section style={{...styles.glassCard, ...(isMobile && {borderRadius: 0, height: '100%', maxHeight: '100vh', width: '100%', border: 'none'})}} className="scrollable-card">
+            <section style={{...styles.glassCard, ...(isMobile && {borderRadius: 0, height: '100%', maxHeight: '100vh', width: '100%', border: 'none'})}}>
                 <header style={{...styles.header, ...(isMobile && {padding: '20px'})}}>
                     <div style={{...styles.logo, ...(isMobile && {fontSize: '1.2rem'})}}>ioniq</div>
                     <div style={styles.headerControls}>
@@ -1376,216 +1374,219 @@ const App: React.FC = () => {
                     </div>
                 )}
 
-                <div style={{...styles.contentContainer, ...(isMobile && {padding: '0 20px 20px 20px'})}}>
-                    <div id="Inicio" ref={sectionRefs['Inicio']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'})}}>
-                        <AnimatedText as="h2" text="DOMÓTICA & TECNOLOGÍA AVANZADA" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'}), paddingBottom: '10px', borderBottom: '2px solid var(--text-main)', marginBottom: '10px'}} />
-                        <AnimatedText as="h1" text="Habitat Inteligente" style={{...styles.title, ...(isMobile && {fontSize: '2.5rem'})}} />
-                        <AnimatedText as="p" text="Transformamos espacios ordinarios en ecosistemas inteligentes y personalizados. Vive el futuro, hoy." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
-                        <button
-                            style={styles.ctaButton}
-                            className="cta-button"
-                            onClick={(e) => handleNavClick(e, 'Contáctanos')}
-                        >
-                            CONOCE MÁS
-                        </button>
-                    </div>
-
-                    <div style={{...styles.combinedStatCard, marginTop: '60px' }}>
-                        <div
-                            style={{
-                                ...styles.statItem,
-                                transform: hoveredStat === 'devices' ? 'scale(1.05)' : (hoveredStat === 'scenes' ? 'scale(0.95)' : 'scale(1)'),
-                                opacity: hoveredStat === 'scenes' ? 0.7 : 1,
-                            }}
-                            onMouseEnter={() => setHoveredStat('devices')}
-                            onMouseLeave={() => setHoveredStat(null)}
-                        >
-                            <p style={styles.statLabel}>Dispositivos Conectados</p>
-                            <p style={styles.statValue}>1,200+</p>
+                <div className="scrollable-card" style={{flex: 1, minHeight: 0, width: '100%', overflowY: 'auto', scrollBehavior: 'smooth'}}>
+                    <div style={{...styles.contentContainer, ...(isMobile && {padding: '0 20px 20px 20px'})}}>
+                        <div id="Inicio" ref={sectionRefs['Inicio']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'})}}>
+                            <AnimatedText as="h2" text="DOMÓTICA & TECNOLOGÍA AVANZADA" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'}), paddingBottom: '10px', borderBottom: '2px solid var(--text-main)', marginBottom: '10px'}} />
+                            <AnimatedText as="h1" text="Habitat Inteligente" style={{...styles.title, ...(isMobile && {fontSize: '2.5rem'})}} />
+                            <AnimatedText as="p" text="Transformamos espacios ordinarios en ecosistemas inteligentes y personalizados. Vive el futuro, hoy." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
+                            <button
+                                style={styles.ctaButton}
+                                className="cta-button"
+                                onClick={(e) => handleNavClick(e, 'Contáctanos')}
+                            >
+                                CONOCE MÁS
+                            </button>
                         </div>
-                        <div style={styles.statSeparator} />
-                        <div
-                            style={{
-                                ...styles.statItem,
-                                transform: hoveredStat === 'scenes' ? 'scale(1.05)' : (hoveredStat === 'devices' ? 'scale(0.95)' : 'scale(1)'),
-                                opacity: hoveredStat === 'devices' ? 0.7 : 1,
-                            }}
-                            onMouseEnter={() => setHoveredStat('scenes')}
-                            onMouseLeave={() => setHoveredStat(null)}
-                        >
-                            <p style={styles.statLabel}>Escenas Automatizadas</p>
-                            <p style={styles.statValue}>50,000+</p>
-                        </div>
-                    </div>
 
-                    <div id="Nosotros" ref={sectionRefs['Nosotros']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'})}}>
-                        <AnimatedText as="h2" text="Nuestra Filosofía" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
-                        <AnimatedText as="h1" text="INNOVACIÓN Y PERSONALIZACIÓN" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
-                        <AnimatedText as="p" text="En ioniq, no solo instalamos sistemas domóticos; creamos ecosistemas inteligentes a la medida de tu estilo de vida. Nuestra fortaleza es el desarrollo propio, garantizando soluciones exclusivas, una integración perfecta y una experiencia de usuario inigualable." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
-                    </div>
-
-                    <div style={styles.domoticsSectionWrapper}>
-                        <div style={styles.securitySectionContainer}>
-                            <div style={styles.securityIllustrationContainer}>
-                                <IllustrationDecentralized />
+                        <div style={{...styles.combinedStatCard, marginTop: '60px' }}>
+                            <div
+                                style={{
+                                    ...styles.statItem,
+                                    transform: hoveredStat === 'devices' ? 'scale(1.05)' : (hoveredStat === 'scenes' ? 'scale(0.95)' : 'scale(1)'),
+                                    opacity: hoveredStat === 'scenes' ? 0.7 : 1,
+                                }}
+                                onMouseEnter={() => setHoveredStat('devices')}
+                                onMouseLeave={() => setHoveredStat(null)}
+                            >
+                                <p style={styles.statLabel}>Dispositivos Conectados</p>
+                                <p style={styles.statValue}>1,200+</p>
                             </div>
-                            <div style={styles.securityTextContainer}>
-                                <AnimatedText as="h1" text="Exclusividad y Desarrollo Propio" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'}), textAlign: 'left'}} />
-                                <AnimatedText as="p" text="Nuestro mayor diferenciador es la capacidad de desarrollo in-house. No nos limitamos a integrar productos; creamos soluciones a medida que garantizan una experiencia única, cohesiva y perfectamente alineada con tu visión." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'}), textAlign: 'left', maxWidth: 'none'}} />
-                                <ul style={styles.securityFeatureList}>
-                                    {exclusiveFeaturesData.map((item, index) => (
-                                        <li key={index} style={styles.securityFeatureItem}>
-                                            <span style={styles.securityFeatureIcon}>{item.icon}</span>
-                                            <span>{item.text}</span>
-                                        </li>
-                                    ))}
-                                </ul>
+                            <div style={styles.statSeparator} />
+                            <div
+                                style={{
+                                    ...styles.statItem,
+                                    transform: hoveredStat === 'scenes' ? 'scale(1.05)' : (hoveredStat === 'devices' ? 'scale(0.95)' : 'scale(1)'),
+                                    opacity: hoveredStat === 'devices' ? 0.7 : 1,
+                                }}
+                                onMouseEnter={() => setHoveredStat('scenes')}
+                                onMouseLeave={() => setHoveredStat(null)}
+                            >
+                                <p style={styles.statLabel}>Escenas Automatizadas</p>
+                                <p style={styles.statValue}>50,000+</p>
                             </div>
                         </div>
-                    </div>
 
-                    <div style={styles.domoticsSectionWrapper}>
-                        <AnimatedText as="h1" text="Control Total, Experiencia Única" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
-                        <AnimatedText as="p" text="Más que productos, ofrecemos soluciones. Escuchamos tus necesidades y las transformamos en realidad con desarrollo propio, creando un entorno inteligente diseñado exclusivamente para tu máxima satisfacción." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
-                        
-                        <div style={styles.featureGrid}>
-                           {domoticsFeaturesData.map((feature, index) => (
-                               <div key={index} style={styles.featureCard} 
-                                    onClick={() => setSelectedFeature(feature)}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(-10px)';
-                                        e.currentTarget.style.boxShadow = `0 10px 30px ${feature.color1}`;
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(0)';
-                                        e.currentTarget.style.boxShadow = 'none';
-                                    }}>
-                                   <GlowIcon color1={feature.color1} color2={feature.color2}>{feature.icon}</GlowIcon>
-                                   <h2 style={styles.featureCardTitle}>{feature.title}</h2>
-                               </div>
-                           ))}
+                        <div id="Nosotros" ref={sectionRefs['Nosotros']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'})}}>
+                            <AnimatedText as="h2" text="Nuestra Filosofía" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
+                            <AnimatedText as="h1" text="INNOVACIÓN Y PERSONALIZACIÓN" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
+                            <AnimatedText as="p" text="En ioniq, no solo instalamos sistemas domóticos; creamos ecosistemas inteligentes a la medida de tu estilo de vida. Nuestra fortaleza es el desarrollo propio, garantizando soluciones exclusivas, una integración perfecta y una experiencia de usuario inigualable." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
                         </div>
-                    </div>
 
-                    <div id="Servicios" ref={sectionRefs['Servicios']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'})}}>
-                        <AnimatedText as="h2" text="Lo que hacemos" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
-                        <AnimatedText as="h1" text="Nuestros Servicios" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
-                        <div style={styles.serviceGrid}>
-                            {servicesData.map((service, index) => {
-                                const isHovered = hoveredService === index;
-                                return (
-                                    <div
-                                        key={index}
-                                        style={{
-                                            ...styles.serviceCard,
-                                            cursor: 'pointer',
-                                            backgroundColor: isHovered ? 'var(--card-bg-hover)' : 'var(--card-bg)',
-                                            opacity: servicesVisible ? 1 : 0,
-                                            transform: servicesVisible ? (isHovered ? 'translateY(-8px)' : 'translateY(0)') : 'translateY(20px)',
-                                            transition: `opacity 0.6s ease-out ${index * 0.1}s, transform 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out`,
+                        <div style={styles.domoticsSectionWrapper}>
+                            <div style={styles.securitySectionContainer}>
+                                <div style={styles.securityIllustrationContainer}>
+                                    <IllustrationDecentralized />
+                                </div>
+                                <div style={styles.securityTextContainer}>
+                                    <AnimatedText as="h1" text="Exclusividad y Desarrollo Propio" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'}), textAlign: 'left'}} />
+                                    <AnimatedText as="p" text="Nuestro mayor diferenciador es la capacidad de desarrollo in-house. No nos limitamos a integrar productos; creamos soluciones a medida que garantizan una experiencia única, cohesiva y perfectamente alineada con tu visión." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'}), textAlign: 'left', maxWidth: 'none'}} />
+                                    <ul style={styles.securityFeatureList}>
+                                        {exclusiveFeaturesData.map((item, index) => (
+                                            <li key={index} style={styles.securityFeatureItem}>
+                                                <span style={styles.securityFeatureIcon}>{item.icon}</span>
+                                                <span>{item.text}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="Servicios" ref={sectionRefs['Servicios']} style={styles.domoticsSectionWrapper}>
+                            <AnimatedText as="h1" text="Control Total, Experiencia Única" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
+                            <AnimatedText as="p" text="Más que productos, ofrecemos soluciones. Escuchamos tus necesidades y las transformamos en realidad con desarrollo propio, creando un entorno inteligente diseñado exclusivamente para tu máxima satisfacción." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
+                            
+                            <div style={styles.featureGrid}>
+                               {domoticsFeaturesData.map((feature, index) => (
+                                   <div key={index} style={styles.featureCard} 
+                                        onClick={() => setSelectedFeature(feature)}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.transform = 'translateY(-10px)';
+                                            e.currentTarget.style.boxShadow = `0 10px 30px ${feature.color1}`;
                                         }}
-                                        onClick={() => setSelectedService(service)}
-                                        onMouseEnter={() => setHoveredService(index)}
-                                        onMouseLeave={() => setHoveredService(null)}
-                                    >
-                                        {service.icon}
-                                        <h2 style={styles.serviceTitle}>{service.title}</h2>
-                                        <p style={styles.serviceDescription}>{service.description}</p>
-                                    </div>
-                                );
-                            })}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.transform = 'translateY(0)';
+                                            e.currentTarget.style.boxShadow = 'none';
+                                        }}>
+                                       <GlowIcon color1={feature.color1} color2={feature.color2}>{feature.icon}</GlowIcon>
+                                       <h2 style={styles.featureCardTitle}>{feature.title}</h2>
+                                   </div>
+                               ))}
+                            </div>
                         </div>
-                    </div>
 
-                     <div id="Proyectos" ref={sectionRefs['Proyectos']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'})}}>
-                        <AnimatedText as="h2" text="Nuestro Trabajo" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
-                        <AnimatedText as="h1" text="Proyectos Destacados" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
-                        
-                        {!isMobile ? (
-                            <div style={styles.projectsAccordionContainer} role="tablist">
-                                {projectsData.map((project, index) => {
-                                    const isActive = activeProject === index;
+                        <div style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'})}}>
+                            <AnimatedText as="h2" text="Lo que hacemos" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
+                            <AnimatedText as="h1" text="Nuestros Servicios" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
+                            <div style={styles.serviceGrid}>
+                                {servicesData.map((service, index) => {
+                                    const isHovered = hoveredService === index;
                                     return (
                                         <div
                                             key={index}
-                                            role="tab"
-                                            aria-selected={isActive}
-                                            aria-controls={`project-content-${index}`}
-                                            onMouseEnter={() => setActiveProject(index)}
-                                            onClick={() => setSelectedProject(project)}
-                                            className="project-column"
                                             style={{
-                                                ...styles.projectColumn,
-                                                flex: isActive ? 5 : 1,
-                                                backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%), url(${project.image})`,
+                                                ...styles.serviceCard,
+                                                cursor: 'pointer',
+                                                backgroundColor: isHovered ? 'var(--card-bg-hover)' : 'var(--card-bg)',
+                                                opacity: servicesVisible ? 1 : 0,
+                                                transform: servicesVisible ? (isHovered ? 'translateY(-8px)' : 'translateY(0)') : 'translateY(20px)',
+                                                transition: `opacity 0.6s ease-out ${index * 0.1}s, transform 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out`,
                                             }}
+                                            onClick={() => setSelectedService(service)}
+                                            onMouseEnter={() => setHoveredService(index)}
+                                            onMouseLeave={() => setHoveredService(null)}
                                         >
-                                            <div style={{ ...styles.projectColumnContent, opacity: isActive ? 1 : 0, color: 'white' }} id={`project-content-${index}`}>
-                                                <h2 style={{...styles.projectTitle, fontSize: '1.2rem', textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{project.title}</h2>
-                                                <p style={{...styles.description, color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.85rem', marginBottom: '15px', maxWidth: '100%', textAlign: 'left', textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{project.description}</p>
-                                                <div style={{...styles.projectFeaturesContainer, marginBottom: '20px'}}>
-                                                    {project.features.map((feature, fIndex) => (
-                                                        <span key={fIndex} style={styles.projectFeatureTag}>{feature}</span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                            <div style={{ ...styles.projectColumnTitleVertical, left: '50%', top: '50%', transform: 'translateX(-50%) translateY(-50%) rotate(180deg)', opacity: isActive ? 0 : 0.8, color: 'white' }}>
-                                                <span>{project.title}</span>
-                                            </div>
+                                            {service.icon}
+                                            <h2 style={styles.serviceTitle}>{service.title}</h2>
+                                            <p style={styles.serviceDescription}>{service.description}</p>
                                         </div>
-                                    )
+                                    );
                                 })}
                             </div>
-                        ) : (
-                             <div style={styles.projectsContainer}>
-                                <div style={{flex: 1, overflow: 'hidden'}}>
-                                    <div style={{...styles.projectsSlider, msOverflowStyle: 'none', scrollbarWidth: 'none'}} ref={projectsRef}>
-                                        {projectsData.map((project, index) => (
-                                            <div key={index} style={{...styles.projectCard, flex: '0 0 90%', scrollSnapAlign: 'center'}} className="project-card" onClick={() => setSelectedProject(project)}>
-                                                <img src={project.image} alt={project.title} style={styles.projectImage} />
-                                                <div style={styles.projectCardContent}>
-                                                    <h2 style={styles.projectTitle}>{project.title}</h2>
-                                                    <p style={{...styles.description, fontSize: '0.8rem', marginBottom: '15px', maxWidth: '100%', textAlign: 'left'}}>{project.description}</p>
+                        </div>
+
+                         <div id="Proyectos" ref={sectionRefs['Proyectos']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'})}}>
+                            <AnimatedText as="h2" text="Nuestro Trabajo" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
+                            <AnimatedText as="h1" text="Proyectos Destacados" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
+                            
+                            {!isMobile ? (
+                                <div style={styles.projectsAccordionContainer} role="tablist">
+                                    {projectsData.map((project, index) => {
+                                        const isActive = activeProject === index;
+                                        return (
+                                            <div
+                                                key={index}
+                                                role="tab"
+                                                aria-selected={isActive}
+                                                aria-controls={`project-content-${index}`}
+                                                onMouseEnter={() => setActiveProject(index)}
+                                                onClick={() => setSelectedProject(project)}
+                                                className="project-column"
+                                                style={{
+                                                    ...styles.projectColumn,
+                                                    flex: isActive ? 5 : 1,
+                                                    backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%), url(${project.image})`,
+                                                }}
+                                            >
+                                                <div style={{ ...styles.projectColumnContent, opacity: isActive ? 1 : 0, color: 'white' }} id={`project-content-${index}`}>
+                                                    <h2 style={{...styles.projectTitle, fontSize: '1.2rem', textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{project.title}</h2>
+                                                    <p style={{...styles.description, color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.85rem', marginBottom: '15px', maxWidth: '100%', textAlign: 'left', textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{project.description}</p>
                                                     <div style={{...styles.projectFeaturesContainer, marginBottom: '20px'}}>
                                                         {project.features.map((feature, fIndex) => (
                                                             <span key={fIndex} style={styles.projectFeatureTag}>{feature}</span>
                                                         ))}
                                                     </div>
                                                 </div>
+                                                <div style={{ ...styles.projectColumnTitleVertical, left: '50%', top: '50%', transform: 'translateX(-50%) translateY(-50%) rotate(180deg)', opacity: isActive ? 0 : 0.8, color: 'white' }}>
+                                                    <span>{project.title}</span>
+                                                </div>
                                             </div>
-                                        ))}
+                                        )
+                                    })}
+                                </div>
+                            ) : (
+                                 <div style={styles.projectsContainer}>
+                                    <div style={{flex: 1, overflow: 'hidden'}}>
+                                        <div style={{...styles.projectsSlider, msOverflowStyle: 'none', scrollbarWidth: 'none'}} ref={projectsRef}>
+                                            {projectsData.map((project, index) => (
+                                                <div key={index} style={{...styles.projectCard, flex: '0 0 90%', scrollSnapAlign: 'center'}} className="project-card" onClick={() => setSelectedProject(project)}>
+                                                    <img src={project.image} alt={project.title} style={styles.projectImage} />
+                                                    <div style={styles.projectCardContent}>
+                                                        <h2 style={styles.projectTitle}>{project.title}</h2>
+                                                        <p style={{...styles.description, fontSize: '0.8rem', marginBottom: '15px', maxWidth: '100%', textAlign: 'left'}}>{project.description}</p>
+                                                        <div style={{...styles.projectFeaturesContainer, marginBottom: '20px'}}>
+                                                            {project.features.map((feature, fIndex) => (
+                                                                <span key={fIndex} style={styles.projectFeatureTag}>{feature}</span>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        )}
-                    </div>
+                            )}
+                        </div>
 
-                    <div id="Contáctanos" ref={sectionRefs['Contáctanos']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'}), borderBottom: 'none'}}>
-                        <AnimatedText as="h2" text="¿Listo para empezar?" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
-                        <AnimatedText as="h1" text="Contáctanos" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
-                        <AnimatedText as="p" text="Envíanos un mensaje y nuestro equipo se pondrá en contacto contigo para explorar cómo podemos transformar tu espacio." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
-                        <form style={styles.contactForm} onSubmit={handleFormSubmit}>
-                            <input type="text" placeholder="Nombre" style={styles.formInput} required />
-                            <input type="email" placeholder="Email" style={styles.formInput} required />
-                            <textarea placeholder="Tu mensaje" style={styles.formTextarea} required></textarea>
-                            <button
-                                type="submit"
-                                style={{...styles.ctaButton, width: '100%'}}
-                                className="cta-button"
-                            >
-                                ENVIAR MENSAJE
-                            </button>
-                        </form>
-                         <div style={styles.socialIconsContainer}>
-                            <a href="#" className="social-icon-link" style={styles.socialIconLink} aria-label="Instagram" onMouseEnter={(e) => { e.currentTarget.style.color = '#E4405F';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
-                                <IconInstagram style={{ width: '28px', height: '28px' }} />
-                            </a>
-                            <a href="#" className="social-icon-link" style={styles.socialIconLink} aria-label="WhatsApp" onMouseEnter={(e) => { e.currentTarget.style.color = '#25D366';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
-                                <IconWhatsApp style={{ width: '28px', height: '28px' }} />
-                            </a>
-                            <a href="#" className="social-icon-link" style={styles.socialIconLink} aria-label="X" onMouseEnter={(e) => { e.currentTarget.style.color = '#888';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
-                                <IconX style={{ width: '26px', height: '26px' }} />
-                            </a>
+                        <div id="Contáctanos" ref={sectionRefs['Contáctanos']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'}), borderBottom: 'none'}}>
+                            <AnimatedText as="h2" text="¿Listo para empezar?" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
+                            <AnimatedText as="h1" text="Contáctanos" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
+                            <AnimatedText as="p" text="Envíanos un mensaje y nuestro equipo se pondrá en contacto contigo para explorar cómo podemos transformar tu espacio." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
+                            <form style={styles.contactForm}>
+                                <input type="text" placeholder="Nombre" style={styles.formInput} required />
+                                <input type="email" placeholder="Email" style={styles.formInput} required />
+                                <textarea placeholder="Tu mensaje" style={styles.formTextarea} required></textarea>
+                                <button
+                                    type="button"
+                                    style={{...styles.ctaButton, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px'}}
+                                    className="cta-button"
+                                >
+                                    <IconWhatsApp style={{ width: '20px', height: '20px' }} />
+                                    ENVIAR POR WHATSAPP
+                                </button>
+                            </form>
+                             <div style={styles.socialIconsContainer}>
+                                <a href="#" className="social-icon-link" style={styles.socialIconLink} aria-label="Instagram" onMouseEnter={(e) => { e.currentTarget.style.color = '#E4405F';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
+                                    <IconInstagram style={{ width: '28px', height: '28px' }} />
+                                </a>
+                                <a href="#" className="social-icon-link" style={styles.socialIconLink} aria-label="WhatsApp" onMouseEnter={(e) => { e.currentTarget.style.color = '#25D366';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
+                                    <IconWhatsApp style={{ width: '28px', height: '28px' }} />
+                                </a>
+                                <a href="#" className="social-icon-link" style={styles.socialIconLink} aria-label="X" onMouseEnter={(e) => { e.currentTarget.style.color = '#888';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
+                                    <IconX style={{ width: '26px', height: '26px' }} />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
