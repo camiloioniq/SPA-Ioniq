@@ -401,23 +401,23 @@ const App: React.FC = () => {
     const exclusiveFeaturesData = [
         { text: 'Software y hardware personalizados para tus necesidades exactas.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg> },
         { text: 'Interfaces de usuario diseñadas exclusivamente para tu proyecto.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg> },
-        { text: 'IA que aprenden de tus hábitos y optimizan las automatizaciones.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg> },
+        { text: 'IA que aprende de tus hábitos y optimiza las automatizaciones.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg> },
         { text: 'Plataforma escalable que crece y evoluciona contigo.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg> },
     ];
 
     const projectsData: Project[] = [
         {
-            title: 'Residencia "Armonía"',
+            title: 'Apartamento "Mónaco"',
             description: 'Integración completa de iluminación, climatización y seguridad, controlada desde una interfaz única desarrollada por ioniq.',
             image: 'https://images.unsplash.com/photo-1618221195710-dd6b41fa2047?auto=format&fit=crop&w=870&q=80',
             features: ['Iluminación', 'Climatización', 'Seguridad'],
             details: `
-                <h2>El Desafío: Elegancia y Simplicidad</h2>
-                <p>El propietario de la Residencia "Armonía" buscaba una solución que unificara todos los sistemas de su hogar sin comprometer la estética minimalista del diseño de interiores. El principal reto fue integrar dispositivos de múltiples fabricantes (iluminación, audio, seguridad y climatización) en una sola plataforma intuitiva y fácil de usar para toda la familia.</p>
-                <h2>Nuestra Solución: Un Cerebro Central a Medida</h2>
-                <p>Desarrollamos un controlador central y una aplicación móvil personalizada bajo la marca ioniq. Esto nos permitió crear una comunicación fluida entre todos los dispositivos. Se instalaron sensores de presencia y luminosidad que automatizan las luces y la temperatura, aprendiendo de las rutinas de los habitantes para maximizar el confort y la eficiencia energética. El cableado se ocultó meticulosamente para mantener la pureza visual de cada habitación.</p>
-                <h2>Resultado: Un Hogar que Responde</h2>
-                <p>El resultado es un hogar que parece anticipar las necesidades de sus ocupantes. Con un solo toque, se activan "escenas" como "Noche de cine" o "Buenos días", ajustando luces, cortinas, temperatura y música. El cliente destacó la sencillez de la interfaz como el mayor logro, permitiendo que la tecnología avanzada se sienta completamente natural y accesible.</p>
+                <h2>El Desafío: Innovación y Autosuficiencia</h2>
+                <p>El propietario del Apartamento “Mónaco” buscaba convertir su hogar en un espacio inteligente, funcional y moderno, sin alterar su diseño estético ni la comodidad de los ocupantes. El reto consistió en integrar sistemas de iluminación, sensores, cámaras de seguridad y controladores IR en una sola red central, garantizando un control total y una experiencia intuitiva.</p>
+                <h2>Nuestra Solución: Un Ecosistema Inteligente Centralizado</h2>
+                <p>Implementamos un controlador central que actúa como el cerebro del hogar, permitiendo la comunicación entre todos los dispositivos y la incorporación de tecnologías AIIOT para funciones inteligentes y automatizadas. La residencia cuenta con un sistema que gestiona luces, sensores y seguridad de forma sincronizada, adaptándose al estilo de vida de los residentes. Todo el cableado y los equipos fueron instalados cuidadosamente para mantener la armonía visual de cada espacio.</p>
+                <h2>Resultado: Una Casa que Piensa</h2>
+                <p>El resultado es una vivienda autosuficiente y funcional que responde de manera natural a las necesidades diarias. Escenas preconfiguradas permiten ajustar iluminación, temperatura o seguridad con un solo toque, ofreciendo confort, eficiencia y tranquilidad. La integración AIIOT eleva la experiencia, logrando que la tecnología se sienta orgánica, elegante y siempre accesible.</p>
             `,
             gallery: [
                 { type: 'image', src: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=60' },
@@ -426,36 +426,39 @@ const App: React.FC = () => {
             ]
         },
         {
-            title: 'Corporativo "Nexus"',
-            description: 'Oficinas inteligentes con gestión energética optimizada y automatización de salas de reuniones para máxima eficiencia.',
-            image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=870&q=80',
-            features: ['Eficiencia Energética', 'Automatización', 'Gestión'],
+            title: 'Muebles "Nexus"',
+            description: 'Desarrollo de un producto IoT propio: muebles abatibles inteligentes con control y monitoreo remoto.',
+            image: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=870&q=80',
+            features: ['IoT', 'Hardware', 'Firmware'],
             details: `
-                <h2>El Desafío: Productividad y Sostenibilidad</h2>
-                <p>El Corporativo "Nexus" necesitaba modernizar sus instalaciones para reducir su huella de carbono y, al mismo tiempo, crear un entorno de trabajo más productivo. El reto era implementar un sistema de gestión de edificios (BMS) que no interrumpiera las operaciones diarias y que fuera escalable para futuras expansiones.</p>
-                <h2>Nuestra Solución: Inteligencia Operativa</h2>
-                <p>Implementamos una red de sensores IoT para monitorear en tiempo real el consumo de energía, la calidad del aire y la ocupación de los espacios. Nuestro software personalizado analiza estos datos para optimizar el uso del aire acondicionado y la iluminación, apagando sistemas en áreas desocupadas. Las salas de reuniones se equiparon con un sistema de reserva inteligente que prepara la sala automáticamente (proyector, luces, videoconferencia) minutos antes de una reunión programada.</p>
-                <h2>Resultado: Un Espacio de Trabajo Eficiente</h2>
-                <p>Tras seis meses, el Corporativo "Nexus" reportó una reducción del 35% en su consumo energético. La automatización de las salas de reuniones eliminó los tiempos de preparación técnica, aumentando la puntualidad y eficiencia de los equipos. La gestión centralizada permite al personal de mantenimiento resolver problemas de forma proactiva, a menudo antes de que los empleados los noten.</p>
+                <h2>El Desafío: Innovar desde Cero</h2>
+                <p>Este proyecto marcó un hito para nosotros: el desarrollo completo de un producto IoT propio, tanto en su diseño físico como en su estructura digital. El objetivo era crear un sistema de muebles abatibles inteligentes, funcionales y adaptados a los nuevos estilos de vida urbanos, donde el espacio es un recurso valioso.</p>
+                <p>El principal desafío fue desarrollar desde cero la electrónica, la conectividad y la interacción con el usuario final, garantizando un producto confiable, elegante y de fácil uso.</p>
+                <h2>Nuestra Solución: Tecnología que Transforma Espacios</h2>
+                <p>Basado en una placa ESP32, diseñamos el sistema completo de control, comunicación y automatización. Se desarrolló la electrónica, el firmware y el entorno digital que permite al usuario monitorear y controlar el mueble de forma remota.</p>
+                <p>El proceso incluyó meses de investigación, pruebas y ajustes para lograr una integración fluida entre hardware y software, consolidando un ecosistema funcional que refleja la filosofía AIIOT: inteligencia artificial aplicada al confort cotidiano.</p>
+                <h2>Resultado: Un Producto que Reimagina el Espacio</h2>
+                <p>El resultado es un mueble inteligente capaz de transformar espacios reducidos en ambientes versátiles y modernos. Su diseño compacto y automatizado brinda soluciones prácticas para hogares contemporáneos, ofreciendo control total desde una aplicación conectada.</p>
+                <p>Este desarrollo representa el primer paso hacia una línea de productos propios que combinan ingeniería, diseño y conectividad para redefinir la manera en que vivimos nuestros espacios.</p>
             `,
             gallery: [
-                { type: 'image', src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=400&q=60' },
+                { type: 'image', src: 'https://images.unsplash.com/photo-1519974719765-e6559eac2575?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1519974719765-e6559eac2575?auto=format&fit=crop&w=400&q=60' },
+                { type: 'image', src: 'https://images.unsplash.com/photo-1588623228456-508a3d583e74?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1588623228456-508a3d583e74?auto=format&fit=crop&w=400&q=60' },
+                { type: 'image', src: 'https://images.unsplash.com/photo-1563224163-614b62f6b5b5?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1563224163-614b62f6b5b5?auto=format&fit=crop&w=400&q=60' },
             ]
         },
         {
-            title: 'Penthouse "Vista"',
-            description: 'Sistema de entretenimiento inmersivo con audio y video multi-zona, cortinas automatizadas y control total por voz.',
+            title: 'Condominio "Nogales"',
+            description: 'Sistema de iluminación inteligente, seguridad avanzada con reconocimiento de placas y conectividad mesh en una residencia de gran extensión.',
             image: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=774&q=80',
-            features: ['Audio & Video', 'Control por Voz', 'Inmersivo'],
+            features: ['Iluminación LED', 'Seguridad Avanzada', 'Red Mesh'],
             details: `
-                <h2>El Desafío: Entretenimiento sin Complicaciones</h2>
-                <p>El dueño del Penthouse "Vista", un apasionado del cine y la música, quería un sistema de entretenimiento de alta fidelidad que se extendiera por toda la propiedad, pero sin la complejidad de múltiples controles remotos y sistemas dispares. La acústica del espacio, con grandes ventanales y techos altos, presentaba un desafío significativo para la calidad del sonido.</p>
-                <h2>Nuestra Solución: Una Sinfonía Tecnológica</h2>
-                <p>Diseñamos e instalamos un sistema de audio y video distribuido con fuentes centralizadas, permitiendo reproducir contenido diferente en cada zona o sincronizarlo en toda la casa. Realizamos un estudio acústico para calibrar los altavoces y colocar paneles discretos para una calidad de sonido óptima. Se integraron motores silenciosos para las cortinas y un sistema de control por voz que permite manejar todo, desde seleccionar una película hasta ajustar el volumen, con simples comandos.</p>
-                <h2>Resultado: Inmersión Total</h2>
-                <p>La experiencia es cinematográfica. El sistema de sonido envuelve al oyente y la calidad de video 4K es espectacular. La facilidad del control por voz ha sido el factor más elogiado, eliminando cualquier barrera tecnológica. El cliente ahora disfruta de su contenido favorito con una calidad y comodidad que superaron ampliamente sus expectativas.</p>
+                <h2>El Desafío: Estética y Conectividad sin Límites</h2>
+                <p>El Condominio “Nogales” representó un reto de diseño y tecnología a gran escala. El objetivo fue crear un entorno estéticamente armonioso que integrara iluminación, seguridad y confort sin comprometer el estilo de los espacios. Además, por tratarse de una residencia de gran extensión, el principal desafío fue garantizar una conectividad estable y fluida entre todos los dispositivos inteligentes.</p>
+                <h2>Nuestra Solución: Un Ecosistema Luminoso e Inteligente</h2>
+                <p>Implementamos un sistema de tiras LED controladas por voz y aplicación móvil, brindando una iluminación ambiental dinámica y elegante. Se añadieron sensores de puertas y ventanas, múltiples cámaras de seguridad y uno de nuestros desarrollos propios: la automatización de la puerta de ingreso con reconocimiento de placas. También se integraron paneles de smart glass y sensores estratégicos para mejorar la experiencia y la eficiencia del hogar.<br>Para enfrentar los retos de comunicación, se propuso una red mesh personalizada que optimiza la conectividad y permite la integración de nuevos dispositivos sin saturar la red principal.</p>
+                <h2>Resultado: Un Condominio que Evoluciona</h2>
+                <p>El resultado es un hogar inteligente, escalable y visualmente impactante. Su sistema central coordina iluminación, seguridad y acceso, mientras se prepara para incorporar futuras funciones como persianas automáticas y sensores láser perimetrales. Nogales demuestra que la domótica puede combinar tecnología avanzada, diseño y confort en perfecta armonía.</p>
             `,
             gallery: [
                 { type: 'image', src: 'https://images.unsplash.com/photo-1585253393433-23988b704c44?auto=format&fit=crop&w=774&q=80', thumbnail: 'https://images.unsplash.com/photo-1585253393433-23988b704c44?auto=format&fit=crop&w=400&q=60' },
@@ -464,22 +467,22 @@ const App: React.FC = () => {
             ]
         },
         {
-            title: 'Jardín "Edén"',
-            description: 'Desarrollo a medida de un sistema de riego inteligente y paisajismo lumínico que se adapta a las condiciones climáticas.',
-            image: 'https://images.unsplash.com/photo-1561434322-8340c4a457a4?auto=format&fit=crop&w=774&q=80',
-            features: ['Riego Inteligente', 'Iluminación Exterior', 'Adaptativo'],
+            title: 'Residencia "Escobar"',
+            description: 'Sistema integral de seguridad con cámaras, apertura de puertas automatizada, smart glass y control de iluminación inteligente.',
+            image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=870&q=80',
+            features: ['Seguridad Total', 'Automatización', 'Smart Glass'],
             details: `
-                <h2>El Desafío: Un Ecosistema Vivo y Autónomo</h2>
-                <p>El proyecto "Edén" consistía en un extenso jardín con una variedad de plantas con diferentes necesidades hídricas. El cliente quería un sistema de riego y de iluminación que no solo fuera automático, sino verdaderamente inteligente: que se adaptara al clima en tiempo real para ahorrar agua y que realzara la belleza del paisaje por la noche.</p>
-                <h2>Nuestra Solución: Tecnología que Nutre</h2>
-                <p>Creamos un sistema a medida que integra sensores de humedad en el suelo y una estación meteorológica local. El software, desarrollado por ioniq, cruza estos datos con pronósticos del tiempo para decidir exactamente cuánta agua usar y en qué zonas, evitando el riego en días de lluvia. Para la iluminación, diseñamos escenas lumínicas que cambian sutilmente a lo largo de la noche, destacando diferentes árboles y flores. Todo el sistema utiliza hardware resistente a la intemperie y de bajo consumo.</p>
-                <h2>Resultado: Belleza Sostenible</h2>
-                <p>El jardín está más saludable que nunca, y el consumo de agua se ha reducido en un 50% en comparación con un sistema de riego tradicional. Por la noche, el jardín se transforma en una obra de arte lumínica, creando una atmósfera mágica. El cliente puede monitorear y ajustar todo desde su tablet, pero rara vez lo necesita, ya que el sistema gestiona el jardín de forma autónoma y eficiente.</p>
+                <h2>El Desafío: Seguridad y Autonomía Total</h2>
+                <p>La Residencia “Escobar” fue un proyecto donde el cliente nos otorgó total libertad para diseñar un sistema integral que combinara seguridad, confort y tecnología avanzada. El reto principal fue crear un entorno completamente conectado que ofreciera protección total sin perder la elegancia del hogar.</p>
+                <h2>Nuestra Solución: Un Hogar que se Protege y se Adapta</h2>
+                <p>Diseñamos un sistema de seguridad completo con cámaras interiores y exteriores, junto con un sistema automatizado de apertura de puertas que integra sensores y cámaras de reconocimiento para identificar visitantes en tiempo real. Además, incorporamos paneles smart glass para garantizar privacidad en la habitación principal y una red de switches inteligentes que permiten controlar la iluminación y demás dispositivos desde un único entorno digital. Todo fue integrado bajo un ecosistema AIIOT, lo que permite la creación de escenas inteligentes que automatizan actividades diarias según las rutinas de los habitantes.</p>
+                <h2>Resultado: Un Espacio Inteligente y Consciente</h2>
+                <p>El resultado es una vivienda con un nivel de seguridad y autonomía excepcionales. Cada dispositivo trabaja de forma coordinada, anticipándose a las necesidades del usuario. Escenas inteligentes gestionan la iluminación, la privacidad y el acceso, convirtiendo la tecnología en un asistente silencioso que protege, automatiza y optimiza el día a día del hogar.</p>
             `,
             gallery: [
-                { type: 'image', src: 'https://images.unsplash.com/photo-1589383827670-8777a834e565?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1589383827670-8777a834e565?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1560574136-eaff80521cc4?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1560574136-eaff80521cc4?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1461418723234-a2a68c670b35?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1461418723234-a2a68c670b35?auto=format&fit=crop&w=400&q=60' },
+                { type: 'image', src: 'https://images.unsplash.com/photo-1617153541489-3c72a83b4e3a?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1617153541489-3c72a83b4e3a?auto=format&fit=crop&w=400&q=60' },
+                { type: 'image', src: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=400&q=60' },
+                { type: 'image', src: 'https://images.unsplash.com/photo-1529408337252-4253714b4369?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1529408337252-4253714b4369?auto=format&fit=crop&w=400&q=60' },
             ]
         }
     ];
@@ -1004,26 +1007,34 @@ const App: React.FC = () => {
             background: 'var(--modal-bg)',
             border: '1px solid var(--glass-border)',
             borderRadius: '20px',
-            padding: '30px',
             width: '90%',
             maxWidth: '800px',
             maxHeight: '85vh',
-            overflowY: 'auto',
             position: 'relative',
             color: 'var(--text-main)',
             boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+            display: 'flex',
+            flexDirection: 'column',
+            overflow: 'hidden',
         },
         modalCloseButton: {
             position: 'absolute',
             top: '20px',
             right: '20px',
-            background: 'transparent',
+            background: 'rgba(0,0,0,0.1)',
             border: 'none',
             color: 'var(--text-main)',
             fontSize: '1.5rem',
             cursor: 'pointer',
             opacity: 0.7,
-            zIndex: 10
+            zIndex: 10,
+            width: '32px',
+            height: '32px',
+            borderRadius: '50%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            lineHeight: 1,
         },
         modalImage: {
             width: '100%',
@@ -1036,6 +1047,12 @@ const App: React.FC = () => {
             fontSize: '2rem',
             fontWeight: 700,
             marginBottom: '15px',
+        },
+        modalInnerContent: {
+            flex: 1,
+            minHeight: 0,
+            overflowY: 'auto',
+            padding: '30px',
         },
         socialIconsContainer: {
             display: 'flex',
@@ -1596,39 +1613,41 @@ const App: React.FC = () => {
                 <div style={styles.modalOverlay} className="modal-overlay" onClick={() => setSelectedProject(null)}>
                     <div style={styles.modalContent} className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button style={styles.modalCloseButton} className="modal-close-button" onClick={() => setSelectedProject(null)} aria-label="Cerrar detalles del proyecto">&times;</button>
-                        <img src={selectedProject.image} alt={selectedProject.title} style={styles.modalImage}/>
-                        <h2 style={styles.modalTitle}>{selectedProject.title}</h2>
-                        <div className="project-details-content" dangerouslySetInnerHTML={{ __html: selectedProject.details }} />
-                        
-                        <div style={styles.gallerySectionContainer}>
-                            <h3 style={styles.gallerySectionTitle}>Galería del Proyecto</h3>
-                            <div style={styles.galleryGrid}>
-                                {selectedProject.gallery.map((item, index) => (
-                                    <div 
-                                        key={index} 
-                                        style={styles.galleryItem}
-                                        onClick={() => setGalleryViewer({ items: selectedProject.gallery, startIndex: index })}
-                                        onMouseEnter={(e) => {
-                                            const img = e.currentTarget.querySelector('img');
-                                            if (img) img.style.transform = 'scale(1.1)';
-                                            const overlay = e.currentTarget.querySelector('div[data-overlay]');
-                                            if (overlay) (overlay as HTMLDivElement).style.opacity = '1';
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            const img = e.currentTarget.querySelector('img');
-                                            if (img) img.style.transform = 'scale(1)';
-                                            const overlay = e.currentTarget.querySelector('div[data-overlay]');
-                                            if (overlay) (overlay as HTMLDivElement).style.opacity = '0';
-                                        }}
-                                    >
-                                        <img src={item.thumbnail} alt={`Galería ${selectedProject.title} ${index + 1}`} style={styles.galleryItemImage} />
-                                        {item.type === 'video' && (
-                                            <div data-overlay style={{...styles.galleryItemOverlay, opacity: 0}}>
-                                                <IconPlay style={styles.galleryItemPlayIcon} />
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
+                        <div className="modal-scroll-area" style={styles.modalInnerContent}>
+                            <img src={selectedProject.image} alt={selectedProject.title} style={styles.modalImage}/>
+                            <h2 style={styles.modalTitle}>{selectedProject.title}</h2>
+                            <div className="project-details-content" dangerouslySetInnerHTML={{ __html: selectedProject.details }} />
+                            
+                            <div style={styles.gallerySectionContainer}>
+                                <h3 style={styles.gallerySectionTitle}>Galería del Proyecto</h3>
+                                <div style={styles.galleryGrid}>
+                                    {selectedProject.gallery.map((item, index) => (
+                                        <div 
+                                            key={index} 
+                                            style={styles.galleryItem}
+                                            onClick={() => setGalleryViewer({ items: selectedProject.gallery, startIndex: index })}
+                                            onMouseEnter={(e) => {
+                                                const img = e.currentTarget.querySelector('img');
+                                                if (img) img.style.transform = 'scale(1.1)';
+                                                const overlay = e.currentTarget.querySelector('div[data-overlay]');
+                                                if (overlay) (overlay as HTMLDivElement).style.opacity = '1';
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                const img = e.currentTarget.querySelector('img');
+                                                if (img) img.style.transform = 'scale(1)';
+                                                const overlay = e.currentTarget.querySelector('div[data-overlay]');
+                                                if (overlay) (overlay as HTMLDivElement).style.opacity = '0';
+                                            }}
+                                        >
+                                            <img src={item.thumbnail} alt={`Galería ${selectedProject.title} ${index + 1}`} style={styles.galleryItemImage} />
+                                            {item.type === 'video' && (
+                                                <div data-overlay style={{...styles.galleryItemOverlay, opacity: 0}}>
+                                                    <IconPlay style={styles.galleryItemPlayIcon} />
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1669,26 +1688,28 @@ const App: React.FC = () => {
                 <div style={styles.modalOverlay} className="modal-overlay" onClick={() => setSelectedFeature(null)}>
                     <div style={{...styles.modalContent, maxWidth: '700px'}} className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button style={styles.modalCloseButton} className="modal-close-button" onClick={() => setSelectedFeature(null)} aria-label="Cerrar detalles de la característica">&times;</button>
-                        <img src={selectedFeature.modalImage} alt={selectedFeature.modalTitle} style={styles.modalImage}/>
-                        <h2 style={styles.modalTitle}>{selectedFeature.modalTitle}</h2>
-                        <p style={{...styles.description, maxWidth: 'none', textAlign: 'left', marginBottom: 0}}>{selectedFeature.modalDescription}</p>
-                    
-                        {selectedFeature.products && selectedFeature.products.length > 0 && (
-                            <div style={styles.productSectionContainer}>
-                                <h3 style={styles.productSectionTitle}>Productos de Ejemplo</h3>
-                                <div style={styles.productGrid}>
-                                    {selectedFeature.products.map((product, index) => (
-                                        <div key={index} style={styles.productCard}>
-                                            <img src={product.image} alt={product.name} style={styles.productImage} />
-                                            <div style={styles.productCardContent}>
-                                                <h4 style={styles.productName}>{product.name}</h4>
-                                                <p style={styles.productDescription}>{product.description}</p>
+                        <div className="modal-scroll-area" style={styles.modalInnerContent}>
+                            <img src={selectedFeature.modalImage} alt={selectedFeature.modalTitle} style={styles.modalImage}/>
+                            <h2 style={styles.modalTitle}>{selectedFeature.modalTitle}</h2>
+                            <p style={{...styles.description, maxWidth: 'none', textAlign: 'left', marginBottom: 0}}>{selectedFeature.modalDescription}</p>
+                        
+                            {selectedFeature.products && selectedFeature.products.length > 0 && (
+                                <div style={styles.productSectionContainer}>
+                                    <h3 style={styles.productSectionTitle}>Productos de Ejemplo</h3>
+                                    <div style={styles.productGrid}>
+                                        {selectedFeature.products.map((product, index) => (
+                                            <div key={index} style={styles.productCard}>
+                                                <img src={product.image} alt={product.name} style={styles.productImage} />
+                                                <div style={styles.productCardContent}>
+                                                    <h4 style={styles.productName}>{product.name}</h4>
+                                                    <p style={styles.productDescription}>{product.description}</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        )}
+                            )}
+                        </div>
                     </div>
                 </div>
             )}
@@ -1697,22 +1718,24 @@ const App: React.FC = () => {
                 <div style={styles.modalOverlay} className="modal-overlay" onClick={() => setSelectedService(null)}>
                     <div style={{...styles.modalContent, maxWidth: '600px'}} className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button style={styles.modalCloseButton} className="modal-close-button" onClick={() => setSelectedService(null)} aria-label="Cerrar detalles del servicio">&times;</button>
-                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', marginBottom: '20px'}}>
-                            {selectedService.icon}
-                            <h2 style={{...styles.modalTitle, marginBottom: 0, textAlign: 'center'}}>{selectedService.modalTitle}</h2>
+                        <div className="modal-scroll-area" style={styles.modalInnerContent}>
+                            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', marginBottom: '20px'}}>
+                                {selectedService.icon}
+                                <h2 style={{...styles.modalTitle, marginBottom: 0, textAlign: 'center'}}>{selectedService.modalTitle}</h2>
+                            </div>
+                            <p style={{...styles.description, maxWidth: 'none', textAlign: 'center', marginBottom: '20px'}}>{selectedService.modalDescription}</p>
+                            
+                            <ul style={{ listStyleType: 'none', padding: 0, marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                                {selectedService.modalDetails.map((detail, index) => (
+                                    <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, color: 'var(--accent-color)', marginTop: '3px' }}>
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        <span>{detail}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                        <p style={{...styles.description, maxWidth: 'none', textAlign: 'center', marginBottom: '20px'}}>{selectedService.modalDescription}</p>
-                        
-                        <ul style={{ listStyleType: 'none', padding: 0, marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                            {selectedService.modalDetails.map((detail, index) => (
-                                <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, color: 'var(--accent-color)', marginTop: '3px' }}>
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
-                                    <span>{detail}</span>
-                                </li>
-                            ))}
-                        </ul>
                     </div>
                 </div>
             )}

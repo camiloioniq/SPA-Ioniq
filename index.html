@@ -133,18 +133,17 @@
         }
         
         /* Custom Scrollbar */
-        .scrollable-card::-webkit-scrollbar, .modal-content::-webkit-scrollbar {
+        .scrollable-card::-webkit-scrollbar, .modal-scroll-area::-webkit-scrollbar {
           width: 6px;
         }
-        .scrollable-card::-webkit-scrollbar-track, .modal-content::-webkit-scrollbar-track {
+        .scrollable-card::-webkit-scrollbar-track, .modal-scroll-area::-webkit-scrollbar-track {
           background: transparent;
         }
-        .scrollable-card::-webkit-scrollbar-thumb, .modal-content::-webkit-scrollbar-thumb {
+        .scrollable-card::-webkit-scrollbar-thumb, .modal-scroll-area::-webkit-scrollbar-thumb {
           background-color: var(--separator-color);
           border-radius: 10px;
-          border: 1px solid var(--separator-color);
         }
-        .scrollable-card, .modal-content {
+        .scrollable-card, .modal-scroll-area {
             scrollbar-width: thin;
             scrollbar-color: var(--separator-color) transparent;
         }
@@ -246,10 +245,11 @@
         }
 
         .modal-close-button {
-            transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease, background-color 0.2s ease;
         }
         .modal-close-button:hover {
             opacity: 1 !important;
+            background-color: rgba(0,0,0,0.2) !important;
         }
 
     </style>
