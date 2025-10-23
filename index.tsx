@@ -205,7 +205,7 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         products: [
             { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://github.com/camiloioniq/SPA-Ioniq/blob/main/assets/videos/Tarjeta%20De%20Iluminacion/freepik__the-video-begins-with-the-led-strips-off-then-they__91732.mp4', mediaType: 'video' },
             { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://github.com/camiloioniq/SPA-Ioniq/blob/main/assets/videos/Tarjeta%20De%20Iluminacion/freepik__closeup-shot-of-a-hand-gently-pressing-a-sleek-mod__91734.mp4', mediaType: 'video' },
-            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://github.com/camiloioniq/SPA-Ioniq/blob/main/assets/videos/Tarjeta%20De%20Iluminacion/freepik__a-cinematic-closeup-of-a-hand-reaching-for-a-smart__91733.mp4', mediaType: 'video' },
+            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/freepik__a-cinematic-closeup-of-a-hand-reaching-for-a-smart__91733.mp4', mediaType: 'video' },
         ]
     },
     { 
