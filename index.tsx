@@ -155,7 +155,8 @@ interface GalleryItem {
 interface Project {
     title: string;
     description: string;
-    image: string;
+    media: string;
+    mediaType: 'image' | 'video';
     features: string[];
     details: string;
     gallery: GalleryItem[];
@@ -164,7 +165,8 @@ interface Project {
 interface ProductExample {
     name: string;
     description: string;
-    image: string;
+    media: string;
+    mediaType: 'image' | 'video';
 }
 
 interface DomoticsFeature {
@@ -174,7 +176,8 @@ interface DomoticsFeature {
     color2: string;
     modalTitle: string;
     modalDescription: string;
-    modalImage: string;
+    modalMedia: string;
+    modalMediaType: 'image' | 'video';
     products: ProductExample[];
 }
 
@@ -197,11 +200,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#6366F1' : '#FACC15',
         modalTitle: 'Control Lumínico Total',
         modalDescription: 'Desde la calidez de una cena romántica hasta la energía de una mañana productiva, ajusta la intensidad y el color de cada luz. Crea escenas personalizadas que se activan con tu voz, un toque en la app o automáticamente según la hora del día.',
-        modalImage: 'https://images.unsplash.com/photo-1678054463388-34a1a87b5a?auto=format&fit=crop&w=1974&q=80',
+        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-a-smart-home-system-with-a-draw-of-a-house-4231-large.mp4',
+        modalMediaType: 'video',
         products: [
-            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', image: 'https://images.unsplash.com/photo-1628151325983-e2879a7545a9?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', image: 'https://images.unsplash.com/photo-1603565437143-b81639d6ea4f?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', image: 'https://images.unsplash.com/photo-1595152569729-1a068f848419?auto=format&fit=crop&w=870&q=80' },
+            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://assets.mixkit.co/videos/preview/mixkit-led-lights-on-a-gaming-keyboard-23188-large.mp4', mediaType: 'video' },
+            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://assets.mixkit.co/videos/preview/mixkit-man-pushing-a-button-with-his-finger-32868-large.mp4', mediaType: 'video' },
+            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-hanging-light-bulb-in-a-dark-room-4376-large.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -211,11 +215,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#3B82F6' : '#38BDF8',
         modalTitle: 'Confort Climático Inteligente',
         modalDescription: 'Nuestro sistema aprende tus preferencias y se anticipa a tus necesidades. Geofencing activa el clima ideal antes de que llegues a casa y los sensores optimizan el consumo energético, garantizando confort absoluto con máxima eficiencia.',
-        modalImage: 'https://images.unsplash.com/photo-1617103996237-703083b16335?auto=format&fit=crop&w=870&q=80',
+        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-thermostat-close-up-39829-large.mp4',
+        modalMediaType: 'video',
         products: [
-            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', image: 'https://images.unsplash.com/photo-1565374332939-76e1c0829837?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', image: 'https://images.unsplash.com/photo-1543269443-a0c5b3c36c68?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Sensores de Temperatura', description: 'Asegura una temperatura precisa y homogénea en cada habitación de tu hogar.', image: 'https://images.unsplash.com/photo-1624898145650-1926b4a8e63a?auto=format&fit=crop&w=870&q=80' },
+            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://assets.mixkit.co/videos/preview/mixkit-woman-regulating-the-temperature-of-her-thermostat-39830-large.mp4', mediaType: 'video' },
+            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://assets.mixkit.co/videos/preview/mixkit-woman-using-her-phone-to-control-smart-home-devices-42202-large.mp4', mediaType: 'video' },
+            { name: 'Sensores de Temperatura', description: 'Asegura una temperatura precisa y homogénea en cada habitación de tu hogar.', media: 'https://assets.mixkit.co/videos/preview/mixkit-smart-home-app-showing-temperatures-42205-large.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -225,11 +230,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#EC4899' : '#F43F5E',
         modalTitle: 'Cine en Casa, Sonido Envolvente',
         modalDescription: 'Distribuye audio y video 4K a cualquier habitación. Inicia tu película favorita en el salón y termínala en tu dormitorio sin interrupciones. Calibramos cada sistema para una acústica perfecta, creando una experiencia verdaderamente inmersiva.',
-        modalImage: 'https://images.unsplash.com/photo-1608303598249-3734e555b7a2?auto=format&fit=crop&w=870&q=80',
+        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-modern-living-room-with-a-big-screen-4235-large.mp4',
+        modalMediaType: 'video',
         products: [
-            { name: 'Matriz de Video 4K', description: 'Distribuye cualquier fuente de video (Apple TV, Blu-ray) a cualquier pantalla de la casa en calidad 4K.', image: 'https://images.unsplash.com/photo-1611141679412-6a4a4f3e2b2e?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Altavoces Arquitectónicos', description: 'Sonido de alta fidelidad que se integra perfectamente en paredes y techos, desapareciendo visualmente.', image: 'https://images.unsplash.com/photo-1618366712173-8451f53c193a?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Control Remoto Universal', description: 'Un solo mando para gobernarlos a todos. Controla tu TV, sistema de sonido, luces y más.', image: 'https://images.unsplash.com/photo-1601642247348-438c8234de5b?auto=format&fit=crop&w=870&q=80' },
+            { name: 'Matriz de Video 4K', description: 'Distribuye cualquier fuente de video (Apple TV, Blu-ray) a cualquier pantalla de la casa en calidad 4K.', media: 'https://assets.mixkit.co/videos/preview/mixkit-man-watching-a-sports-game-on-a-big-screen-4227-large.mp4', mediaType: 'video' },
+            { name: 'Altavoces Arquitectónicos', description: 'Sonido de alta fidelidad que se integra perfectamente en paredes y techos, desapareciendo visualmente.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-big-speaker-of-a-sound-system-playing-music-4375-large.mp4', mediaType: 'video' },
+            { name: 'Control Remoto Universal', description: 'Un solo mando para gobernarlos a todos. Controla tu TV, sistema de sonido, luces y más.', media: 'https://assets.mixkit.co/videos/preview/mixkit-hand-pressing-the-buttons-of-a-remote-control-33205-large.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -239,11 +245,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#8B5CF6' : '#4F46E5',
         modalTitle: 'Tranquilidad, Donde Quiera Que Estés',
         modalDescription: 'Vigila tu hogar con cámaras de alta definición, recibe alertas de movimiento en tiempo real y controla accesos de forma remota. Simula presencia cuando estás fuera y duerme tranquilo sabiendo que tu hogar está protegido 24/7.',
-        modalImage: 'https://images.unsplash.com/photo-1558991341-c1170b208e9d?auto=format&fit=crop&w=870&q=80',
+        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-cctv-camera-on-a-building-3269-large.mp4',
+        modalMediaType: 'video',
         products: [
-            { name: 'Cámaras IP con IA', description: 'Reconocimiento inteligente de personas, vehículos y paquetes para evitar falsas alarmas.', image: 'https://images.unsplash.com/photo-1527440135016-aba58ac7c3de?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Cerradura Inteligente', description: 'Acceso sin llaves mediante código, huella dactilar o tu móvil. Otorga accesos temporales a distancia.', image: 'https://images.unsplash.com/photo-1591876334533-146312a14603?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Sensores de Apertura', description: 'Recibe alertas instantáneas en tu móvil si una puerta o ventana se abre inesperadamente.', image: 'https://images.unsplash.com/photo-1596796330097-4c3e8f8a3f8f?auto=format&fit=crop&w=870&q=80' },
+            { name: 'Cámaras IP con IA', description: 'Reconocimiento inteligente de personas, vehículos y paquetes para evitar falsas alarmas.', media: 'https://assets.mixkit.co/videos/preview/mixkit-security-camera-in-a-crosswalk-2946-large.mp4', mediaType: 'video' },
+            { name: 'Cerradura Inteligente', description: 'Acceso sin llaves mediante código, huella dactilar o tu móvil. Otorga accesos temporales a distancia.', media: 'https://assets.mixkit.co/videos/preview/mixkit-man-unlocking-a-door-with-a-key-card-2942-large.mp4', mediaType: 'video' },
+            { name: 'Sensores de Apertura', description: 'Recibe alertas instantáneas en tu móvil si una puerta o ventana se abre inesperadamente.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-entering-a-house-by-opening-the-door-32845-large.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -253,11 +260,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#10B981' : '#4ADE80',
         modalTitle: 'Hogar Sostenible, Ahorro Inteligente',
         modalDescription: 'Monitorea tu consumo en tiempo real y deja que el sistema tome decisiones inteligentes. Apaga luces olvidadas, ajusta el termostato y optimiza el uso de electrodomésticos. Reduce tu huella de carbono y tu factura eléctrica sin esfuerzo.',
-        modalImage: 'https://images.unsplash.com/photo-1586799059437-30a7d5b9ba4b?auto=format&fit=crop&w=870&q=80',
+        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-dashboard-with-graphs-and-numbers-32982-large.mp4',
+        modalMediaType: 'video',
         products: [
-            { name: 'Medidor de Consumo', description: 'Monitorea el gasto energético de toda tu casa o de circuitos individuales en tiempo real.', image: 'https://images.unsplash.com/photo-1621358252061-807a0445b90f?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Enchufes Inteligentes', description: 'Controla y programa el encendido/apagado de cualquier electrodoméstico desde tu móvil.', image: 'https://images.unsplash.com/photo-1616423923363-27b019310a43?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Controlador de Cargas', description: 'Gestiona dispositivos de alto consumo, como calentadores, para que funcionen en horas de menor coste energético.', image: 'https://images.unsplash.com/photo-1509390214234-e36b856c670b35?auto=format&fit=crop&w=870&q=80' },
+            { name: 'Medidor de Consumo', description: 'Monitorea el gasto energético de toda tu casa o de circuitos individuales en tiempo real.', media: 'https://assets.mixkit.co/videos/preview/mixkit-electric-meter-of-a-house-39828-large.mp4', mediaType: 'video' },
+            { name: 'Enchufes Inteligentes', description: 'Controla y programa el encendido/apagado de cualquier electrodoméstico desde tu móvil.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-disconnects-a-white-plug-26488-large.mp4', mediaType: 'video' },
+            { name: 'Controlador de Cargas', description: 'Gestiona dispositivos de alto consumo, como calentadores, para que funcionen en horas de menor coste energético.', media: 'https://assets.mixkit.co/videos/preview/mixkit-technician-checking-a-breaker-box-39833-large.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -267,11 +275,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#D946EF' : '#C084FC',
         modalTitle: 'Tu Voz es el Mando',
         modalDescription: 'Integramos los principales asistentes de voz para un control manos libres total. Desde apagar todas las luces al acostarte hasta pedir tu playlist favorita, tu hogar obedece tus palabras. Y con nuestra app, el control viaja contigo a cualquier parte del mundo.',
-        modalImage: 'https://images.unsplash.com/photo-1533750247785-50a781a75b28?auto=format&fit=crop&w=870&q=80',
+        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-girl-giving-a-command-to-a-virtual-assistant-40149-large.mp4',
+        modalMediaType: 'video',
         products: [
-            { name: 'Hub de Automatización', description: 'El cerebro que unifica todos los dispositivos de diferentes marcas en un solo ecosistema cohesivo.', image: 'https://images.unsplash.com/photo-1563240381-82f42b336357?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Asistente de Voz', description: 'Integración nativa con Amazon Alexa, Google Assistant y Apple HomeKit para un control por voz natural.', image: 'https://images.unsplash.com/photo-1589028092244-885a44391a33?auto=format&fit=crop&w=870&q=80' },
-            { name: 'Interfaz Móvil Propia', description: 'Una app diseñada por y para ti, con la distribución y los controles que realmente necesitas.', image: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=870&q=80' },
+            { name: 'Hub de Automatización', description: 'El cerebro que unifica todos los dispositivos de diferentes marcas en un solo ecosistema cohesivo.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-computer-server-with-dozens-of-blinking-lights-32988-large.mp4', mediaType: 'video' },
+            { name: 'Asistente de Voz', description: 'Integración nativa con Amazon Alexa, Google Assistant y Apple HomeKit para un control por voz natural.', media: 'https://assets.mixkit.co/videos/preview/mixkit-smart-speaker-and-a-small-plant-32873-large.mp4', mediaType: 'video' },
+            { name: 'Interfaz Móvil Propia', description: 'Una app diseñada por y para ti, con la distribución y los controles que realmente necesitas.', media: 'https://assets.mixkit.co/videos/preview/mixkit-hand-of-a-man-using-a-smartphone-at-night-34489-large.mp4', mediaType: 'video' },
         ]
     },
 ];
@@ -409,7 +418,8 @@ const App: React.FC = () => {
         {
             title: 'Apartamento "Mónaco"',
             description: 'Integración completa de iluminación, climatización y seguridad, controlada desde una interfaz única desarrollada por ioniq.',
-            image: 'https://images.unsplash.com/photo-1618221195710-dd6b41fa2047?auto=format&fit=crop&w=870&q=80',
+            media: 'https://assets.mixkit.co/videos/preview/mixkit-empty-room-of-a-luxurious-house-4663-large.mp4',
+            mediaType: 'video',
             features: ['Iluminación', 'Climatización', 'Seguridad'],
             details: `
                 <h2>El Desafío: Innovación y Autosuficiencia</h2>
@@ -428,7 +438,8 @@ const App: React.FC = () => {
         {
             title: 'Muebles "Nexus"',
             description: 'Desarrollo de un producto IoT propio: muebles abatibles inteligentes con control y monitoreo remoto.',
-            image: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=870&q=80',
+            media: 'https://assets.mixkit.co/videos/preview/mixkit-a-bed-with-a-gray-quilt-and-many-pillows-4229-large.mp4',
+            mediaType: 'video',
             features: ['IoT', 'Hardware', 'Firmware'],
             details: `
                 <h2>El Desafío: Innovar desde Cero</h2>
@@ -450,7 +461,8 @@ const App: React.FC = () => {
         {
             title: 'Condominio "Nogales"',
             description: 'Sistema de iluminación inteligente, seguridad avanzada con reconocimiento de placas y conectividad mesh en una residencia de gran extensión.',
-            image: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=774&q=80',
+            media: 'https://assets.mixkit.co/videos/preview/mixkit-modern-house-with-a-swimming-pool-4238-large.mp4',
+            mediaType: 'video',
             features: ['Iluminación LED', 'Seguridad Avanzada', 'Red Mesh'],
             details: `
                 <h2>El Desafío: Estética y Conectividad sin Límites</h2>
@@ -469,7 +481,8 @@ const App: React.FC = () => {
         {
             title: 'Residencia "Escobar"',
             description: 'Sistema integral de seguridad con cámaras, apertura de puertas automatizada, smart glass y control de iluminación inteligente.',
-            image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=870&q=80',
+            media: 'https://assets.mixkit.co/videos/preview/mixkit-luxurious-house-in-the-middle-of-the-woods-4236-large.mp4',
+            mediaType: 'video',
             features: ['Seguridad Total', 'Automatización', 'Smart Glass'],
             details: `
                 <h2>El Desafío: Seguridad y Autonomía Total</h2>
@@ -863,6 +876,7 @@ const App: React.FC = () => {
             whiteSpace: 'nowrap',
             opacity: 0.9,
             transition: 'opacity 0.5s ease-in-out',
+            zIndex: 2
         },
         projectFeaturesContainer: {
             display: 'flex',
@@ -1533,9 +1547,15 @@ const App: React.FC = () => {
                                                 style={{
                                                     ...styles.projectColumn,
                                                     flex: isActive ? 5 : 1,
-                                                    backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%), url(${project.image})`,
                                                 }}
                                             >
+                                                {project.mediaType === 'video' ? (
+                                                    <video src={project.media} autoPlay loop muted playsInline style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0}}/>
+                                                ) : (
+                                                    <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: `url(${project.media})`, backgroundSize: 'cover', backgroundPosition: 'center', zIndex: 0}}/>
+                                                )}
+                                                <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%)', zIndex: 1}}/>
+
                                                 <div style={{ ...styles.projectColumnContent, opacity: isActive ? 1 : 0, color: 'white' }} id={`project-content-${index}`}>
                                                     <h2 style={{...styles.projectTitle, fontSize: '1.2rem', textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{project.title}</h2>
                                                     <p style={{...styles.description, color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.85rem', marginBottom: '15px', maxWidth: '100%', textAlign: 'left', textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{project.description}</p>
@@ -1558,7 +1578,11 @@ const App: React.FC = () => {
                                         <div style={{...styles.projectsSlider, msOverflowStyle: 'none', scrollbarWidth: 'none'}} ref={projectsRef}>
                                             {projectsData.map((project, index) => (
                                                 <div key={index} style={{...styles.projectCard, flex: '0 0 90%', scrollSnapAlign: 'center'}} className="project-card" onClick={() => setSelectedProject(project)}>
-                                                    <img src={project.image} alt={project.title} style={styles.projectImage} />
+                                                    {project.mediaType === 'video' ? (
+                                                        <video src={project.media} style={styles.projectImage} autoPlay loop muted playsInline />
+                                                    ) : (
+                                                        <img src={project.media} alt={project.title} style={styles.projectImage} />
+                                                    )}
                                                     <div style={styles.projectCardContent}>
                                                         <h2 style={styles.projectTitle}>{project.title}</h2>
                                                         <p style={{...styles.description, fontSize: '0.8rem', marginBottom: '15px', maxWidth: '100%', textAlign: 'left'}}>{project.description}</p>
@@ -1614,7 +1638,11 @@ const App: React.FC = () => {
                     <div style={styles.modalContent} className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button style={styles.modalCloseButton} className="modal-close-button" onClick={() => setSelectedProject(null)} aria-label="Cerrar detalles del proyecto">&times;</button>
                         <div className="modal-scroll-area" style={styles.modalInnerContent}>
-                            <img src={selectedProject.image} alt={selectedProject.title} style={styles.modalImage}/>
+                            {selectedProject.mediaType === 'video' ? (
+                                <video src={selectedProject.media} style={styles.modalImage} autoPlay loop muted playsInline/>
+                            ) : (
+                                <img src={selectedProject.media} alt={selectedProject.title} style={styles.modalImage}/>
+                            )}
                             <h2 style={styles.modalTitle}>{selectedProject.title}</h2>
                             <div className="project-details-content" dangerouslySetInnerHTML={{ __html: selectedProject.details }} />
                             
@@ -1689,7 +1717,11 @@ const App: React.FC = () => {
                     <div style={{...styles.modalContent, maxWidth: '700px'}} className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button style={styles.modalCloseButton} className="modal-close-button" onClick={() => setSelectedFeature(null)} aria-label="Cerrar detalles de la característica">&times;</button>
                         <div className="modal-scroll-area" style={styles.modalInnerContent}>
-                            <img src={selectedFeature.modalImage} alt={selectedFeature.modalTitle} style={styles.modalImage}/>
+                            {selectedFeature.modalMediaType === 'video' ? (
+                                <video src={selectedFeature.modalMedia} style={styles.modalImage} autoPlay loop muted playsInline/>
+                            ) : (
+                                <img src={selectedFeature.modalMedia} alt={selectedFeature.modalTitle} style={styles.modalImage}/>
+                            )}
                             <h2 style={styles.modalTitle}>{selectedFeature.modalTitle}</h2>
                             <p style={{...styles.description, maxWidth: 'none', textAlign: 'left', marginBottom: 0}}>{selectedFeature.modalDescription}</p>
                         
@@ -1699,7 +1731,11 @@ const App: React.FC = () => {
                                     <div style={styles.productGrid}>
                                         {selectedFeature.products.map((product, index) => (
                                             <div key={index} style={styles.productCard}>
-                                                <img src={product.image} alt={product.name} style={styles.productImage} />
+                                                {product.mediaType === 'video' ? (
+                                                    <video src={product.media} style={styles.productImage} autoPlay loop muted playsInline />
+                                                ) : (
+                                                    <img src={product.media} alt={product.name} style={styles.productImage} />
+                                                )}
                                                 <div style={styles.productCardContent}>
                                                     <h4 style={styles.productName}>{product.name}</h4>
                                                     <p style={styles.productDescription}>{product.description}</p>
