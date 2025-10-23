@@ -297,7 +297,7 @@ const App: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const [selectedFeature, setSelectedFeature] = useState<DomoticsFeature | null>(null);
     const [selectedService, setSelectedService] = useState<Service | null>(null);
-    const [galleryViewer, setGalleryViewer] = useState<{ items: GalleryItem[]; startIndex: number } | null>(null);
+    const [galleryIndex, setGalleryIndex] = useState(0);
     
     const sectionRefs = {
         'Inicio': useRef<HTMLDivElement>(null),
@@ -311,13 +311,18 @@ const App: React.FC = () => {
 
     const domoticsFeaturesData = useMemo(() => getDomoticsFeaturesData(theme), [theme]);
 
-    const handleGalleryNav = (direction: 'next' | 'prev') => {
-        if (galleryViewer) {
-            const { items, startIndex } = galleryViewer;
-            const newIndex = (startIndex + (direction === 'next' ? 1 : -1) + items.length) % items.length;
-            setGalleryViewer({ items, startIndex: newIndex });
+    const handleProjectGalleryNav = (direction: 'next' | 'prev') => {
+        if (selectedProject) {
+            const newIndex = (galleryIndex + (direction === 'next' ? 1 : -1) + selectedProject.gallery.length) % selectedProject.gallery.length;
+            setGalleryIndex(newIndex);
         }
     };
+
+    useEffect(() => {
+        if (selectedProject) {
+            setGalleryIndex(0);
+        }
+    }, [selectedProject]);
 
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
@@ -375,9 +380,7 @@ const App: React.FC = () => {
         
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === 'Escape') {
-                if (galleryViewer) {
-                    setGalleryViewer(null);
-                } else if (selectedFeature) {
+                if (selectedFeature) {
                     setSelectedFeature(null);
                 } else if (selectedProject) {
                     setSelectedProject(null);
@@ -385,9 +388,9 @@ const App: React.FC = () => {
                     setSelectedService(null);
                 }
             }
-            if (galleryViewer) {
-                if (e.key === 'ArrowRight') handleGalleryNav('next');
-                if (e.key === 'ArrowLeft') handleGalleryNav('prev');
+            if (selectedProject) {
+                if (e.key === 'ArrowRight') handleProjectGalleryNav('next');
+                if (e.key === 'ArrowLeft') handleProjectGalleryNav('prev');
             }
         };
 
@@ -405,7 +408,7 @@ const App: React.FC = () => {
                 servicesObserver.unobserve(servicesRef);
             }
         };
-    }, [galleryViewer, selectedProject, selectedFeature, selectedService]);
+    }, [selectedProject, selectedFeature, selectedService, galleryIndex]);
     
     const exclusiveFeaturesData = [
         { text: 'Software y hardware personalizados para tus necesidades exactas.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg> },
@@ -432,7 +435,10 @@ const App: React.FC = () => {
             gallery: [
                 { type: 'image', src: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=60' },
                 { type: 'image', src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1560185893-a55d8c30ef06?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1560185893-a55d8c30ef06?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-is-controlling-the-lights-of-his-house-with-his-42208-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1618221195710-86c98fa1997a?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-in-his-living-room-at-night-4221-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-interior-of-a-luxurious-and-spacious-apartment-4664-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-view-of-a-modern-city-from-a-balcony-4217-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=400&q=60' },
             ]
         },
         {
@@ -455,7 +461,10 @@ const App: React.FC = () => {
             gallery: [
                 { type: 'image', src: 'https://images.unsplash.com/photo-1519974719765-e6559eac2575?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1519974719765-e6559eac2575?auto=format&fit=crop&w=400&q=60' },
                 { type: 'image', src: 'https://images.unsplash.com/photo-1588623228456-508a3d583e74?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1588623228456-508a3d583e74?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1563224163-614b62f6b5b5?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1563224163-614b62f6b5b5?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-sofa-in-the-living-room-of-a-modern-house-4234-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-lift-bed-being-lowered-with-a-remote-control-4228-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-man-working-with-a-3d-printer-4302-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-programmer-writing-code-on-a-laptop-42240-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&w=400&q=60' },
             ]
         },
         {
@@ -474,8 +483,11 @@ const App: React.FC = () => {
             `,
             gallery: [
                 { type: 'image', src: 'https://images.unsplash.com/photo-1585253393433-23988b704c44?auto=format&fit=crop&w=774&q=80', thumbnail: 'https://images.unsplash.com/photo-1585253393433-23988b704c44?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-modern-living-room-with-a-big-screen-4235-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1631603122136-e8a6d863f642?auto=format&fit=crop&w=869&q=80' },
                 { type: 'image', src: 'https://images.unsplash.com/photo-1594488518062-88543a41e9d2?auto=format&fit=crop&w=774&q=80', thumbnail: 'https://images.unsplash.com/photo-1594488518062-88543a41e9d2?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-modern-living-room-with-a-big-screen-4235-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1631603122136-e8a6d863f642?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-security-camera-of-a-house-39832-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-the-facade-of-a-modern-house-at-dusk-4237-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-family-enjoying-in-the-pool-of-a-modern-house-4239-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=400&q=60' },
             ]
         },
         {
@@ -495,7 +507,10 @@ const App: React.FC = () => {
             gallery: [
                 { type: 'image', src: 'https://images.unsplash.com/photo-1617153541489-3c72a83b4e3a?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1617153541489-3c72a83b4e3a?auto=format&fit=crop&w=400&q=60' },
                 { type: 'image', src: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1529408337252-4253714b4369?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1529408337252-4253714b4369?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-locks-a-door-with-a-key-32851-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-motion-sensor-for-a-smart-home-42207-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-smart-home-interface-on-a-tablet-42203-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-walking-and-looking-at-his-surroundings-at-dusk-4222-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=400&q=60' },
             ]
         }
     ];
@@ -1091,97 +1106,26 @@ const App: React.FC = () => {
             marginBottom: '15px',
             color: 'var(--text-highlight)',
         },
-        galleryGrid: {
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
-            gap: '10px',
-        },
-        galleryItem: {
+        galleryCarouselMain: {
             position: 'relative',
-            borderRadius: '8px',
+            width: '100%',
+            aspectRatio: '16 / 9',
+            borderRadius: '12px',
             overflow: 'hidden',
-            cursor: 'pointer',
-            aspectRatio: '1 / 1',
+            background: 'var(--card-bg)',
+            marginBottom: '15px',
         },
-        galleryItemImage: {
+        galleryCarouselMedia: {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            transition: 'transform 0.3s ease',
+            transition: 'opacity 0.3s ease-in-out',
         },
-        galleryItemOverlay: {
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.3)',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            opacity: 0,
-            transition: 'opacity 0.3s ease',
-        },
-        galleryItemPlayIcon: {
-            width: '32px',
-            height: '32px',
-            color: 'white',
-        },
-        galleryViewerOverlay: {
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'rgba(0, 0, 0, 0.85)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            zIndex: 2000,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '20px',
-        },
-        galleryViewerContent: {
-            position: 'relative',
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-        },
-        galleryViewerMedia: {
-            maxWidth: '90%',
-            maxHeight: '90%',
-            width: 'auto',
-            height: 'auto',
-            objectFit: 'contain',
-            borderRadius: '8px',
-        },
-        galleryViewerNavButton: {
+        galleryCarouselNavButton: {
             position: 'absolute',
             top: '50%',
             transform: 'translateY(-50%)',
-            background: 'rgba(255, 255, 255, 0.1)',
-            border: '1px solid var(--nav-button-border)',
-            color: 'var(--text-main)',
-            borderRadius: '50%',
-            width: '44px',
-            height: '44px',
-            cursor: 'pointer',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            fontSize: '1.8rem',
-            transition: 'background-color 0.3s ease',
-            backdropFilter: 'blur(5px)',
-            zIndex: 10,
-        },
-        galleryViewerCloseButton: {
-            position: 'absolute',
-            top: '20px',
-            right: '20px',
-            background: 'rgba(255, 255, 255, 0.1)',
+            background: 'rgba(0, 0, 0, 0.3)',
             border: '1px solid var(--nav-button-border)',
             color: 'var(--text-main)',
             borderRadius: '50%',
@@ -1193,19 +1137,49 @@ const App: React.FC = () => {
             alignItems: 'center',
             fontSize: '1.5rem',
             lineHeight: 1,
-            transition: 'background-color 0.3s ease',
+            transition: 'background-color 0.3s ease, transform 0.2s ease',
+            backdropFilter: 'blur(5px)',
             zIndex: 10,
         },
-        galleryViewerCounter: {
+        galleryThumbnailsContainer: {
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '10px',
+            flexWrap: 'wrap',
+        },
+        galleryThumbnail: {
+            width: '80px',
+            height: '60px',
+            borderRadius: '8px',
+            overflow: 'hidden',
+            cursor: 'pointer',
+            border: '2px solid transparent',
+            transition: 'border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease',
+            opacity: 0.6,
+            position: 'relative'
+        },
+        galleryThumbnailImage: {
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+        },
+        galleryThumbnailActive: {
+            borderColor: 'var(--accent-color)',
+            opacity: 1,
+            transform: 'scale(1.05)',
+        },
+        galleryItemPlayIcon: {
             position: 'absolute',
-            bottom: '20px',
+            top: '50%',
             left: '50%',
-            transform: 'translateX(-50%)',
-            background: 'rgba(0, 0, 0, 0.5)',
+            transform: 'translate(-50%, -50%)',
+            width: '24px',
+            height: '24px',
             color: 'white',
-            padding: '5px 15px',
-            borderRadius: '16px',
-            fontSize: '0.8rem',
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            borderRadius: '50%',
+            padding: '4px',
+            pointerEvents: 'none',
         },
         productSectionContainer: {
             marginTop: '30px',
@@ -1646,69 +1620,62 @@ const App: React.FC = () => {
                             <h2 style={styles.modalTitle}>{selectedProject.title}</h2>
                             <div className="project-details-content" dangerouslySetInnerHTML={{ __html: selectedProject.details }} />
                             
-                            <div style={styles.gallerySectionContainer}>
-                                <h3 style={styles.gallerySectionTitle}>Galería del Proyecto</h3>
-                                <div style={styles.galleryGrid}>
-                                    {selectedProject.gallery.map((item, index) => (
-                                        <div 
-                                            key={index} 
-                                            style={styles.galleryItem}
-                                            onClick={() => setGalleryViewer({ items: selectedProject.gallery, startIndex: index })}
-                                            onMouseEnter={(e) => {
-                                                const img = e.currentTarget.querySelector('img');
-                                                if (img) img.style.transform = 'scale(1.1)';
-                                                const overlay = e.currentTarget.querySelector('div[data-overlay]');
-                                                if (overlay) (overlay as HTMLDivElement).style.opacity = '1';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                const img = e.currentTarget.querySelector('img');
-                                                if (img) img.style.transform = 'scale(1)';
-                                                const overlay = e.currentTarget.querySelector('div[data-overlay]');
-                                                if (overlay) (overlay as HTMLDivElement).style.opacity = '0';
-                                            }}
-                                        >
-                                            <img src={item.thumbnail} alt={`Galería ${selectedProject.title} ${index + 1}`} style={styles.galleryItemImage} />
-                                            {item.type === 'video' && (
-                                                <div data-overlay style={{...styles.galleryItemOverlay, opacity: 0}}>
+                            {selectedProject.gallery && selectedProject.gallery.length > 0 && (
+                                <div style={styles.gallerySectionContainer}>
+                                    <h3 style={styles.gallerySectionTitle}>Galería del Proyecto</h3>
+                                    
+                                    <div style={styles.galleryCarouselMain}>
+                                        {selectedProject.gallery[galleryIndex].type === 'video' ? (
+                                            <video 
+                                                key={selectedProject.gallery[galleryIndex].src}
+                                                src={selectedProject.gallery[galleryIndex].src} 
+                                                style={styles.galleryCarouselMedia} 
+                                                autoPlay 
+                                                loop 
+                                                muted 
+                                                playsInline
+                                                controls
+                                            />
+                                        ) : (
+                                            <img 
+                                                key={selectedProject.gallery[galleryIndex].src}
+                                                src={selectedProject.gallery[galleryIndex].src} 
+                                                alt={`Galería ${selectedProject.title} ${galleryIndex + 1}`} 
+                                                style={styles.galleryCarouselMedia} 
+                                            />
+                                        )}
+                                        <button 
+                                            style={{...styles.galleryCarouselNavButton, left: '15px'}}
+                                            onClick={(e) => { e.stopPropagation(); handleProjectGalleryNav('prev'); }} 
+                                            aria-label="Anterior"
+                                            className="slider-nav-button"
+                                        >‹</button>
+                                        <button 
+                                            style={{...styles.galleryCarouselNavButton, right: '15px'}}
+                                            onClick={(e) => { e.stopPropagation(); handleProjectGalleryNav('next'); }} 
+                                            aria-label="Siguiente"
+                                            className="slider-nav-button"
+                                        >›</button>
+                                    </div>
+
+                                    <div style={styles.galleryThumbnailsContainer}>
+                                        {selectedProject.gallery.map((item, index) => (
+                                            <div
+                                                key={index}
+                                                style={index === galleryIndex ? {...styles.galleryThumbnail, ...styles.galleryThumbnailActive} : styles.galleryThumbnail}
+                                                onClick={() => setGalleryIndex(index)}
+                                            >
+                                                <img src={item.thumbnail} alt={`Thumbnail ${index + 1}`} style={styles.galleryThumbnailImage} />
+                                                {item.type === 'video' && (
                                                     <IconPlay style={styles.galleryItemPlayIcon} />
-                                                </div>
-                                            )}
-                                        </div>
-                                    ))}
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
                     </div>
-                </div>
-            )}
-
-            {galleryViewer && (
-                <div style={styles.galleryViewerOverlay} className="gallery-viewer-overlay" onClick={() => setGalleryViewer(null)}>
-                     <button 
-                        style={{...styles.galleryViewerCloseButton, ...{':hover': {backgroundColor: 'rgba(255, 255, 255, 0.2)'}}}}
-                        onClick={(e) => { e.stopPropagation(); setGalleryViewer(null); }} 
-                        aria-label="Cerrar galería">&times;</button>
-
-                    <button 
-                        style={{...styles.galleryViewerNavButton, left: isMobile ? '5px' : '30px'}}
-                        onClick={(e) => { e.stopPropagation(); handleGalleryNav('prev'); }} 
-                        aria-label="Anterior">‹</button>
-
-                    <div style={styles.galleryViewerContent} onClick={(e) => e.stopPropagation()}>
-                        {galleryViewer.items[galleryViewer.startIndex].type === 'image' ? (
-                            <img src={galleryViewer.items[galleryViewer.startIndex].src} style={styles.galleryViewerMedia} alt=""/>
-                        ) : (
-                            <video src={galleryViewer.items[galleryViewer.startIndex].src} style={styles.galleryViewerMedia} controls autoPlay loop/>
-                        )}
-                    </div>
-                     <div style={styles.galleryViewerCounter}>
-                        {galleryViewer.startIndex + 1} / {galleryViewer.items.length}
-                    </div>
-
-                    <button 
-                        style={{...styles.galleryViewerNavButton, right: isMobile ? '5px' : '30px'}} 
-                        onClick={(e) => { e.stopPropagation(); handleGalleryNav('next'); }}
-                        aria-label="Siguiente">›</button>
                 </div>
             )}
 
