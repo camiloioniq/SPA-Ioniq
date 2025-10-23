@@ -218,8 +218,8 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-thermostat-close-up-39829-large.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://github.com/camiloioniq/SPA-Ioniq/blob/main/assets/videos/Tarjeta%20Climatizacion/freepik__a-closeup-of-a-sleek-thermostat-displaying-72-degr__91730.mp4', mediaType: 'video' },
-            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://github.com/camiloioniq/SPA-Ioniq/blob/main/assets/videos/Tarjeta%20Climatizacion/16e70a37-6ad8-4db7-b26e-0222c92d0209.mp4', mediaType: 'video' },
+            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video1.mp4', mediaType: 'video' },
+            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video2.mp4', mediaType: 'video' },
             { name: 'Sensores de Temperatura', description: 'Asegura una temperatura precisa y homogénea en cada habitación de tu hogar.', media: 'https://assets.mixkit.co/videos/preview/mixkit-smart-home-app-showing-temperatures-42205-large.mp4', mediaType: 'video' },
         ]
     },
