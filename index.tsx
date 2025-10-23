@@ -200,7 +200,7 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#6366F1' : '#FACC15',
         modalTitle: 'Control Lumínico Total',
         modalDescription: 'Desde la calidez de una cena romántica hasta la energía de una mañana productiva, ajusta la intensidad y el color de cada luz. Crea escenas personalizadas que se activan con tu voz, un toque en la app o automáticamente según la hora del día.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/videoinicial.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/Videobanner.mp4',
         modalMediaType: 'video',
         products: [
             { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/Video1.mp4', mediaType: 'video' },
