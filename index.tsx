@@ -200,12 +200,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#6366F1' : '#FACC15',
         modalTitle: 'Control Lumínico Total',
         modalDescription: 'Desde la calidez de una cena romántica hasta la energía de una mañana productiva, ajusta la intensidad y el color de cada luz. Crea escenas personalizadas que se activan con tu voz, un toque en la app o automáticamente según la hora del día.',
-        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-a-smart-home-system-with-a-draw-of-a-house-4231-large.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/videoinicial.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://github.com/camiloioniq/SPA-Ioniq/blob/main/assets/videos/Tarjeta%20De%20Iluminacion/freepik__the-video-begins-with-the-led-strips-off-then-they__91732.mp4', mediaType: 'video' },
-            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://github.com/camiloioniq/SPA-Ioniq/blob/main/assets/videos/Tarjeta%20De%20Iluminacion/freepik__closeup-shot-of-a-hand-gently-pressing-a-sleek-mod__91734.mp4', mediaType: 'video' },
-            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/freepik__a-cinematic-closeup-of-a-hand-reaching-for-a-smart__91733.mp4', mediaType: 'video' },
+            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/Video1.mp4', mediaType: 'video' },
+            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/Video2.mp4', mediaType: 'video' },
+            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/Video3.mp4', mediaType: 'video' },
         ]
     },
     { 
