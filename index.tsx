@@ -1205,7 +1205,7 @@ const App: React.FC = () => {
         },
         productImage: {
             width: '100%',
-            height: '100px',
+            height: 'auto',
             objectFit: 'cover',
         },
         productCardContent: {
