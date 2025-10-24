@@ -200,12 +200,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#6366F1' : '#FACC15',
         modalTitle: 'Control Lumínico Total',
         modalDescription: 'Desde la calidez de una cena romántica hasta la energía de una mañana productiva, ajusta la intensidad y el color de cada luz. Crea escenas personalizadas que se activan con tu voz, un toque en la app o automáticamente según la hora del día.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/Videobanner.mp4',
+        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-a-smart-home-system-with-a-draw-of-a-house-4231-large.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/Video1.mp4', mediaType: 'video' },
-            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/Video2.mp4', mediaType: 'video' },
-            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20De%20Iluminacion/Video3.mp4', mediaType: 'video' },
+            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://assets.mixkit.co/videos/preview/mixkit-led-lights-on-a-gaming-keyboard-23188-large.mp4', mediaType: 'video' },
+            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://assets.mixkit.co/videos/preview/mixkit-man-pushing-a-button-with-his-finger-32868-large.mp4', mediaType: 'video' },
+            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-hanging-light-bulb-in-a-dark-room-4376-large.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -215,11 +215,11 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#3B82F6' : '#38BDF8',
         modalTitle: 'Confort Climático Inteligente',
         modalDescription: 'Nuestro sistema aprende tus preferencias y se anticipa a tus necesidades. Geofencing activa el clima ideal antes de que llegues a casa y los sensores optimizan el consumo energético, garantizando confort absoluto con máxima eficiencia.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Videobanner2.mp4',
+        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-thermostat-close-up-39829-large.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video1.mp4', mediaType: 'video' },
-            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video2.mp4', mediaType: 'video' },
+            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://assets.mixkit.co/videos/preview/mixkit-woman-regulating-the-temperature-of-her-thermostat-39830-large.mp4', mediaType: 'video' },
+            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://assets.mixkit.co/videos/preview/mixkit-woman-using-her-phone-to-control-smart-home-devices-42202-large.mp4', mediaType: 'video' },
             { name: 'Sensores de Temperatura', description: 'Asegura una temperatura precisa y homogénea en cada habitación de tu hogar.', media: 'https://assets.mixkit.co/videos/preview/mixkit-smart-home-app-showing-temperatures-42205-large.mp4', mediaType: 'video' },
         ]
     },
@@ -819,8 +819,8 @@ const App: React.FC = () => {
             right: 0,
             bottom: 0,
             background: 'rgba(10, 10, 10, 0.98)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
             zIndex: 200,
             display: 'flex',
             flexDirection: 'column',
@@ -1205,7 +1205,7 @@ const App: React.FC = () => {
         },
         productImage: {
             width: '100%',
-            height: '130px',
+            height: '100px',
             objectFit: 'cover',
         },
         productCardContent: {
@@ -1350,7 +1350,7 @@ const App: React.FC = () => {
                 </header>
                 
                 {isMobile && isMenuOpen && (
-                    <div style={{...styles.mobileMenuContainer, background: theme === 'night' ? 'rgba(10, 10, 10, 0.98)' : 'rgba(255, 250, 245, 0.98)'}}>
+                    <div style={{...styles.mobileMenuContainer, background: theme === 'night' ? 'rgba(10, 10, 10, 0.8)' : 'rgba(255, 250, 245, 0.8)'}}>
                         <div style={styles.mobileMenuHeader}>
                             <button
                                 onClick={toggleTheme}
@@ -1697,9 +1697,31 @@ const App: React.FC = () => {
                                     <h3 style={styles.productSectionTitle}>Productos de Ejemplo</h3>
                                     <div style={styles.productGrid}>
                                         {selectedFeature.products.map((product, index) => (
-                                            <div key={index} style={styles.productCard}>
+                                            <div 
+                                                key={index} 
+                                                style={styles.productCard}
+                                                className="product-card"
+                                                onMouseEnter={!isMobile ? (e) => {
+                                                    const video = e.currentTarget.querySelector('video');
+                                                    if (video) video.play().catch(error => console.log("Video play was prevented:", error));
+                                                } : undefined}
+                                                onMouseLeave={!isMobile ? (e) => {
+                                                    const video = e.currentTarget.querySelector('video');
+                                                    if (video) {
+                                                        video.pause();
+                                                        video.currentTime = 0;
+                                                    }
+                                                } : undefined}
+                                            >
                                                 {product.mediaType === 'video' ? (
-                                                    <video src={product.media} style={styles.productImage} autoPlay loop muted playsInline />
+                                                    <video 
+                                                        src={product.media} 
+                                                        style={styles.productImage} 
+                                                        autoPlay={isMobile}
+                                                        loop={isMobile}
+                                                        muted 
+                                                        playsInline 
+                                                    />
                                                 ) : (
                                                     <img src={product.media} alt={product.name} style={styles.productImage} />
                                                 )}
