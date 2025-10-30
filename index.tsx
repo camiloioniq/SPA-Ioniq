@@ -1297,7 +1297,7 @@ const App: React.FC = () => {
         {
             title: 'Apartamento "Mónaco"',
             description: 'Integración completa de iluminación, climatización y seguridad, controlada desde una interfaz única desarrollada por ioniq.',
-            media: 'https://assets.mixkit.co/videos/preview/mixkit-empty-room-of-a-luxurious-house-4663-large.mp4',
+            media: 'https://spa-ioniq.vercel.app/videos/Contenido%20Monaco/Monaco%20.mp4',
             mediaType: 'video',
             features: ['Iluminación', 'Climatización', 'Seguridad'],
             details: `
@@ -1309,7 +1309,7 @@ const App: React.FC = () => {
                 <p>El resultado es una vivienda autosuficiente y funcional que responde de manera natural a las necesidades diarias. Escenas preconfiguradas permiten ajustar iluminación, temperatura o seguridad con un solo toque, ofreciendo confort, eficiencia y tranquilidad. La integración AIIOT eleva la experiencia, logrando que la tecnología se sienta orgánica, elegante y siempre accesible.</p>
             `,
             gallery: [
-                { type: 'video', src: 'https://spa-ioniq.vercel.app/videos/Contenido%20Monaco/Monaco%20.mp4', thumbnail: 'https://images.unsplash.com/photo-1618221195710-86c98fa1997a?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://spa-ioniq.vercel.app/videos/Contenido%20Monaco/Monaco%20.mp4', thumbnail: 'https://spa-ioniq.vercel.app/videos/Contenido%20Monaco/Banner.png' },
             ]
         },
         {
