@@ -229,12 +229,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#6366F1' : '#FACC15',
         modalTitle: 'Control Lumínico Total',
         modalDescription: 'Desde la calidez de una cena romántica hasta la energía de una mañana productiva, ajusta la intensidad y el color de cada luz. Crea escenas personalizadas que se activan con tu voz, un toque en la app o automáticamente según la hora del día.',
-        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-a-smart-home-system-with-a-draw-of-a-house-4231-large.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Videobanner.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://assets.mixkit.co/videos/preview/mixkit-led-lights-on-a-gaming-keyboard-23188-large.mp4', mediaType: 'video' },
-            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://assets.mixkit.co/videos/preview/mixkit-man-pushing-a-button-with-his-finger-32868-large.mp4', mediaType: 'video' },
-            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-hanging-light-bulb-in-a-dark-room-4376-large.mp4', mediaType: 'video' },
+            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Video1.mp4', mediaType: 'video' },
+            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Video2.mp4', mediaType: 'video' },
+            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Video3.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -244,12 +244,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#3B82F6' : '#38BDF8',
         modalTitle: 'Confort Climático Inteligente',
         modalDescription: 'Nuestro sistema aprende tus preferencias y se anticipa a tus necesidades. Geofencing activa el clima ideal antes de que llegues a casa y los sensores optimizan el consumo energético, garantizando confort absoluto con máxima eficiencia.',
-        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-thermostat-close-up-39829-large.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Videobanner1.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://assets.mixkit.co/videos/preview/mixkit-woman-regulating-the-temperature-of-her-thermostat-39830-large.mp4', mediaType: 'video' },
-            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://assets.mixkit.co/videos/preview/mixkit-woman-using-her-phone-to-control-smart-home-devices-42202-large.mp4', mediaType: 'video' },
-            { name: 'Sensores de Temperatura', description: 'Asegura una temperatura precisa y homogénea en cada habitación de tu hogar.', media: 'https://assets.mixkit.co/videos/preview/mixkit-smart-home-app-showing-temperatures-42205-large.mp4', mediaType: 'video' },
+            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video1.mp4', mediaType: 'video' },
+            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video2.mp4', mediaType: 'video' },
+            { name: 'Sensores de Temperatura', description: 'Asegura una temperatura precisa y homogénea en cada habitación de tu hogar.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video3.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -259,12 +259,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#EC4899' : '#F43F5E',
         modalTitle: 'Cine en Casa, Sonido Envolvente',
         modalDescription: 'Crea el ambiente perfecto para cada ocasión con un solo toque. Con nuestras escenas automáticas, tu salón se transforma en una sala de cine o un estadio para ver el partido. Las luces, el sonido y las persianas se ajustan al instante para una experiencia totalmente inmersiva.',
-        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-modern-living-room-with-a-big-screen-4235-large.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Entretenimiento/Videobanner.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Escenas Automáticas', description: 'El cerebro de tus escenas automáticas. Activa el "Modo Cine" y las luces bajarán al instante, o el "Modo Fútbol" para sincronizar el partido en las pantallas de donde te encuentres en tu hogar en perfecto 4K.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-is-controlling-the-lights-of-his-house-with-his-42208-large.mp4', mediaType: 'video' },
-            { name: 'Altavoces Arquitectónicos', description: 'Sonido de alta fidelidad que se integra perfectamente en paredes y techos, desapareciendo visualmente.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-big-speaker-of-a-sound-system-playing-music-4375-large.mp4', mediaType: 'video' },
-            { name: 'Control Remoto Universal', description: 'Un solo mando para gobernarlos a todos. Controla tu TV, sistema de sonido, luces y más.', media: 'https://assets.mixkit.co/videos/preview/mixkit-hand-pressing-the-buttons-of-a-remote-control-33205-large.mp4', mediaType: 'video' },
+            { name: 'Escenas Automáticas', description: 'El cerebro de tus escenas automáticas. Activa el "Modo Cine" y las luces bajarán al instante, o el "Modo Fútbol" para sincronizar el partido en las pantallas de donde te encuentres en tu hogar en perfecto 4K.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Entretenimiento/Video1.mp4', mediaType: 'video' },
+            { name: 'Altavoces Arquitectónicos', description: 'Sonido de alta fidelidad que se integra perfectamente en paredes y techos, desapareciendo visualmente.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Entretenimiento/Video2.mp4', mediaType: 'video' },
+            { name: 'Control Remoto Universal', description: 'Un solo mando para gobernarlos a todos. Controla tu TV, sistema de sonido, luces y más.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Entretenimiento/Video3.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -274,12 +274,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#8B5CF6' : '#4F46E5',
         modalTitle: 'Tranquilidad, Donde Quiera Que Estés',
         modalDescription: 'Vigila tu hogar con cámaras de alta definición, recibe alertas de movimiento en tiempo real y controla accesos de forma remota. Simula presencia cuando estás fuera y duerme tranquilo sabiendo que tu hogar está protegido 24/7.',
-        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-cctv-camera-on-a-building-3269-large.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Seguridad/Videobanner.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Cámaras IP con IA', description: 'Reconocimiento inteligente de personas, vehículos y paquetes para evitar falsas alarmas.', media: 'https://assets.mixkit.co/videos/preview/mixkit-security-camera-in-a-crosswalk-2946-large.mp4', mediaType: 'video' },
-            { name: 'Cerradura Inteligente', description: 'Acceso sin llaves mediante código, huella dactilar o tu móvil. Otorga accesos temporales a distancia.', media: 'https://assets.mixkit.co/videos/preview/mixkit-man-unlocking-a-door-with-a-key-card-2942-large.mp4', mediaType: 'video' },
-            { name: 'Sensores de Apertura', description: 'Recibe alertas instantáneas en tu móvil si una puerta o ventana se abre inesperadamente.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-entering-a-house-by-opening-the-door-32845-large.mp4', mediaType: 'video' },
+            { name: 'Cámaras IP con IA', description: 'Reconocimiento inteligente de personas, vehículos y paquetes para evitar falsas alarmas.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Seguridad/Video1.mp4', mediaType: 'video' },
+            { name: 'Cerradura Inteligente', description: 'Acceso sin llaves mediante código, huella dactilar o tu móvil. Otorga accesos temporales a distancia.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Seguridad/Video2.mp4', mediaType: 'video' },
+            { name: 'Sensores de Apertura', description: 'Recibe alertas instantáneas en tu móvil si una puerta o ventana se abre inesperadamente.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Seguridad/Video3.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -289,12 +289,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#10B981' : '#4ADE80',
         modalTitle: 'Hogar Sostenible, Ahorro Inteligente',
         modalDescription: 'Monitorea tu consumo en tiempo real y deja que el sistema tome decisiones inteligentes. Apaga luces olvidadas, ajusta el termostato y optimiza el uso de electrodomésticos. Reduce tu huella de carbono y tu factura eléctrica sin esfuerzo.',
-        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-dashboard-with-graphs-and-numbers-32982-large.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Consumo/Videobanner.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Medidor de Consumo', description: 'Monitorea el gasto energético de toda tu casa o de circuitos individuales en tiempo real.', media: 'https://assets.mixkit.co/videos/preview/mixkit-electric-meter-of-a-house-39828-large.mp4', mediaType: 'video' },
-            { name: 'Enchufes Inteligentes', description: 'Controla y programa el encendido/apagado de cualquier electrodoméstico desde tu móvil.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-disconnects-a-white-plug-26488-large.mp4', mediaType: 'video' },
-            { name: 'Controlador de Cargas', description: 'Gestiona dispositivos de alto consumo, como calentadores, para que funcionen en horas de menor coste energético.', media: 'https://assets.mixkit.co/videos/preview/mixkit-technician-checking-a-breaker-box-39833-large.mp4', mediaType: 'video' },
+            { name: 'Medidor de Consumo', description: 'Monitorea el gasto energético de toda tu casa o de circuitos individuales en tiempo real.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Consumo/Video1.mp4', mediaType: 'video' },
+            { name: 'Enchufes Inteligentes', description: 'Controla y programa el encendido/apagado de cualquier electrodoméstico desde tu móvil.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Consumo/Video2.mp4', mediaType: 'video' },
+            { name: 'Controlador de Cargas', description: 'Gestiona dispositivos de alto consumo, como calentadores, para que funcionen en horas de menor coste energético.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Consumo/Video3.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -304,12 +304,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#D946EF' : '#C084FC',
         modalTitle: 'Tu Voz es el Mando',
         modalDescription: 'Integramos los principales asistentes de voz para un control manos libres total. Desde apagar todas las luces al acostarte hasta pedir tu playlist favorita, tu hogar obedece tus palabras. Y con nuestra app, el control viaja contigo a cualquier parte del mundo.',
-        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-girl-giving-a-command-to-a-virtual-assistant-40149-large.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Voz/Videobanner.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Hub de Automatización', description: 'El cerebro que unifica todos los dispositivos de diferentes marcas en un solo ecosistema cohesivo.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-computer-server-with-dozens-of-blinking-lights-32988-large.mp4', mediaType: 'video' },
-            { name: 'Asistente de Voz', description: 'Integración nativa con Amazon Alexa, Google Assistant y Apple HomeKit para un control por voz natural.', media: 'https://assets.mixkit.co/videos/preview/mixkit-smart-speaker-and-a-small-plant-32873-large.mp4', mediaType: 'video' },
-            { name: 'Interfaz Móvil Propia', description: 'Una app diseñada por y para ti, con la distribución y los controles que realmente necesitas.', media: 'https://assets.mixkit.co/videos/preview/mixkit-hand-of-a-man-using-a-smartphone-at-night-34489-large.mp4', mediaType: 'video' },
+            { name: 'Hub de Automatización', description: 'El cerebro que unifica todos los dispositivos de diferentes marcas en un solo ecosistema cohesivo.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Voz/Video1.mp4', mediaType: 'video' },
+            { name: 'Asistente de Voz', description: 'Integración nativa con Amazon Alexa, Google Assistant y Apple HomeKit para un control por voz natural.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Voz/Video2.mp4', mediaType: 'video' },
+            { name: 'Interfaz Móvil Propia', description: 'Una app diseñada por y para ti, con la distribución y los controles que realmente necesitas.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Voz/Video3.mp4', mediaType: 'video' },
         ]
     },
 ];
@@ -1309,7 +1309,7 @@ const App: React.FC = () => {
                 <p>El resultado es una vivienda autosuficiente y funcional que responde de manera natural a las necesidades diarias. Escenas preconfiguradas permiten ajustar iluminación, temperatura o seguridad con un solo toque, ofreciendo confort, eficiencia y tranquilidad. La integración AIIOT eleva la experiencia, logrando que la tecnología se sienta orgánica, elegante y siempre accesible.</p>
             `,
             gallery: [
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-is-controlling-the-lights-of-his-house-with-his-42208-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1618221195710-86c98fa1997a?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://spa-ioniq.vercel.app/videos/Contenido%20Monaco/Monaco%20.mp4', thumbnail: 'https://images.unsplash.com/photo-1618221195710-86c98fa1997a?auto=format&fit=crop&w=400&q=60' },
             ]
         },
         {
