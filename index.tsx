@@ -2092,7 +2092,7 @@ const App: React.FC = () => {
                                 <div style={styles.catalogModalHeader}>
                                     <h2 style={{...styles.modalTitle, marginBottom: 0}}>Categorías</h2>
                                 </div>
-                                <div className="modal-scroll-area" style={{flex: 1, minHeight: 0}}>
+                                <div className="modal-scroll-area" style={{flex: 1, minHeight: 0, overflowY: 'auto'}}>
                                     <div style={styles.categoryGrid}>
                                         {catalogData.map((category) => (
                                             <div 
@@ -2114,7 +2114,7 @@ const App: React.FC = () => {
                                     <button style={styles.catalogBackButton} className="catalog-back-button" onClick={() => setSelectedCatalogCategory(null)} aria-label="Volver a categorías">‹</button>
                                     <h2 style={styles.catalogModalTitle}>{selectedCatalogCategory.name}</h2>
                                 </div>
-                                 <div className="modal-scroll-area" style={{flex: 1, minHeight: 0}}>
+                                 <div className="modal-scroll-area" style={{flex: 1, minHeight: 0, overflowY: 'auto'}}>
                                      <div style={styles.catalogProductGrid}>
                                         {selectedCatalogCategory.products.map((product) => (
                                             <div key={product.name} style={styles.catalogProductCard} className="catalog-product-card">
