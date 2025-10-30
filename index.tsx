@@ -318,10 +318,9 @@ const catalogData: CatalogCategory[] = [
     { name: 'Control Central y Red', icon: <IconHub style={{width: 32, height: 32}}/>, products: [
         { name: 'Asistentes de Voz', description: 'Controla tu hogar con comandos de voz.', image: 'https://images.unsplash.com/photo-1518452695943-c269113540a3?w=400&q=80' },
         { name: 'Hubs/Bridges', description: 'Unifica dispositivos de diferentes protocolos.', image: 'https://images.unsplash.com/photo-16178022813-559145610634?w=400&q=80' },
-        { name: 'Controladores Domóticos', description: 'El cerebro avanzado para automatizaciones complejas.', image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80' },
+        { name: 'Controladores Domóticos', description: 'El cerebro avanzado para automatizaciones complexas.', image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80' },
         { name: 'Control Remoto Universal', description: 'Un solo mando para todos tus aparatos.', image: 'https://images.unsplash.com/photo-1601944177324-f23675a2f582?w=400&q=80' },
         { name: 'Routers Wi-Fi Mesh', description: 'Cobertura Wi-Fi total y estable en todo tu hogar.', image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80' },
-        { name: 'Servidores NAS', description: 'Almacenamiento seguro para tus cámaras de seguridad.', image: 'https://images.unsplash.com/photo-1593432333979-33d32b516802?w=400&q=80' },
     ]},
     { name: 'Electricidad y Energía', icon: <IconPlug style={{width: 32, height: 32}}/>, products: [
         { name: 'Interruptores Inteligentes', description: 'Moderniza tus luces sin cambiar las bombillas.', image: 'https://images.unsplash.com/photo-1617805104922-a6f6348b6c43?w=400&q=80' },
@@ -1341,7 +1340,7 @@ const App: React.FC = () => {
         },
         {
             title: 'Condominio "Nogales"',
-            description: 'Sistema de iluminación inteligente, seguridad avanzada con reconocimiento de placas y conectividad mesh en una residencia de gran extensión.',
+            description: 'Sistema de iluminación inteligente, seguridad avanzada com reconhecimento de placas y conectividad mesh en una residencia de gran extensión.',
             media: 'https://assets.mixkit.co/videos/preview/mixkit-modern-house-with-a-swimming-pool-4238-large.mp4',
             mediaType: 'video',
             features: ['Iluminación LED', 'Seguridad Avanzada', 'Red Mesh'],
@@ -1349,7 +1348,7 @@ const App: React.FC = () => {
                 <h2>El Desafío: Estética y Conectividad sin Límites</h2>
                 <p>El Condominio “Nogales” representó un reto de diseño y tecnología a gran escala. El objetivo fue crear un entorno estéticamente armonioso que integrara iluminación, seguridad y confort sin comprometer el estilo de los espacios. Además, por tratarse de una residencia de gran extensión, el principal desafío fue garantizar una conectividad estable y fluida entre todos los dispositivos inteligentes.</p>
                 <h2>Nuestra Solución: Un Ecosistema Luminoso e Inteligente</h2>
-                <p>Implementamos un sistema de tiras LED controladas por voz y aplicación móvil, brindando una iluminación ambiental dinámica y elegante. Se añadieron sensores de puertas y ventanas, múltiples cámaras de seguridad y uno de nuestros desarrollos propios: la automatización de la puerta de ingreso con reconocimiento de placas. También se integraron paneles de smart glass y sensores estratégicos para mejorar la experiencia y la eficiencia del hogar.<br>Para enfrentar los retos de comunicación, se propuso una red mesh personalizada que optimiza la conectividad y permite la integración de nuevos dispositivos sin saturar la red principal.</p>
+                <p>Implementamos un sistema de tiras LED controladas por voz y aplicación móvil, brindando una iluminación ambiental dinámica y elegante. Se añadieron sensores de puertas y ventanas, múltiples cámaras de seguridad y uno de nuestros desarrollos propios: la automatización de la puerta de ingreso com reconhecimento de placas. También se integraron paneles de smart glass y sensores estratégicos para mejorar la experiencia y la eficiencia del hogar.<br>Para enfrentar los retos de comunicación, se propuso una red mesh personalizada que optimiza la conectividad y permite la integración de nuevos dispositivos sin saturar la red principal.</p>
                 <h2>Resultado: Un Condominio que Evoluciona</h2>
                 <p>El resultado es un hogar inteligente, escalable y visualmente impactante. Su sistema central coordina iluminación, seguridad y acceso, mientras se prepara para incorporar futuras funciones como persianas automáticas y sensores láser perimetrales. Nogales demuestra que la domótica puede combinar tecnología avanzada, diseño y confort en perfecta armonía.</p>
             `,
@@ -1372,7 +1371,7 @@ const App: React.FC = () => {
                 <h2>El Desafío: Seguridad y Autonomía Total</h2>
                 <p>La Residencia “Escobar” fue un proyecto donde el cliente nos otorgó total libertad para diseñar un sistema integral que combinara seguridad, confort y tecnología avanzada. El reto principal fue crear un entorno completamente conectado que ofreciera protección total sin perder la elegancia del hogar.</p>
                 <h2>Nuestra Solución: Un Hogar que se Protege y se Adapta</h2>
-                <p>Diseñamos un sistema de seguridad completo con cámaras interiores y exteriores, junto con un sistema automatizado de apertura de puertas que integra sensores y cámaras de reconocimiento para identificar visitantes en tiempo real. Además, incorporamos paneles smart glass para garantizar privacidad en la habitación principal y una red de switches inteligentes que permiten controlar la iluminación y demás dispositivos desde un único entorno digital. Todo fue integrado bajo un ecosistema AIIOT, lo que permite la creación de escenas inteligentes que automatizan actividades diarias según las rutinas de los habitantes.</p>
+                <p>Diseñamos un sistema de seguridad completo con cámaras interiores y exteriores, junto con un sistema automatizado de apertura de puertas que integra sensores y cámaras de reconhecimento para identificar visitantes en tiempo real. Además, incorporamos paneles smart glass para garantizar privacidad en la habitación principal y una red de switches inteligentes que permiten controlar la iluminación y demás dispositivos desde un único entorno digital. Todo fue integrado bajo un ecosistema AIIOT, lo que permite la creación de escenas inteligentes que automatizan actividades diarias según las rutinas de los habitantes.</p>
                 <h2>Resultado: Un Espacio Inteligente y Consciente</h2>
                 <p>El resultado es una vivienda con un nivel de seguridad y autonomía excepcionales. Cada dispositivo trabaja de forma coordinada, anticipándose a las necesidades del usuario. Escenas inteligentes gestionan la iluminación, la privacidad y el acceso, convirtiendo la tecnología en un asistente silencioso que protege, automatiza y optimiza el día a día del hogar.</p>
             `,
