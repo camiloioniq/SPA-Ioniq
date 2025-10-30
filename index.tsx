@@ -1,3 +1,4 @@
+
 import React, { useState, CSSProperties, useRef, useEffect, useMemo } from 'react';
 import { createRoot } from 'react-dom/client';
 
@@ -106,6 +107,12 @@ const IconPlay: React.FC<{ style: CSSProperties }> = ({ style }) => (
     </svg>
 );
 
+const IconPause: React.FC<{ style: CSSProperties }> = ({ style }) => (
+    <svg style={style} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+    </svg>
+);
+
 const IconSun: React.FC<{ style?: CSSProperties }> = ({ style }) => (
     <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -118,6 +125,16 @@ const IconMoon: React.FC<{ style?: CSSProperties }> = ({ style }) => (
     </svg>
 );
 
+// Catalog Icons
+const IconHub: React.FC<{ style: CSSProperties }> = ({ style }) => <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3.75H19.5M8.25 3.75v16.5M8.25 3.75h-3.75c-.621 0-1.125.504-1.125 1.125v14.25c0 .621.504 1.125 1.125 1.125h3.75m0-16.5h11.25c.621 0 1.125.504 1.125 1.125v14.25c0 .621-.504 1.125-1.125 1.125H8.25m0-16.5v16.5m0 0H4.5m15 0h-15" /></svg>;
+const IconPlug: React.FC<{ style: CSSProperties }> = ({ style }) => <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" /></svg>;
+const IconLock: React.FC<{ style: CSSProperties }> = ({ style }) => <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>;
+const IconRadar: React.FC<{ style: CSSProperties }> = ({ style }) => <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639l4.418-2.209a1.012 1.012 0 011.123.083l4.093 3.509a1.011 1.011 0 001.217 0l4.093-3.509a1.012 1.012 0 011.123-.083l4.418 2.21a1.012 1.012 0 010 .638l-4.418 2.21a1.012 1.012 0 01-1.123-.082l-4.093-3.51a1.011 1.011 0 00-1.217 0l-4.093 3.509a1.012 1.012 0 01-1.123.083L2.036 12.322z" /></svg>;
+const IconThermometer: React.FC<{ style: CSSProperties }> = ({ style }) => <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /><path d="M12 12.75a.75.75 0 100-1.5.75.75 0 000 1.5z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" /></svg>;
+const IconRobot: React.FC<{ style: CSSProperties }> = ({ style }) => <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M7.5 7.5h-.75A2.25 2.25 0 004.5 9.75v7.5a2.25 2.25 0 002.25 2.25h7.5a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75m0-3l-3-3m0 0l-3 3m3-3v11.25m6.75 2.25h.75a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75" /></svg>;
+const IconAppliance: React.FC<{ style: CSSProperties }> = ({ style }) => <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5c0-.933.224-1.83.627-2.643a10.457 10.457 0 00-4.254 0c.403.813.627 1.71.627 2.643V21m4.5-3.75h-6a.375.375 0 01-.375-.375v-1.5c0-.207.168-.375.375-.375h6c.207 0 .375.168.375.375v1.5c0 .207-.168.375-.375.375z" /><path strokeLinecap="round" strokeLinejoin="round" d="M6 3h12M6 3v12a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 15V3" /></svg>;
+const IconSpeaker: React.FC<{ style: CSSProperties }> = ({ style }) => <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012 12c0-.83.112-1.633.322-2.396C2.556 8.756 3.379 8.25 4.26 8.25h2.49z" /></svg>;
+const IconLightbulb: React.FC<{ style: CSSProperties }> = ({ style }) => <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>;
 
 const GlowIcon: React.FC<{ children: React.ReactNode; color1: string; color2: string }> = ({ children, color1, color2 }) => (
     <div style={{
@@ -190,6 +207,18 @@ interface Service {
     modalDetails: string[];
 }
 
+interface CatalogProduct {
+    name: string;
+    description: string;
+    image: string;
+}
+
+interface CatalogCategory {
+    name: string;
+    icon: React.ReactNode;
+    products: CatalogProduct[];
+}
+
 type Theme = 'night' | 'day';
 
 const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
@@ -200,12 +229,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#6366F1' : '#FACC15',
         modalTitle: 'Control Lumínico Total',
         modalDescription: 'Desde la calidez de una cena romántica hasta la energía de una mañana productiva, ajusta la intensidad y el color de cada luz. Crea escenas personalizadas que se activan con tu voz, un toque en la app o automáticamente según la hora del día.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Videobanner.mp4',
+        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-a-smart-home-system-with-a-draw-of-a-house-4231-large.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Video1.mp4', mediaType: 'video' },
-            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Video2.mp4', mediaType: 'video' },
-            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Video3.mp4', mediaType: 'video' },
+            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://assets.mixkit.co/videos/preview/mixkit-led-lights-on-a-gaming-keyboard-23188-large.mp4', mediaType: 'video' },
+            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://assets.mixkit.co/videos/preview/mixkit-man-pushing-a-button-with-his-finger-32868-large.mp4', mediaType: 'video' },
+            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-hanging-light-bulb-in-a-dark-room-4376-large.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -215,12 +244,12 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color2: theme === 'night' ? '#3B82F6' : '#38BDF8',
         modalTitle: 'Confort Climático Inteligente',
         modalDescription: 'Nuestro sistema aprende tus preferencias y se anticipa a tus necesidades. Geofencing activa el clima ideal antes de que llegues a casa y los sensores optimizan el consumo energético, garantizando confort absoluto con máxima eficiencia.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Videobanner1.mp4',
+        modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-thermostat-close-up-39829-large.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video1.mp4', mediaType: 'video' },
-            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video2.mp4', mediaType: 'video' },
-            { name: 'Sensores de Temperatura', description: 'Asegura una temperatura precisa y homogénea en cada habitación de tu hogar.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video3.mp4', mediaType: 'video' },
+            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://assets.mixkit.co/videos/preview/mixkit-woman-regulating-the-temperature-of-her-thermostat-39830-large.mp4', mediaType: 'video' },
+            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://assets.mixkit.co/videos/preview/mixkit-woman-using-her-phone-to-control-smart-home-devices-42202-large.mp4', mediaType: 'video' },
+            { name: 'Sensores de Temperatura', description: 'Asegura una temperatura precisa y homogénea en cada habitación de tu hogar.', media: 'https://assets.mixkit.co/videos/preview/mixkit-smart-home-app-showing-temperatures-42205-large.mp4', mediaType: 'video' },
         ]
     },
     { 
@@ -229,11 +258,11 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
         color1: theme === 'night' ? 'rgba(236, 72, 153, 0.4)' : 'rgba(244, 63, 94, 0.4)',
         color2: theme === 'night' ? '#EC4899' : '#F43F5E',
         modalTitle: 'Cine en Casa, Sonido Envolvente',
-        modalDescription: 'Distribuye audio y video 4K a cualquier habitación. Inicia tu película favorita en el salón y termínala en tu dormitorio sin interrupciones. Calibramos cada sistema para una acústica perfecta, creando una experiencia verdaderamente inmersiva.',
+        modalDescription: 'Crea el ambiente perfecto para cada ocasión con un solo toque. Con nuestras escenas automáticas, tu salón se transforma en una sala de cine o un estadio para ver el partido. Las luces, el sonido y las persianas se ajustan al instante para una experiencia totalmente inmersiva.',
         modalMedia: 'https://assets.mixkit.co/videos/preview/mixkit-modern-living-room-with-a-big-screen-4235-large.mp4',
         modalMediaType: 'video',
         products: [
-            { name: 'Matriz de Video 4K', description: 'Distribuye cualquier fuente de video (Apple TV, Blu-ray) a cualquier pantalla de la casa en calidad 4K.', media: 'https://assets.mixkit.co/videos/preview/mixkit-man-watching-a-sports-game-on-a-big-screen-4227-large.mp4', mediaType: 'video' },
+            { name: 'Escenas Automáticas', description: 'El cerebro de tus escenas automáticas. Activa el "Modo Cine" y las luces bajarán al instante, o el "Modo Fútbol" para sincronizar el partido en las pantallas de donde te encuentres en tu hogar en perfecto 4K.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-is-controlling-the-lights-of-his-house-with-his-42208-large.mp4', mediaType: 'video' },
             { name: 'Altavoces Arquitectónicos', description: 'Sonido de alta fidelidad que se integra perfectamente en paredes y techos, desapareciendo visualmente.', media: 'https://assets.mixkit.co/videos/preview/mixkit-a-big-speaker-of-a-sound-system-playing-music-4375-large.mp4', mediaType: 'video' },
             { name: 'Control Remoto Universal', description: 'Un solo mando para gobernarlos a todos. Controla tu TV, sistema de sonido, luces y más.', media: 'https://assets.mixkit.co/videos/preview/mixkit-hand-pressing-the-buttons-of-a-remote-control-33205-large.mp4', mediaType: 'video' },
         ]
@@ -285,6 +314,938 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     },
 ];
 
+const catalogData: CatalogCategory[] = [
+    { name: 'Control Central y Red', icon: <IconHub style={{width: 32, height: 32}}/>, products: [
+        { name: 'Asistentes de Voz', description: 'Controla tu hogar con comandos de voz.', image: 'https://images.unsplash.com/photo-1518452695943-c269113540a3?w=400&q=80' },
+        { name: 'Hubs/Bridges', description: 'Unifica dispositivos de diferentes protocolos.', image: 'https://images.unsplash.com/photo-16178022813-559145610634?w=400&q=80' },
+        { name: 'Controladores Domóticos', description: 'El cerebro avanzado para automatizaciones complejas.', image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80' },
+        { name: 'Control Remoto Universal', description: 'Un solo mando para todos tus aparatos.', image: 'https://images.unsplash.com/photo-1601944177324-f23675a2f582?w=400&q=80' },
+        { name: 'Routers Wi-Fi Mesh', description: 'Cobertura Wi-Fi total y estable en todo tu hogar.', image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80' },
+        { name: 'Servidores NAS', description: 'Almacenamiento seguro para tus cámaras de seguridad.', image: 'https://images.unsplash.com/photo-1593432333979-33d32b516802?w=400&q=80' },
+    ]},
+    { name: 'Electricidad y Energía', icon: <IconPlug style={{width: 32, height: 32}}/>, products: [
+        { name: 'Interruptores Inteligentes', description: 'Moderniza tus luces sin cambiar las bombillas.', image: 'https://images.unsplash.com/photo-1617805104922-a6f6348b6c43?w=400&q=80' },
+        { name: 'Módulos de Relé', description: 'Domotiza cualquier circuito desde el cajetín.', image: 'https://images.unsplash.com/photo-1580130281324-2c2192e42253?w=400&q=80' },
+        { name: 'Enchufes Inteligentes', description: 'Controla y programa cualquier electrodoméstico.', image: 'https://images.unsplash.com/photo-1620703423750-1373465a3b77?w=400&q=80' },
+        { name: 'Regletas Inteligentes', description: 'Gestiona varios dispositivos de forma individual.', image: 'https://images.unsplash.com/photo-1616423604252-4a4b2b2b2b2b?w=400&q=80' },
+        { name: 'Disyuntores Inteligentes', description: 'Control y protección desde el cuadro eléctrico.', image: 'https://images.unsplash.com/photo-1581092921462-683133a854d6?w=400&q=80' },
+        { name: 'Medidores de Consumo', description: 'Monitoriza tu gasto energético en tiempo real.', image: 'https://images.unsplash.com/photo-1624140164603-9b5527b2c5c0?w=400&q=80' },
+    ]},
+    { name: 'Iluminación', icon: <IconLightbulb style={{width: 32, height: 32}}/>, products: [
+        { name: 'Bombillas Inteligentes', description: 'Millones de colores y tonalidades de blanco.', image: 'https://images.unsplash.com/photo-1608688806945-84693994e45c?w=400&q=80' },
+        { name: 'Tiras de Luz LED', description: 'Iluminación ambiental versátil y espectacular.', image: 'https://images.unsplash.com/photo-1588275582594-e8b9319e7256?w=400&q=80' },
+        { name: 'Paneles de Luz', description: 'Crea murales de luz decorativos y dinámicos.', image: 'https://images.unsplash.com/photo-1629733239275-265142a7304f?w=400&q=80' },
+        { name: 'Controladores de LED', description: 'Haz inteligentes tus tiras LED convencionales.', image: 'https://images.unsplash.com/photo-1555543118-0c3a54ac3973?w=400&q=80' },
+        { name: 'Sensores de Luminosidad', description: 'Ajuste automático de la luz según el ambiente.', image: 'https://images.unsplash.com/photo-1543443259-b1d5e6931998?w=400&q=80' },
+    ]},
+    { name: 'Seguridad y Accesos', icon: <IconLock style={{width: 32, height: 32}}/>, products: [
+        { name: 'Cámaras de Seguridad', description: 'Vigila tu hogar desde cualquier lugar.', image: 'https://images.unsplash.com/photo-1588392523368-29388f8d976a?w=400&q=80' },
+        { name: 'Timbres con Video', description: 'Ve y habla con tus visitas estés donde estés.', image: 'https://images.unsplash.com/photo-1589394142334-02824c64391a?w=400&q=80' },
+        { name: 'Mirillas Digitales', description: 'La mirilla tradicional, ahora inteligente.', image: 'https://images.unsplash.com/photo-1611082595082-a0e28c7c2518?w=400&q=80' },
+        { name: 'Cerraduras Inteligentes', description: 'Acceso sin llaves con código, huella o móvil.', image: 'https://images.unsplash.com/photo-1563286345-564593e92591?w=400&q=80' },
+        { name: 'Abre-puertas de Garaje', description: 'Controla la puerta de tu garaje a distancia.', image: 'https://images.unsplash.com/photo-1597044079854-3c13fdd34d71?w=400&q=80' },
+        { name: 'Sensores de Vibración', description: 'Detecta roturas de cristal o golpes.', image: 'https://images.unsplash.com/photo-1614914182284-8a88185c898c?w=400&q=80' },
+        { name: 'Botones de Pánico', description: 'Alerta inmediata en caso de emergencia.', image: 'https://images.unsplash.com/photo-1510076857177-7470076d4098?w=400&q=80' },
+    ]},
+    { name: 'Sensores Específicos', icon: <IconRadar style={{width: 32, height: 32}}/>, products: [
+        { name: 'Sensores de Movimiento', description: 'Automatiza luces y alertas con la detección de paso.', image: 'https://images.unsplash.com/photo-1628189507421-a354a8e22851?w=400&q=80' },
+        { name: 'Sensores de Presencia', description: 'Detección precisa de presencia humana, incluso inmóvil.', image: 'https://images.unsplash.com/photo-1633450793134-2e2a3952f447?w=400&q=80' },
+        { name: 'Sensores de Apertura', description: 'Recibe notificaciones de puertas y ventanas abiertas.', image: 'https://images.unsplash.com/photo-1560114999-b703a55a8f4c?w=400&q=80' },
+        { name: 'Sensores de T/H', description: 'Controla la temperatura y humedad de cada estancia.', image: 'https://images.unsplash.com/photo-1631557813637-a7541b65639a?w=400&q=80' },
+        { name: 'Detectores de Humo y Gas', description: 'Protección esencial contra incendios y fugas.', image: 'https://images.unsplash.com/photo-1593028245788-a83a15a08528?w=400&q=80' },
+        { name: 'Sensores de Fugas de Agua', description: 'Evita desastres por inundación con alertas tempranas.', image: 'https://images.unsplash.com/photo-1619177584165-2a2b34a62a6d?w=400&q=80' },
+    ]},
+    { name: 'Climatización', icon: <IconThermometer style={{width: 32, height: 32}}/>, products: [
+        { name: 'Termostatos Inteligentes', description: 'Optimiza el confort y ahorra en tu factura energética.', image: 'https://images.unsplash.com/photo-1617043245431-2292029c5a4a?w=400&q=80' },
+        { name: 'Cabezales Termostáticos', description: 'Control individual de la temperatura de cada radiador.', image: 'https://images.unsplash.com/photo-1632345031110-4a87a6d89849?w=400&q=80' },
+        { name: 'Controladores para A/C', description: 'Convierte tu aire acondicionado en un dispositivo smart.', image: 'https://images.unsplash.com/photo-1618510842930-5b583f707f1f?w=400&q=80' },
+        { name: 'Calefactores Inteligentes', description: 'Calor instantáneo y controlable desde tu móvil.', image: 'https://images.unsplash.com/photo-1605503029807-f3e4554c2512?w=400&q=80' },
+    ]},
+    { name: 'Automatización', icon: <IconRobot style={{width: 32, height: 32}}/>, products: [
+        { name: 'Motores para Persianas', description: 'Sube y baja tus persianas y cortinas automáticamente.', image: 'https://images.unsplash.com/photo-1596048139327-cc9f7c87c65b?w=400&q=80' },
+        { name: 'Smart Glass', description: 'Controla la privacidad y la luz con un solo toque.', image: 'https://images.unsplash.com/photo-1617802690658-32c140a3b2b0?w=400&q=80' },
+        { name: 'Robots Aspiradores', description: 'Limpieza autónoma e inteligente para tu hogar.', image: 'https://images.unsplash.com/photo-1628335964867-ce68800f7e4f?w=400&q=80' },
+        { name: 'Válvulas de Agua y Gas', description: 'Corta el suministro a distancia en caso de fuga.', image: 'https://images.unsplash.com/photo-1616359556070-8f654b73b53c?w=400&q=80' },
+        { name: 'Controladores de Riego', description: 'Riego inteligente y eficiente para tu jardín.', image: 'https://images.unsplash.com/photo-1549488344-cbb6c144e207?w=400&q=80' },
+        { name: 'Estaciones Meteorológicas', description: 'Datos climáticos precisos para tus automatizaciones.', image: 'https://images.unsplash.com/photo-1585803279883-820885145c22?w=400&q=80' },
+    ]},
+    { name: 'Electrodomésticos', icon: <IconAppliance style={{width: 32, height: 32}}/>, products: [
+        { name: 'Cafeteras Inteligentes', description: 'Despierta con el café recién hecho a tu gusto.', image: 'https://images.unsplash.com/photo-1565452344013-a6fed67345f8?w=400&q=80' },
+        { name: 'Neveras Inteligentes', description: 'Gestiona tus alimentos y recibe recetas.', image: 'https://images.unsplash.com/photo-1629827281145-a7c87b154a26?w=400&q=80' },
+        { name: 'Lavadoras y Secadoras', description: 'Controla el ciclo de lavado desde cualquier lugar.', image: 'https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?w=400&q=80' },
+        { name: 'Robots de Cocina', description: 'Cocina guiada y control remoto para tus platos.', image: 'https://images.unsplash.com/photo-1580982823624-9a0azzi3d014?w=400&q=80' },
+        { name: 'Dispensadores para Mascotas', description: 'Alimenta a tus mascotas estés donde estés.', image: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80' },
+    ]},
+    { name: 'Audio y Video', icon: <IconSpeaker style={{width: 32, height: 32}}/>, products: [
+        { name: 'Altavoces Multi-room', description: 'Sonido sincronizado en toda la casa.', image: 'https://images.unsplash.com/photo-1593500244432-15f17a9c8b7c?w=400&q=80' },
+        { name: 'Dispositivos de Streaming', description: 'Convierte cualquier TV en una Smart TV avanzada.', image: 'https://images.unsplash.com/photo-1606334235882-f50686374828?w=400&q=80' },
+        { name: 'Switches HDMI Inteligentes', description: 'Cambia de fuente de video automáticamente.', image: 'https://images.unsplash.com/photo-1593788229497-2936742a03e1?w=400&q=80' },
+    ]},
+];
+
+const styles: { [key: string]: CSSProperties } = {
+    mainContainer: {
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    glassCard: {
+        width: '100%',
+        height: 'auto',
+        maxHeight: '90vh',
+        background: 'var(--glass-bg)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        border: '1px solid var(--glass-border)',
+        borderRadius: '24px',
+        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+        zIndex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        color: 'var(--text-main)',
+        overflow: 'hidden',
+        position: 'relative',
+        transition: 'background 0.5s ease, border 0.5s ease, color 0.5s ease',
+    },
+    header: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '100%',
+        padding: '30px 40px',
+        zIndex: 100,
+        background: 'var(--header-bg)',
+        backdropFilter: 'blur(15px)',
+        WebkitBackdropFilter: 'blur(15px)',
+        transition: 'background 0.5s ease',
+        flexShrink: 0,
+    },
+    headerControls: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '30px',
+    },
+    themeToggleButton: {
+        background: 'transparent',
+        border: 'none',
+        color: 'var(--text-main)',
+        cursor: 'pointer',
+        padding: '5px',
+        borderRadius: '50%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        transition: 'background-color 0.2s ease, transform 0.3s ease',
+    },
+    logo: {
+        fontWeight: 700,
+        fontSize: '1.5rem',
+        letterSpacing: '1px',
+        textTransform: 'lowercase',
+    },
+    nav: {
+        display: 'flex',
+        gap: '30px',
+    },
+    navLink: {
+        textDecoration: 'none',
+        color: 'var(--text-main)',
+        fontSize: '0.8rem',
+        fontWeight: 400,
+        letterSpacing: '1px',
+        textTransform: 'uppercase',
+        transition: 'opacity 0.3s ease, text-decoration 0.3s ease',
+        cursor: 'pointer',
+    },
+    activeNavLink: {
+        textDecoration: 'underline',
+        textUnderlineOffset: '5px',
+    },
+    contentContainer: {
+        padding: '0 40px 40px 40px',
+    },
+    section: {
+        padding: '60px 20px',
+        minHeight: '400px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        borderBottom: '1px solid var(--glass-border)',
+        transition: 'border-color 0.5s ease',
+    },
+    subtitle: {
+        fontSize: '1rem',
+        fontWeight: 600,
+        textTransform: 'uppercase',
+        letterSpacing: '1px',
+        opacity: 0.8,
+    },
+    title: {
+        fontSize: '3.5rem',
+        fontWeight: 700,
+        lineHeight: 1.2,
+        margin: '10px 0',
+        textTransform: 'uppercase',
+    },
+    sectionTitle: {
+        fontSize: '2.5rem',
+        fontWeight: 700,
+        lineHeight: 1.2,
+        margin: '10px 0',
+        textTransform: 'uppercase',
+    },
+    description: {
+        fontSize: '0.9rem',
+        fontWeight: 300,
+        maxWidth: '600px',
+        color: 'var(--text-secondary)',
+        marginBottom: '30px',
+    },
+    ctaButton: {
+        background: 'transparent',
+        border: '1px solid var(--cta-border)',
+        color: 'var(--cta-text)',
+        padding: '10px 25px',
+        borderRadius: '8px',
+        fontSize: '0.8rem',
+        fontWeight: 600,
+        cursor: 'pointer',
+        textTransform: 'uppercase',
+        letterSpacing: '1px',
+    },
+    serviceGrid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+        gap: '20px',
+        width: '100%',
+        maxWidth: '900px',
+        marginTop: '30px',
+    },
+    serviceCard: {
+        background: 'var(--card-bg)',
+        padding: '25px',
+        borderRadius: '16px',
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '10px',
+        border: '1px solid var(--glass-border)',
+        transition: 'background-color 0.3s ease, border-color 0.3s ease, opacity 0.6s ease-out, transform 0.3s ease-out',
+    },
+    serviceTitle: {
+        fontSize: '1.1rem',
+        fontWeight: 600,
+        margin: '10px 0 5px 0',
+    },
+    serviceDescription: {
+        fontSize: '0.85rem',
+        fontWeight: 300,
+        color: 'var(--text-secondary)',
+        lineHeight: 1.5,
+    },
+    projectsContainer: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '15px',
+        width: '100%',
+        maxWidth: '900px',
+        marginTop: '20px',
+    },
+    projectsSlider: {
+        display: 'flex',
+        overflowX: 'auto',
+        scrollSnapType: 'x mandatory',
+        scrollBehavior: 'smooth',
+        width: '100%',
+        gap: '20px',
+        paddingBottom: '15px',
+    },
+    projectCard: {
+        background: 'var(--card-bg)',
+        borderRadius: '16px',
+        flex: '0 0 calc(50% - 10px)',
+        scrollSnapAlign: 'start',
+        textAlign: 'left',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+        cursor: 'pointer',
+    },
+    projectImage: {
+        width: '100%',
+        height: '180px',
+        objectFit: 'cover',
+    },
+    projectCardContent: {
+        padding: '20px',
+        display: 'flex',
+        flexDirection: 'column',
+        flexGrow: 1,
+    },
+    projectTitle: {
+        fontSize: '1rem',
+        fontWeight: 600,
+        marginBottom: '10px',
+    },
+    sliderNav: {
+        flexShrink: 0,
+        background: 'var(--nav-button-bg)',
+        border: '1px solid var(--nav-button-border)',
+        color: 'var(--text-main)',
+        borderRadius: '50%',
+        width: '40px',
+        height: '40px',
+        cursor: 'pointer',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '1.5rem',
+        backdropFilter: 'blur(5px)',
+    },
+    contactForm: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '15px',
+        width: '100%',
+        maxWidth: '500px',
+        marginTop: '20px',
+    },
+    formInput: {
+        background: 'var(--input-bg)',
+        border: '1px solid var(--input-border)',
+        borderRadius: '8px',
+        padding: '12px',
+        color: 'var(--text-main)',
+        fontSize: '0.9rem',
+        fontFamily: "'Poppins', sans-serif",
+    },
+    formTextarea: {
+        background: 'var(--input-bg)',
+        border: '1px solid var(--input-border)',
+        borderRadius: '8px',
+        padding: '12px',
+        color: 'var(--text-main)',
+        fontSize: '0.9rem',
+        fontFamily: "'Poppins', sans-serif",
+        minHeight: '120px',
+        resize: 'vertical',
+    },
+    mobileMenuOverlay: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'rgba(0,0,0,0.3)',
+        backdropFilter: 'blur(4px)',
+        WebkitBackdropFilter: 'blur(4px)',
+        zIndex: 199,
+    },
+    mobileMenuContainer: {
+        position: 'absolute',
+        top: '80px',
+        left: '15px',
+        right: '15px',
+        background: 'var(--header-bg)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        zIndex: 200,
+        display: 'flex',
+        flexDirection: 'column',
+        borderRadius: '16px',
+        border: '1px solid var(--glass-border)',
+        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
+    },
+    mobileMenuHeader: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '100%',
+        padding: '15px 20px',
+    },
+    mobileNav: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '30px',
+        padding: '15px 20px 20px 20px',
+    },
+    mobileNavLink: {
+        textDecoration: 'none',
+        color: 'var(--text-main)',
+        fontSize: '1.2rem',
+        fontWeight: 600,
+        letterSpacing: '1px',
+        textTransform: 'uppercase',
+    },
+    projectsAccordionContainer: {
+        display: 'flex',
+        width: '100%',
+        maxWidth: '900px',
+        height: '400px',
+        gap: '10px',
+        marginTop: '30px',
+    },
+    projectColumn: {
+        position: 'relative',
+        overflow: 'hidden',
+        borderRadius: '16px',
+        border: '1px solid var(--glass-border)',
+        cursor: 'pointer',
+        transition: 'flex 0.7s cubic-bezier(0.165, 0.84, 0.44, 1)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+    },
+    projectColumnContent: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-end',
+        height: '100%',
+        padding: '25px',
+        position: 'relative',
+        zIndex: 2,
+        transition: 'opacity 0.5s ease-in-out',
+    },
+    projectColumnTitleVertical: {
+        writingMode: 'vertical-rl',
+        transform: 'rotate(180deg)',
+        textAlign: 'center',
+        fontSize: '1rem',
+        fontWeight: 600,
+        letterSpacing: '1px',
+        textTransform: 'uppercase',
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transformOrigin: 'center',
+        whiteSpace: 'nowrap',
+        opacity: 0.9,
+        transition: 'opacity 0.5s ease-in-out',
+        zIndex: 2
+    },
+    projectFeaturesContainer: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '8px',
+        marginTop: '15px',
+    },
+    projectFeatureTag: {
+        background: 'rgba(255, 255, 255, 0.1)',
+        border: '1px solid rgba(255, 255, 255, 0.2)',
+        borderRadius: '12px',
+        padding: '4px 10px',
+        fontSize: '0.7rem',
+        fontWeight: 400,
+        color: 'rgba(255, 255, 255, 0.9)',
+        pointerEvents: 'none',
+        backdropFilter: 'blur(2px)',
+    },
+     domoticsSectionWrapper: {
+        padding: '60px 20px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        borderBottom: '1px solid var(--glass-border)',
+    },
+    combinedStatCard: {
+        display: 'flex',
+        border: '1px solid var(--separator-color)',
+        borderRadius: '24px',
+        padding: '20px 30px',
+        width: '100%',
+        maxWidth: '600px',
+        background: 'var(--card-bg)',
+        margin: '0 auto 60px auto',
+        overflow: 'hidden',
+        transition: 'all 0.4s ease',
+    },
+    statItem: {
+        flex: 1,
+        textAlign: 'center',
+        padding: '10px 20px',
+        transition: 'transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease',
+        cursor: 'pointer',
+    },
+    statSeparator: {
+        width: '1px',
+        background: 'var(--separator-color)',
+        margin: '0 15px',
+        transition: 'background-color 0.5s ease',
+    },
+    statLabel: {
+        fontSize: '0.9rem',
+        color: 'var(--text-secondary)',
+        marginBottom: '8px',
+    },
+    statValue: {
+        fontSize: '1.8rem',
+        fontWeight: 600,
+        color: 'var(--text-main)',
+    },
+    featureGrid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        gap: '25px',
+        width: '100%',
+        maxWidth: '1000px',
+        marginTop: '40px',
+    },
+    featureCard: {
+        background: 'var(--card-bg)',
+        border: '1px solid var(--glass-border)',
+        borderRadius: '16px',
+        padding: '30px',
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '15px',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        cursor: 'pointer',
+    },
+    featureCardTitle: {
+        fontSize: '1rem',
+        fontWeight: 500,
+        color: 'var(--text-secondary)',
+    },
+    securitySectionContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: '40px',
+        width: '100%',
+        maxWidth: '1000px',
+        marginTop: '40px',
+        textAlign: 'left',
+    },
+    securityIllustrationContainer: {
+        flex: 1,
+        minWidth: '300px',
+    },
+    securityTextContainer: {
+        flex: 1.5,
+    },
+    securityFeatureList: {
+        listStyle: 'none',
+        padding: 0,
+        marginTop: '20px',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '20px',
+    },
+    securityFeatureItem: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '15px',
+        fontSize: '0.9rem',
+        color: 'var(--text-secondary)',
+    },
+    securityFeatureIcon: {
+        color: 'var(--accent-color)',
+        width: '24px',
+        height: '24px',
+        flexShrink: 0,
+    },
+    modalOverlay: {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'rgba(0, 0, 0, 0.7)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        zIndex: 1000,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    modalContent: {
+        background: 'var(--modal-bg)',
+        border: '1px solid var(--glass-border)',
+        borderRadius: '20px',
+        width: '90%',
+        maxWidth: '800px',
+        maxHeight: '85vh',
+        position: 'relative',
+        color: 'var(--text-main)',
+        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+    },
+    modalCloseButton: {
+        position: 'absolute',
+        top: '20px',
+        right: '20px',
+        background: 'rgba(0,0,0,0.1)',
+        border: 'none',
+        color: 'var(--text-main)',
+        fontSize: '1.5rem',
+        cursor: 'pointer',
+        opacity: 0.7,
+        zIndex: 10,
+        width: '32px',
+        height: '32px',
+        borderRadius: '50%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        lineHeight: 1,
+    },
+    modalImage: {
+        width: '100%',
+        height: '300px',
+        borderRadius: '12px',
+        objectFit: 'cover',
+        marginBottom: '20px',
+    },
+    modalTitle: {
+        fontSize: '2rem',
+        fontWeight: 700,
+        marginBottom: '15px',
+    },
+    modalInnerContent: {
+        flex: 1,
+        minHeight: 0,
+        overflowY: 'auto',
+        padding: '30px',
+    },
+    socialIconsContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '30px',
+        marginTop: '30px',
+    },
+    socialIconLink: {
+        color: 'var(--text-main)',
+        textDecoration: 'none',
+        display: 'inline-block',
+    },
+    gallerySectionContainer: {
+        marginTop: '30px',
+        paddingTop: '20px',
+        borderTop: '1px solid var(--glass-border)',
+    },
+    gallerySectionTitle: {
+        fontSize: '1.2rem',
+        fontWeight: 600,
+        marginBottom: '15px',
+        color: 'var(--text-highlight)',
+    },
+    galleryCarouselMain: {
+        position: 'relative',
+        width: '100%',
+        aspectRatio: '16 / 9',
+        borderRadius: '12px',
+        overflow: 'hidden',
+        background: 'var(--card-bg)',
+        marginBottom: '15px',
+    },
+    galleryCarouselMedia: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        transition: 'opacity 0.3s ease-in-out',
+    },
+    galleryCarouselNavButton: {
+        position: 'absolute',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        background: 'rgba(0, 0, 0, 0.3)',
+        border: '1px solid var(--nav-button-border)',
+        color: 'var(--text-main)',
+        borderRadius: '50%',
+        width: '40px',
+        height: '40px',
+        cursor: 'pointer',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '1.5rem',
+        lineHeight: 1,
+        transition: 'background-color 0.3s ease, transform 0.2s ease',
+        backdropFilter: 'blur(5px)',
+        zIndex: 10,
+    },
+    galleryThumbnailsContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '10px',
+        flexWrap: 'wrap',
+    },
+    galleryThumbnail: {
+        width: '80px',
+        height: '60px',
+        borderRadius: '8px',
+        overflow: 'hidden',
+        cursor: 'pointer',
+        border: '2px solid transparent',
+        transition: 'border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease',
+        opacity: 0.6,
+        position: 'relative'
+    },
+    galleryThumbnailImage: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+    },
+    galleryThumbnailActive: {
+        borderColor: 'var(--accent-color)',
+        opacity: 1,
+        transform: 'scale(1.05)',
+    },
+    galleryItemPlayIcon: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '24px',
+        height: '24px',
+        color: 'white',
+        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        borderRadius: '50%',
+        padding: '4px',
+        pointerEvents: 'none',
+    },
+    productSectionContainer: {
+        marginTop: '30px',
+        paddingTop: '20px',
+        borderTop: '1px solid var(--glass-border)',
+    },
+    productSectionTitle: {
+        fontSize: '1.2rem',
+        fontWeight: 600,
+        marginBottom: '15px',
+        color: 'var(--text-highlight)',
+    },
+    productGrid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+        gap: '20px',
+    },
+    productCard: {
+        background: 'var(--card-bg)',
+        borderRadius: '12px',
+        overflow: 'hidden',
+        border: '1px solid var(--glass-border)',
+    },
+    productImage: {
+        width: '100%',
+        height: '100px',
+        objectFit: 'cover',
+    },
+    productCardContent: {
+        padding: '15px',
+    },
+    productName: {
+        fontSize: '0.9rem',
+        fontWeight: 600,
+        marginBottom: '5px',
+    },
+    productDescription: {
+        fontSize: '0.75rem',
+        color: 'var(--text-secondary)',
+        lineHeight: 1.5,
+    },
+    productVideoContainer: {
+        position: 'relative',
+        width: '100%',
+        height: '100px',
+        background: 'var(--card-bg)',
+    },
+    productVideoOverlay: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0,0,0,0.3)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        cursor: 'pointer',
+        opacity: 0,
+        transition: 'opacity 0.3s ease',
+    },
+    productVideoIcon: {
+        width: '32px',
+        height: '32px',
+        color: 'white',
+    },
+    catalogModalHeader: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: '30px 30px 0 30px',
+        flexShrink: 0
+    },
+    catalogModalTitle: {
+        fontSize: '1.5rem',
+        fontWeight: 600,
+        marginLeft: '15px',
+    },
+    catalogBackButton: {
+        background: 'var(--card-bg)',
+        border: '1px solid var(--glass-border)',
+        color: 'var(--text-main)',
+        borderRadius: '50%',
+        width: '36px',
+        height: '36px',
+        cursor: 'pointer',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '1.2rem',
+    },
+    categoryGrid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+        gap: '20px',
+        padding: '30px',
+        width: '100%',
+    },
+    categoryCard: {
+        background: 'var(--card-bg)',
+        border: '1px solid var(--glass-border)',
+        borderRadius: '16px',
+        padding: '25px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '15px',
+        textAlign: 'center',
+        cursor: 'pointer',
+        transition: 'background-color 0.3s, transform 0.3s',
+    },
+    categoryCardTitle: {
+        fontSize: '1rem',
+        fontWeight: 500,
+        color: 'var(--text-secondary)',
+    },
+    catalogProductGrid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+        gap: '20px',
+        padding: '20px 30px 30px 30px',
+    },
+    catalogProductCard: {
+        background: 'var(--card-bg)',
+        borderRadius: '12px',
+        overflow: 'hidden',
+        border: '1px solid var(--glass-border)',
+        transition: 'transform 0.3s, box-shadow 0.3s',
+    },
+    catalogProductImage: {
+        width: '100%',
+        height: '120px',
+        objectFit: 'cover',
+        display: 'block',
+    },
+    catalogProductContent: {
+        padding: '15px',
+    },
+    catalogProductName: {
+        fontSize: '0.9rem',
+        fontWeight: 600,
+        marginBottom: '8px',
+        lineHeight: 1.3,
+    },
+    catalogProductDescription: {
+        fontSize: '0.75rem',
+        color: 'var(--text-secondary)',
+        lineHeight: 1.4,
+    },
+};
+
+const ProductCard: React.FC<{ product: ProductExample; isMobile: boolean; styles: { [key: string]: CSSProperties } }> = ({ product, isMobile, styles }) => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isPaused, setIsPaused] = useState(true);
+
+    const togglePlay = () => {
+        const video = videoRef.current;
+        if (video) {
+            if (video.paused) {
+                video.play().catch(error => console.log("Video play was prevented:", error));
+            } else {
+                video.pause();
+            }
+        }
+    };
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (video) {
+            const handlePlay = () => setIsPaused(false);
+            const handlePause = () => setIsPaused(true);
+            video.addEventListener('play', handlePlay);
+            video.addEventListener('pause', handlePause);
+            return () => {
+                video.removeEventListener('play', handlePlay);
+                video.removeEventListener('pause', handlePause);
+            };
+        }
+    }, []);
+
+    const handleMouseEnter = () => {
+        if (!isMobile && videoRef.current) {
+            videoRef.current.play().catch(error => console.log("Video play was prevented:", error));
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (!isMobile && videoRef.current) {
+            videoRef.current.pause();
+            videoRef.current.currentTime = 0;
+        }
+    };
+
+    return (
+        <div
+            style={styles.productCard}
+            className="product-card"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onClick={isMobile ? togglePlay : undefined}
+        >
+            <div style={styles.productVideoContainer}>
+                {product.mediaType === 'video' ? (
+                    <video
+                        ref={videoRef}
+                        src={product.media}
+                        style={styles.productImage}
+                        muted
+                        playsInline
+                        loop
+                        preload="metadata"
+                    />
+                ) : (
+                    <img src={product.media} alt={product.name} style={styles.productImage} />
+                )}
+                {product.mediaType === 'video' && isMobile && isPaused && (
+                     <div style={{...styles.productVideoOverlay, opacity: 1, backgroundColor: 'rgba(0,0,0,0.4)'}}>
+                        <IconPlay style={styles.productVideoIcon} />
+                    </div>
+                )}
+            </div>
+            <div style={styles.productCardContent}>
+                <h4 style={styles.productName}>{product.name}</h4>
+                <p style={styles.productDescription}>{product.description}</p>
+            </div>
+        </div>
+    );
+};
+
+
 const App: React.FC = () => {
     const [theme, setTheme] = useState<Theme>('night');
     const [activeSection, setActiveSection] = useState('Inicio');
@@ -298,16 +1259,20 @@ const App: React.FC = () => {
     const [selectedFeature, setSelectedFeature] = useState<DomoticsFeature | null>(null);
     const [selectedService, setSelectedService] = useState<Service | null>(null);
     const [galleryIndex, setGalleryIndex] = useState(0);
+    const [isCatalogOpen, setIsCatalogOpen] = useState(false);
+    const [selectedCatalogCategory, setSelectedCatalogCategory] = useState<CatalogCategory | null>(null);
     
     const sectionRefs = {
         'Inicio': useRef<HTMLDivElement>(null),
         'Nosotros': useRef<HTMLDivElement>(null),
         'Servicios': useRef<HTMLDivElement>(null),
         'Proyectos': useRef<HTMLDivElement>(null),
+        'Catálogo': useRef<HTMLDivElement>(null),
         'Contáctanos': useRef<HTMLDivElement>(null),
     };
 
     const projectsRef = useRef<HTMLDivElement>(null);
+    const projectVideoRefs = useRef<Map<number, HTMLVideoElement>>(new Map());
 
     const domoticsFeaturesData = useMemo(() => getDomoticsFeaturesData(theme), [theme]);
 
@@ -327,96 +1292,8 @@ const App: React.FC = () => {
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
     }, [theme]);
-
-    useEffect(() => {
-        const handleResize = () => {
-            const mobile = window.innerWidth < 768;
-            setIsMobile(mobile);
-            if (!mobile) {
-                setIsMenuOpen(false);
-            }
-        };
-        window.addEventListener('resize', handleResize);
-        
-        const observerOptions = {
-            root: document.querySelector('.scrollable-card'),
-            rootMargin: '0px',
-            threshold: 0.5,
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const sectionId = Object.keys(sectionRefs).find(
-                        key => sectionRefs[key as keyof typeof sectionRefs].current === entry.target
-                    );
-                    if (sectionId) {
-                       setActiveSection(sectionId);
-                    }
-                }
-            });
-        }, observerOptions);
-        
-        const servicesObserver = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setServicesVisible(true);
-                    servicesObserver.unobserve(entry.target);
-                }
-            },
-            { root: document.querySelector('.scrollable-card'), threshold: 0.2 }
-        );
-        
-        const servicesRef = sectionRefs['Servicios'].current;
-        if (servicesRef) {
-            servicesObserver.observe(servicesRef);
-        }
-
-        Object.values(sectionRefs).forEach(ref => {
-            if (ref.current) {
-                observer.observe(ref.current);
-            }
-        });
-        
-        const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') {
-                if (selectedFeature) {
-                    setSelectedFeature(null);
-                } else if (selectedProject) {
-                    setSelectedProject(null);
-                } else if (selectedService) {
-                    setSelectedService(null);
-                }
-            }
-            if (selectedProject) {
-                if (e.key === 'ArrowRight') handleProjectGalleryNav('next');
-                if (e.key === 'ArrowLeft') handleProjectGalleryNav('prev');
-            }
-        };
-
-        window.addEventListener('keydown', handleKeyDown);
-
-        return () => {
-             window.removeEventListener('resize', handleResize);
-             window.removeEventListener('keydown', handleKeyDown);
-             Object.values(sectionRefs).forEach(ref => {
-                if (ref.current) {
-                    observer.unobserve(ref.current);
-                }
-            });
-            if (servicesRef) {
-                servicesObserver.unobserve(servicesRef);
-            }
-        };
-    }, [selectedProject, selectedFeature, selectedService, galleryIndex]);
     
-    const exclusiveFeaturesData = [
-        { text: 'Software y hardware personalizados para tus necesidades exactas.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg> },
-        { text: 'Interfaces de usuario diseñadas exclusivamente para tu proyecto.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg> },
-        { text: 'IA que aprende de tus hábitos y optimiza las automatizaciones.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg> },
-        { text: 'Plataforma escalable que crece y evoluciona contigo.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg> },
-    ];
-
+    // FIX: Moved projectsData before its usage in the following useEffect hook to fix "used before declaration" error.
     const projectsData: Project[] = [
         {
             title: 'Apartamento "Mónaco"',
@@ -433,12 +1310,7 @@ const App: React.FC = () => {
                 <p>El resultado es una vivienda autosuficiente y funcional que responde de manera natural a las necesidades diarias. Escenas preconfiguradas permiten ajustar iluminación, temperatura o seguridad con un solo toque, ofreciendo confort, eficiencia y tranquilidad. La integración AIIOT eleva la experiencia, logrando que la tecnología se sienta orgánica, elegante y siempre accesible.</p>
             `,
             gallery: [
-                { type: 'image', src: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=60' },
                 { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-is-controlling-the-lights-of-his-house-with-his-42208-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1618221195710-86c98fa1997a?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-in-his-living-room-at-night-4221-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-interior-of-a-luxurious-and-spacious-apartment-4664-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-view-of-a-modern-city-from-a-balcony-4217-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=400&q=60' },
             ]
         },
         {
@@ -514,7 +1386,127 @@ const App: React.FC = () => {
             ]
         }
     ];
+
+    useEffect(() => {
+        if (!isMobile || !projectsRef.current) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const video = entry.target as HTMLVideoElement;
+                    if (entry.isIntersecting) {
+                        video.play().catch(error => console.log("Video play was prevented:", error));
+                    } else {
+                        video.pause();
+                    }
+                });
+            },
+            { root: projectsRef.current, threshold: 0.75 }
+        );
+        
+        // FIX: Replaced Array.from with Map.forEach for observing video elements. This is cleaner and less prone to type errors.
+        const videosMap = projectVideoRefs.current;
+        videosMap.forEach(video => observer.observe(video));
+
+        return () => {
+            videosMap.forEach(video => observer.unobserve(video));
+        };
+    }, [isMobile, projectsData.length]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const mobile = window.innerWidth < 768;
+            setIsMobile(mobile);
+            if (!mobile) {
+                setIsMenuOpen(false);
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        
+        const observerOptions = {
+            root: document.querySelector('.scrollable-card'),
+            rootMargin: '0px',
+            threshold: 0.5,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = Object.keys(sectionRefs).find(
+                        key => sectionRefs[key as keyof typeof sectionRefs].current === entry.target
+                    );
+                    if (sectionId) {
+                       setActiveSection(sectionId);
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        const servicesObserver = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setServicesVisible(true);
+                    servicesObserver.unobserve(entry.target);
+                }
+            },
+            { root: document.querySelector('.scrollable-card'), threshold: 0.2 }
+        );
+        
+        const servicesRef = sectionRefs['Servicios'].current;
+        if (servicesRef) {
+            servicesObserver.observe(servicesRef);
+        }
+
+        Object.values(sectionRefs).forEach(ref => {
+            if (ref.current) {
+                observer.observe(ref.current);
+            }
+        });
+        
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                if (isCatalogOpen) {
+                    setIsCatalogOpen(false);
+                    setSelectedCatalogCategory(null);
+                } else if (selectedFeature) {
+                    setSelectedFeature(null);
+                } else if (selectedProject) {
+                    setSelectedProject(null);
+                } else if (selectedService) {
+                    setSelectedService(null);
+                } else if (isMenuOpen) {
+                    setIsMenuOpen(false);
+                }
+            }
+            if (selectedProject) {
+                if (e.key === 'ArrowRight') handleProjectGalleryNav('next');
+                if (e.key === 'ArrowLeft') handleProjectGalleryNav('prev');
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+             window.removeEventListener('resize', handleResize);
+             window.removeEventListener('keydown', handleKeyDown);
+             Object.values(sectionRefs).forEach(ref => {
+                if (ref.current) {
+                    observer.unobserve(ref.current);
+                }
+            });
+            if (servicesRef) {
+                servicesObserver.unobserve(servicesRef);
+            }
+        };
+    }, [selectedProject, selectedFeature, selectedService, galleryIndex, isMenuOpen, isCatalogOpen]);
     
+    const exclusiveFeaturesData = [
+        { text: 'Software y hardware personalizados para tus necesidades exactas.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg> },
+        { text: 'Interfaces de usuario diseñadas exclusivamente para tu proyecto.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg> },
+        { text: 'IA que aprende de tus hábitos y optimiza las automatizaciones.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg> },
+        { text: 'Plataforma escalable que crece y evoluciona contigo.', icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg> },
+    ];
+
     const servicesData: Service[] = [
         {
             icon: <IconConsulting style={{width: '48px', height: '48px', color: 'var(--accent-color)'}}/>,
@@ -560,668 +1552,24 @@ const App: React.FC = () => {
         }
     ];
 
-    const styles: { [key: string]: CSSProperties } = {
-        mainContainer: {
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-        },
-        glassCard: {
-            width: '100%',
-            height: 'auto',
-            maxHeight: '90vh',
-            background: 'var(--glass-bg)',
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
-            border: '1px solid var(--glass-border)',
-            borderRadius: '24px',
-            boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
-            zIndex: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            color: 'var(--text-main)',
-            overflow: 'hidden',
-            position: 'relative',
-            transition: 'background 0.5s ease, border 0.5s ease, color 0.5s ease',
-        },
-        header: {
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            width: '100%',
-            padding: '30px 40px',
-            zIndex: 100,
-            background: 'var(--header-bg)',
-            backdropFilter: 'blur(15px)',
-            WebkitBackdropFilter: 'blur(15px)',
-            transition: 'background 0.5s ease',
-            flexShrink: 0,
-        },
-        headerControls: {
-            display: 'flex',
-            alignItems: 'center',
-            gap: '30px',
-        },
-        themeToggleButton: {
-            background: 'transparent',
-            border: 'none',
-            color: 'var(--text-main)',
-            cursor: 'pointer',
-            padding: '5px',
-            borderRadius: '50%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            transition: 'background-color 0.2s ease, transform 0.3s ease',
-        },
-        logo: {
-            fontWeight: 700,
-            fontSize: '1.5rem',
-            letterSpacing: '1px',
-            textTransform: 'lowercase',
-        },
-        nav: {
-            display: 'flex',
-            gap: '30px',
-        },
-        navLink: {
-            textDecoration: 'none',
-            color: 'var(--text-main)',
-            fontSize: '0.8rem',
-            fontWeight: 400,
-            letterSpacing: '1px',
-            textTransform: 'uppercase',
-            transition: 'opacity 0.3s ease, text-decoration 0.3s ease',
-            cursor: 'pointer',
-        },
-        activeNavLink: {
-            textDecoration: 'underline',
-            textUnderlineOffset: '5px',
-        },
-        contentContainer: {
-            padding: '0 40px 40px 40px',
-        },
-        section: {
-            padding: '60px 20px',
-            minHeight: '400px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            textAlign: 'center',
-            borderBottom: '1px solid var(--glass-border)',
-            transition: 'border-color 0.5s ease',
-        },
-        subtitle: {
-            fontSize: '1rem',
-            fontWeight: 600,
-            textTransform: 'uppercase',
-            letterSpacing: '1px',
-            opacity: 0.8,
-        },
-        title: {
-            fontSize: '3.5rem',
-            fontWeight: 700,
-            lineHeight: 1.2,
-            margin: '10px 0',
-            textTransform: 'uppercase',
-        },
-        sectionTitle: {
-            fontSize: '2.5rem',
-            fontWeight: 700,
-            lineHeight: 1.2,
-            margin: '10px 0',
-            textTransform: 'uppercase',
-        },
-        description: {
-            fontSize: '0.9rem',
-            fontWeight: 300,
-            maxWidth: '600px',
-            color: 'var(--text-secondary)',
-            marginBottom: '30px',
-        },
-        ctaButton: {
-            background: 'transparent',
-            border: '1px solid var(--cta-border)',
-            color: 'var(--cta-text)',
-            padding: '10px 25px',
-            borderRadius: '8px',
-            fontSize: '0.8rem',
-            fontWeight: 600,
-            cursor: 'pointer',
-            textTransform: 'uppercase',
-            letterSpacing: '1px',
-        },
-        serviceGrid: {
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: '20px',
-            width: '100%',
-            maxWidth: '900px',
-            marginTop: '30px',
-        },
-        serviceCard: {
-            background: 'var(--card-bg)',
-            padding: '25px',
-            borderRadius: '16px',
-            textAlign: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '10px',
-            border: '1px solid var(--glass-border)',
-            transition: 'background-color 0.3s ease, border-color 0.3s ease',
-        },
-        serviceTitle: {
-            fontSize: '1.1rem',
-            fontWeight: 600,
-            margin: '10px 0 5px 0',
-        },
-        serviceDescription: {
-            fontSize: '0.85rem',
-            fontWeight: 300,
-            color: 'var(--text-secondary)',
-            lineHeight: 1.5,
-        },
-        projectsContainer: {
-            display: 'flex',
-            alignItems: 'center',
-            gap: '15px',
-            width: '100%',
-            maxWidth: '900px',
-            marginTop: '20px',
-        },
-        projectsSlider: {
-            display: 'flex',
-            overflowX: 'auto',
-            scrollSnapType: 'x mandatory',
-            scrollBehavior: 'smooth',
-            width: '100%',
-            gap: '20px',
-            paddingBottom: '15px',
-        },
-        projectCard: {
-            background: 'var(--card-bg)',
-            borderRadius: '16px',
-            flex: '0 0 calc(50% - 10px)',
-            scrollSnapAlign: 'start',
-            textAlign: 'left',
-            display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden',
-            cursor: 'pointer',
-        },
-        projectImage: {
-            width: '100%',
-            height: '180px',
-            objectFit: 'cover',
-        },
-        projectCardContent: {
-            padding: '20px',
-            display: 'flex',
-            flexDirection: 'column',
-            flexGrow: 1,
-        },
-        projectTitle: {
-            fontSize: '1rem',
-            fontWeight: 600,
-            marginBottom: '10px',
-        },
-        sliderNav: {
-            flexShrink: 0,
-            background: 'var(--nav-button-bg)',
-            border: '1px solid var(--nav-button-border)',
-            color: 'var(--text-main)',
-            borderRadius: '50%',
-            width: '40px',
-            height: '40px',
-            cursor: 'pointer',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            fontSize: '1.5rem',
-            backdropFilter: 'blur(5px)',
-        },
-        contactForm: {
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '15px',
-            width: '100%',
-            maxWidth: '500px',
-            marginTop: '20px',
-        },
-        formInput: {
-            background: 'var(--input-bg)',
-            border: '1px solid var(--input-border)',
-            borderRadius: '8px',
-            padding: '12px',
-            color: 'var(--text-main)',
-            fontSize: '0.9rem',
-            fontFamily: "'Poppins', sans-serif",
-        },
-        formTextarea: {
-            background: 'var(--input-bg)',
-            border: '1px solid var(--input-border)',
-            borderRadius: '8px',
-            padding: '12px',
-            color: 'var(--text-main)',
-            fontSize: '0.9rem',
-            fontFamily: "'Poppins', sans-serif",
-            minHeight: '120px',
-            resize: 'vertical',
-        },
-        mobileMenuContainer: {
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'rgba(10, 10, 10, 0.98)',
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
-            zIndex: 200,
-            display: 'flex',
-            flexDirection: 'column',
-            padding: '20px',
-        },
-        mobileMenuHeader: {
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            width: '100%',
-        },
-        mobileNav: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '30px',
-            flex: 1,
-        },
-        mobileNavLink: {
-            textDecoration: 'none',
-            color: 'var(--text-main)',
-            fontSize: '1.2rem',
-            fontWeight: 600,
-            letterSpacing: '1px',
-            textTransform: 'uppercase',
-        },
-        projectsAccordionContainer: {
-            display: 'flex',
-            width: '100%',
-            maxWidth: '900px',
-            height: '400px',
-            gap: '10px',
-            marginTop: '30px',
-        },
-        projectColumn: {
-            position: 'relative',
-            overflow: 'hidden',
-            borderRadius: '16px',
-            border: '1px solid var(--glass-border)',
-            cursor: 'pointer',
-            transition: 'flex 0.7s cubic-bezier(0.165, 0.84, 0.44, 1)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-        },
-        projectColumnContent: {
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-end',
-            height: '100%',
-            padding: '25px',
-            position: 'relative',
-            zIndex: 2,
-            transition: 'opacity 0.5s ease-in-out',
-        },
-        projectColumnTitleVertical: {
-            writingMode: 'vertical-rl',
-            transform: 'rotate(180deg)',
-            textAlign: 'center',
-            fontSize: '1rem',
-            fontWeight: 600,
-            letterSpacing: '1px',
-            textTransform: 'uppercase',
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transformOrigin: 'center',
-            whiteSpace: 'nowrap',
-            opacity: 0.9,
-            transition: 'opacity 0.5s ease-in-out',
-            zIndex: 2
-        },
-        projectFeaturesContainer: {
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '8px',
-            marginTop: '15px',
-        },
-        projectFeatureTag: {
-            background: 'rgba(255, 255, 255, 0.1)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            borderRadius: '12px',
-            padding: '4px 10px',
-            fontSize: '0.7rem',
-            fontWeight: 400,
-            color: 'rgba(255, 255, 255, 0.9)',
-            pointerEvents: 'none',
-            backdropFilter: 'blur(2px)',
-        },
-         domoticsSectionWrapper: {
-            padding: '60px 20px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            textAlign: 'center',
-            borderBottom: '1px solid var(--glass-border)',
-        },
-        combinedStatCard: {
-            display: 'flex',
-            border: '1px solid var(--separator-color)',
-            borderRadius: '24px',
-            padding: '20px 30px',
-            width: '100%',
-            maxWidth: '600px',
-            background: 'var(--card-bg)',
-            margin: '0 auto 60px auto',
-            overflow: 'hidden',
-            transition: 'all 0.4s ease',
-        },
-        statItem: {
-            flex: 1,
-            textAlign: 'center',
-            padding: '10px 20px',
-            transition: 'transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease',
-            cursor: 'pointer',
-        },
-        statSeparator: {
-            width: '1px',
-            background: 'var(--separator-color)',
-            margin: '0 15px',
-            transition: 'background-color 0.5s ease',
-        },
-        statLabel: {
-            fontSize: '0.9rem',
-            color: 'var(--text-secondary)',
-            marginBottom: '8px',
-        },
-        statValue: {
-            fontSize: '1.8rem',
-            fontWeight: 600,
-            color: 'var(--text-main)',
-        },
-        featureGrid: {
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '25px',
-            width: '100%',
-            maxWidth: '1000px',
-            marginTop: '40px',
-        },
-        featureCard: {
-            background: 'var(--card-bg)',
-            border: '1px solid var(--glass-border)',
-            borderRadius: '16px',
-            padding: '30px',
-            textAlign: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '15px',
-            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-            cursor: 'pointer',
-        },
-        featureCardTitle: {
-            fontSize: '1rem',
-            fontWeight: 500,
-            color: 'var(--text-secondary)',
-        },
-        securitySectionContainer: {
-            display: 'flex',
-            flexDirection: isMobile ? 'column' : 'row',
-            alignItems: 'center',
-            gap: '40px',
-            width: '100%',
-            maxWidth: '1000px',
-            marginTop: '40px',
-            textAlign: 'left',
-        },
-        securityIllustrationContainer: {
-            flex: 1,
+    const { securitySectionContainer: securitySectionContainerBase, securityFeatureList: securityFeatureListBase, ...baseStyles } = styles;
+
+    const dynamicStyles = useMemo(() => ({
+      ...baseStyles,
+      securitySectionContainer: {
+        ...securitySectionContainerBase,
+        flexDirection: isMobile ? 'column' : 'row',
+      },
+      securityIllustrationContainer: {
+            ...styles.securityIllustrationContainer,
             minWidth: isMobile ? '100%' : '300px',
-        },
-        securityTextContainer: {
-            flex: 1.5,
-        },
-        securityFeatureList: {
-            listStyle: 'none',
-            padding: 0,
-            marginTop: '20px',
-            display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
-            gap: '20px',
-        },
-        securityFeatureItem: {
-            display: 'flex',
-            alignItems: 'center',
-            gap: '15px',
-            fontSize: '0.9rem',
-            color: 'var(--text-secondary)',
-        },
-        securityFeatureIcon: {
-            color: 'var(--accent-color)',
-            width: '24px',
-            height: '24px',
-            flexShrink: 0,
-        },
-        modalOverlay: {
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'rgba(0, 0, 0, 0.7)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            zIndex: 1000,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-        },
-        modalContent: {
-            background: 'var(--modal-bg)',
-            border: '1px solid var(--glass-border)',
-            borderRadius: '20px',
-            width: '90%',
-            maxWidth: '800px',
-            maxHeight: '85vh',
-            position: 'relative',
-            color: 'var(--text-main)',
-            boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
-            display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden',
-        },
-        modalCloseButton: {
-            position: 'absolute',
-            top: '20px',
-            right: '20px',
-            background: 'rgba(0,0,0,0.1)',
-            border: 'none',
-            color: 'var(--text-main)',
-            fontSize: '1.5rem',
-            cursor: 'pointer',
-            opacity: 0.7,
-            zIndex: 10,
-            width: '32px',
-            height: '32px',
-            borderRadius: '50%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            lineHeight: 1,
-        },
-        modalImage: {
-            width: '100%',
-            height: '300px',
-            borderRadius: '12px',
-            objectFit: 'cover',
-            marginBottom: '20px',
-        },
-        modalTitle: {
-            fontSize: '2rem',
-            fontWeight: 700,
-            marginBottom: '15px',
-        },
-        modalInnerContent: {
-            flex: 1,
-            minHeight: 0,
-            overflowY: 'auto',
-            padding: '30px',
-        },
-        socialIconsContainer: {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '30px',
-            marginTop: '30px',
-        },
-        socialIconLink: {
-            color: 'var(--text-main)',
-            textDecoration: 'none',
-            display: 'inline-block',
-        },
-        gallerySectionContainer: {
-            marginTop: '30px',
-            paddingTop: '20px',
-            borderTop: '1px solid var(--glass-border)',
-        },
-        gallerySectionTitle: {
-            fontSize: '1.2rem',
-            fontWeight: 600,
-            marginBottom: '15px',
-            color: 'var(--text-highlight)',
-        },
-        galleryCarouselMain: {
-            position: 'relative',
-            width: '100%',
-            aspectRatio: '16 / 9',
-            borderRadius: '12px',
-            overflow: 'hidden',
-            background: 'var(--card-bg)',
-            marginBottom: '15px',
-        },
-        galleryCarouselMedia: {
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            transition: 'opacity 0.3s ease-in-out',
-        },
-        galleryCarouselNavButton: {
-            position: 'absolute',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            background: 'rgba(0, 0, 0, 0.3)',
-            border: '1px solid var(--nav-button-border)',
-            color: 'var(--text-main)',
-            borderRadius: '50%',
-            width: '40px',
-            height: '40px',
-            cursor: 'pointer',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            fontSize: '1.5rem',
-            lineHeight: 1,
-            transition: 'background-color 0.3s ease, transform 0.2s ease',
-            backdropFilter: 'blur(5px)',
-            zIndex: 10,
-        },
-        galleryThumbnailsContainer: {
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '10px',
-            flexWrap: 'wrap',
-        },
-        galleryThumbnail: {
-            width: '80px',
-            height: '60px',
-            borderRadius: '8px',
-            overflow: 'hidden',
-            cursor: 'pointer',
-            border: '2px solid transparent',
-            transition: 'border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease',
-            opacity: 0.6,
-            position: 'relative'
-        },
-        galleryThumbnailImage: {
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-        },
-        galleryThumbnailActive: {
-            borderColor: 'var(--accent-color)',
-            opacity: 1,
-            transform: 'scale(1.05)',
-        },
-        galleryItemPlayIcon: {
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '24px',
-            height: '24px',
-            color: 'white',
-            backgroundColor: 'rgba(0, 0, 0, 0.4)',
-            borderRadius: '50%',
-            padding: '4px',
-            pointerEvents: 'none',
-        },
-        productSectionContainer: {
-            marginTop: '30px',
-            paddingTop: '20px',
-            borderTop: '1px solid var(--glass-border)',
-        },
-        productSectionTitle: {
-            fontSize: '1.2rem',
-            fontWeight: 600,
-            marginBottom: '15px',
-            color: 'var(--text-highlight)',
-        },
-        productGrid: {
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-            gap: '20px',
-        },
-        productCard: {
-            background: 'var(--card-bg)',
-            borderRadius: '12px',
-            overflow: 'hidden',
-            border: '1px solid var(--glass-border)',
-        },
-        productImage: {
-            width: '100%',
-            height: '130px',
-            objectFit: 'cover',
-        },
-        productCardContent: {
-            padding: '15px',
-        },
-        productName: {
-            fontSize: '0.9rem',
-            fontWeight: 600,
-            marginBottom: '5px',
-        },
-        productDescription: {
-            fontSize: '0.75rem',
-            color: 'var(--text-secondary)',
-            lineHeight: 1.5,
-        },
-    };
+      },
+      securityFeatureList: {
+        ...securityFeatureListBase,
+        gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+      }
+    }), [isMobile]);
+
 
     const handleMouseOverNavLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
         if (e.currentTarget.ariaCurrent !== 'page') {
@@ -1230,28 +1578,6 @@ const App: React.FC = () => {
     };
     const handleMouseOutNavLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.currentTarget.style.opacity = '1';
-    };
-
-    const handleSliderNav = (direction: 'prev' | 'next') => {
-        const slider = projectsRef.current;
-        if (slider) {
-            const { scrollLeft, scrollWidth, clientWidth } = slider;
-            const scrollAmount = clientWidth / 2;
-
-            if (direction === 'next') {
-                if (Math.abs(scrollWidth - clientWidth - scrollLeft) < 1) {
-                    slider.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-                }
-            } else {
-                if (scrollLeft < 1) {
-                    slider.scrollTo({ left: scrollWidth, behavior: 'smooth' });
-                } else {
-                    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-                }
-            }
-        }
     };
     
     const sphereData = useMemo(() => [
@@ -1277,16 +1603,11 @@ const App: React.FC = () => {
         }
     };
 
-    const handleFormSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
-    };
-
     const toggleTheme = () => {
         setTheme(prevTheme => (prevTheme === 'night' ? 'day' : 'night'));
     };
 
-    const navItems = ['Inicio', 'Nosotros', 'Servicios', 'Proyectos', 'Contáctanos'];
+    const navItems = ['Inicio', 'Nosotros', 'Servicios', 'Proyectos', 'Catálogo', 'Contáctanos'];
 
 
     return (
@@ -1350,33 +1671,36 @@ const App: React.FC = () => {
                 </header>
                 
                 {isMobile && isMenuOpen && (
-                    <div style={{...styles.mobileMenuContainer, background: theme === 'night' ? 'rgba(10, 10, 10, 0.8)' : 'rgba(255, 250, 245, 0.8)'}}>
-                        <div style={styles.mobileMenuHeader}>
-                            <button
-                                onClick={toggleTheme}
-                                style={{...styles.themeToggleButton, color: theme === 'night' ? '#FFF' : '#1f2937'}}
-                                aria-label={`Switch to ${theme === 'night' ? 'day' : 'night'} mode`}
-                            >
-                                {theme === 'night' ? <IconSun style={{ width: 22, height: 22 }} /> : <IconMoon style={{ width: 22, height: 22 }} />}
-                            </button>
-                            <IconClose style={{width: '28px', height: '28px', cursor: 'pointer', color: theme === 'night' ? '#FFF' : '#1f2937'}} onClick={() => setIsMenuOpen(false)} />
-                        </div>
-                        <nav style={styles.mobileNav}>
-                            {navItems.map(item => (
-                                <a
-                                    key={item}
-                                    href={`#${item}`}
-                                    style={{...styles.mobileNavLink, color: theme === 'night' ? '#FFF' : '#1f2937'}}
-                                    onClick={(e) => {
-                                        handleNavClick(e, item);
-                                        setIsMenuOpen(false);
-                                    }}
+                    <>
+                        <div className="mobile-menu-overlay" style={styles.mobileMenuOverlay} onClick={() => setIsMenuOpen(false)}></div>
+                        <div className="mobile-menu-container" style={styles.mobileMenuContainer} onClick={e => e.stopPropagation()}>
+                            <div style={styles.mobileMenuHeader}>
+                                <button
+                                    onClick={toggleTheme}
+                                    style={{...styles.themeToggleButton, color: 'var(--text-main)'}}
+                                    aria-label={`Switch to ${theme === 'night' ? 'day' : 'night'} mode`}
                                 >
-                                    {item}
-                                </a>
-                            ))}
-                        </nav>
-                    </div>
+                                    {theme === 'night' ? <IconSun style={{ width: 22, height: 22 }} /> : <IconMoon style={{ width: 22, height: 22 }} />}
+                                </button>
+                                <IconClose style={{width: '28px', height: '28px', cursor: 'pointer', color: 'var(--text-main)'}} onClick={() => setIsMenuOpen(false)} />
+                            </div>
+                            <nav style={styles.mobileNav}>
+                                {navItems.map(item => (
+                                    <a
+                                        key={item}
+                                        href={`#${item}`}
+                                        style={{...styles.mobileNavLink, color: 'var(--text-main)'}}
+                                        onClick={(e) => {
+                                            handleNavClick(e, item);
+                                            setIsMenuOpen(false);
+                                        }}
+                                    >
+                                        {item}
+                                    </a>
+                                ))}
+                            </nav>
+                        </div>
+                    </>
                 )}
 
                 <div className="scrollable-card" style={{flex: 1, minHeight: 0, width: '100%', overflowY: 'auto', scrollBehavior: 'smooth'}}>
@@ -1384,7 +1708,7 @@ const App: React.FC = () => {
                         <div id="Inicio" ref={sectionRefs['Inicio']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'})}}>
                             <AnimatedText as="h2" text="DOMÓTICA & TECNOLOGÍA AVANZADA" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'}), paddingBottom: '10px', borderBottom: '2px solid var(--text-main)', marginBottom: '10px'}} />
                             <AnimatedText as="h1" text="Habitat Inteligente" style={{...styles.title, ...(isMobile && {fontSize: '2.5rem'})}} />
-                            <AnimatedText as="p" text="Transformamos espacios ordinarios en ecosistemas inteligentes y personalizados. Vive el futuro, hoy." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
+                            <AnimatedText as="p" text="Transformamos espacios ordinarios en ecosistemas inteligentes y personalizados, desde escenas inmersivas para tu entretenimiento hasta la optimización de tu confort y seguridad. Vive el futuro, hoy." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
                             <button
                                 style={styles.ctaButton}
                                 className="cta-button"
@@ -1401,6 +1725,7 @@ const App: React.FC = () => {
                                     transform: hoveredStat === 'devices' ? 'scale(1.05)' : (hoveredStat === 'scenes' ? 'scale(0.95)' : 'scale(1)'),
                                     opacity: hoveredStat === 'scenes' ? 0.7 : 1,
                                 }}
+                                className="statItem"
                                 onMouseEnter={() => setHoveredStat('devices')}
                                 onMouseLeave={() => setHoveredStat(null)}
                             >
@@ -1414,6 +1739,7 @@ const App: React.FC = () => {
                                     transform: hoveredStat === 'scenes' ? 'scale(1.05)' : (hoveredStat === 'devices' ? 'scale(0.95)' : 'scale(1)'),
                                     opacity: hoveredStat === 'devices' ? 0.7 : 1,
                                 }}
+                                className="statItem"
                                 onMouseEnter={() => setHoveredStat('scenes')}
                                 onMouseLeave={() => setHoveredStat(null)}
                             >
@@ -1429,14 +1755,14 @@ const App: React.FC = () => {
                         </div>
 
                         <div style={styles.domoticsSectionWrapper}>
-                            <div style={styles.securitySectionContainer}>
-                                <div style={styles.securityIllustrationContainer}>
+                            <div style={dynamicStyles.securitySectionContainer}>
+                                <div style={dynamicStyles.securityIllustrationContainer}>
                                     <IllustrationDecentralized />
                                 </div>
                                 <div style={styles.securityTextContainer}>
                                     <AnimatedText as="h1" text="Exclusividad y Desarrollo Propio" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'}), textAlign: 'left'}} />
                                     <AnimatedText as="p" text="Nuestro mayor diferenciador es la capacidad de desarrollo in-house. No nos limitamos a integrar productos; creamos soluciones a medida que garantizan una experiencia única, cohesiva y perfectamente alineada con tu visión." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'}), textAlign: 'left', maxWidth: 'none'}} />
-                                    <ul style={styles.securityFeatureList}>
+                                    <ul style={dynamicStyles.securityFeatureList}>
                                         {exclusiveFeaturesData.map((item, index) => (
                                             <li key={index} style={styles.securityFeatureItem}>
                                                 <span style={styles.securityFeatureIcon}>{item.icon}</span>
@@ -1455,6 +1781,7 @@ const App: React.FC = () => {
                             <div style={styles.featureGrid}>
                                {domoticsFeaturesData.map((feature, index) => (
                                    <div key={index} style={styles.featureCard} 
+                                        className="featureCard"
                                         onClick={() => setSelectedFeature(feature)}
                                         onMouseEnter={(e) => {
                                             e.currentTarget.style.transform = 'translateY(-10px)';
@@ -1488,6 +1815,7 @@ const App: React.FC = () => {
                                                 transform: servicesVisible ? (isHovered ? 'translateY(-8px)' : 'translateY(0)') : 'translateY(20px)',
                                                 transition: `opacity 0.6s ease-out ${index * 0.1}s, transform 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out`,
                                             }}
+                                            className="serviceCard"
                                             onClick={() => setSelectedService(service)}
                                             onMouseEnter={() => setHoveredService(index)}
                                             onMouseLeave={() => setHoveredService(null)}
@@ -1523,11 +1851,12 @@ const App: React.FC = () => {
                                                     flex: isActive ? 5 : 1,
                                                 }}
                                             >
-                                                {project.mediaType === 'video' ? (
-                                                    <video src={project.media} autoPlay loop muted playsInline style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0}}/>
+                                                {isActive && project.mediaType === 'video' ? (
+                                                    <video key={project.title} src={project.media} autoPlay loop muted playsInline poster={project.gallery?.[0]?.thumbnail} style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0}}/>
                                                 ) : (
-                                                    <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: `url(${project.media})`, backgroundSize: 'cover', backgroundPosition: 'center', zIndex: 0}}/>
+                                                    <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: `url(${project.mediaType === 'video' ? project.gallery?.[0]?.thumbnail : project.media})`, backgroundSize: 'cover', backgroundPosition: 'center', zIndex: 0}}/>
                                                 )}
+
                                                 <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%)', zIndex: 1}}/>
 
                                                 <div style={{ ...styles.projectColumnContent, opacity: isActive ? 1 : 0, color: 'white' }} id={`project-content-${index}`}>
@@ -1553,7 +1882,13 @@ const App: React.FC = () => {
                                             {projectsData.map((project, index) => (
                                                 <div key={index} style={{...styles.projectCard, flex: '0 0 90%', scrollSnapAlign: 'center'}} className="project-card" onClick={() => setSelectedProject(project)}>
                                                     {project.mediaType === 'video' ? (
-                                                        <video src={project.media} style={styles.projectImage} autoPlay loop muted playsInline />
+                                                        <video 
+                                                          ref={el => {
+                                                              if (el) projectVideoRefs.current.set(index, el);
+                                                              else projectVideoRefs.current.delete(index);
+                                                          }}
+                                                          src={project.media} style={styles.projectImage} loop muted playsInline preload="metadata" poster={project.gallery?.[0]?.thumbnail}
+                                                        />
                                                     ) : (
                                                         <img src={project.media} alt={project.title} style={styles.projectImage} />
                                                     )}
@@ -1574,6 +1909,19 @@ const App: React.FC = () => {
                             )}
                         </div>
 
+                        <div id="Catálogo" ref={sectionRefs['Catálogo']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'})}}>
+                            <AnimatedText as="h2" text="Nuestros Productos" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
+                            <AnimatedText as="h1" text="Catálogo de Dispositivos" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
+                            <AnimatedText as="p" text="Explora una selección curada de los mejores dispositivos del mercado, compatibles con nuestros ecosistemas inteligentes. Desde el control central hasta el último sensor, tenemos la pieza perfecta para tu proyecto." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
+                             <button
+                                style={styles.ctaButton}
+                                className="cta-button"
+                                onClick={() => setIsCatalogOpen(true)}
+                            >
+                                VER CATÁLOGO
+                            </button>
+                        </div>
+                        
                         <div id="Contáctanos" ref={sectionRefs['Contáctanos']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'}), borderBottom: 'none'}}>
                             <AnimatedText as="h2" text="¿Listo para empezar?" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
                             <AnimatedText as="h1" text="Contáctanos" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
@@ -1613,7 +1961,7 @@ const App: React.FC = () => {
                         <button style={styles.modalCloseButton} className="modal-close-button" onClick={() => setSelectedProject(null)} aria-label="Cerrar detalles del proyecto">&times;</button>
                         <div className="modal-scroll-area" style={styles.modalInnerContent}>
                             {selectedProject.mediaType === 'video' ? (
-                                <video src={selectedProject.media} style={styles.modalImage} autoPlay loop muted playsInline/>
+                                <video src={selectedProject.media} style={styles.modalImage} autoPlay loop muted playsInline poster={selectedProject.gallery?.[0]?.thumbnail}/>
                             ) : (
                                 <img src={selectedProject.media} alt={selectedProject.title} style={styles.modalImage}/>
                             )}
@@ -1635,6 +1983,7 @@ const App: React.FC = () => {
                                                 muted 
                                                 playsInline
                                                 controls
+                                                poster={selectedProject.gallery[galleryIndex].thumbnail}
                                             />
                                         ) : (
                                             <img 
@@ -1697,39 +2046,7 @@ const App: React.FC = () => {
                                     <h3 style={styles.productSectionTitle}>Productos de Ejemplo</h3>
                                     <div style={styles.productGrid}>
                                         {selectedFeature.products.map((product, index) => (
-                                            <div 
-                                                key={index} 
-                                                style={styles.productCard}
-                                                className="product-card"
-                                                onMouseEnter={!isMobile ? (e) => {
-                                                    const video = e.currentTarget.querySelector('video');
-                                                    if (video) video.play().catch(error => console.log("Video play was prevented:", error));
-                                                } : undefined}
-                                                onMouseLeave={!isMobile ? (e) => {
-                                                    const video = e.currentTarget.querySelector('video');
-                                                    if (video) {
-                                                        video.pause();
-                                                        video.currentTime = 0;
-                                                    }
-                                                } : undefined}
-                                            >
-                                                {product.mediaType === 'video' ? (
-                                                    <video 
-                                                        src={product.media} 
-                                                        style={styles.productImage} 
-                                                        autoPlay={isMobile}
-                                                        loop={isMobile}
-                                                        muted 
-                                                        playsInline 
-                                                    />
-                                                ) : (
-                                                    <img src={product.media} alt={product.name} style={styles.productImage} />
-                                                )}
-                                                <div style={styles.productCardContent}>
-                                                    <h4 style={styles.productName}>{product.name}</h4>
-                                                    <p style={styles.productDescription}>{product.description}</p>
-                                                </div>
-                                            </div>
+                                           <ProductCard key={index} product={product} isMobile={isMobile} styles={styles} />
                                         ))}
                                     </div>
                                 </div>
@@ -1761,6 +2078,57 @@ const App: React.FC = () => {
                                 ))}
                             </ul>
                         </div>
+                    </div>
+                </div>
+            )}
+
+            {isCatalogOpen && (
+                 <div style={styles.modalOverlay} className="modal-overlay" onClick={() => { setIsCatalogOpen(false); setSelectedCatalogCategory(null); }}>
+                    <div style={{...styles.modalContent, maxWidth: selectedCatalogCategory ? '900px' : '700px' }} className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button style={styles.modalCloseButton} className="modal-close-button" onClick={() => { setIsCatalogOpen(false); setSelectedCatalogCategory(null); }} aria-label="Cerrar catálogo">&times;</button>
+                        
+                        {!selectedCatalogCategory ? (
+                            <>
+                                <div style={styles.catalogModalHeader}>
+                                    <h2 style={{...styles.modalTitle, marginBottom: 0}}>Categorías</h2>
+                                </div>
+                                <div className="modal-scroll-area" style={{flex: 1, minHeight: 0}}>
+                                    <div style={styles.categoryGrid}>
+                                        {catalogData.map((category) => (
+                                            <div 
+                                                key={category.name} 
+                                                style={styles.categoryCard} 
+                                                className="category-card"
+                                                onClick={() => setSelectedCatalogCategory(category)}
+                                            >
+                                                <span style={{color: 'var(--accent-color)'}}>{category.icon}</span>
+                                                <h3 style={styles.categoryCardTitle}>{category.name}</h3>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <div style={styles.catalogModalHeader}>
+                                    <button style={styles.catalogBackButton} className="catalog-back-button" onClick={() => setSelectedCatalogCategory(null)} aria-label="Volver a categorías">‹</button>
+                                    <h2 style={styles.catalogModalTitle}>{selectedCatalogCategory.name}</h2>
+                                </div>
+                                 <div className="modal-scroll-area" style={{flex: 1, minHeight: 0}}>
+                                     <div style={styles.catalogProductGrid}>
+                                        {selectedCatalogCategory.products.map((product) => (
+                                            <div key={product.name} style={styles.catalogProductCard} className="catalog-product-card">
+                                                <img src={product.image} alt={product.name} style={styles.catalogProductImage} loading="lazy" />
+                                                <div style={styles.catalogProductContent}>
+                                                    <h4 style={styles.catalogProductName}>{product.name}</h4>
+                                                    <p style={styles.catalogProductDescription}>{product.description}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                     </div>
+                                 </div>
+                            </>
+                        )}
                     </div>
                 </div>
             )}
