@@ -318,9 +318,9 @@ const catalogData: CatalogCategory[] = [
     { name: 'Control Central y Red', icon: <IconHub style={{width: 32, height: 32}}/>, products: [
         { name: 'Asistentes de Voz', description: 'Controla tu hogar con comandos de voz.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Alexa.png' },
         { name: 'Hubs/Bridges', description: 'Unifica dispositivos de diferentes protocolos.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Hub.png' },
-        { name: 'Controladores Domóticos', description: 'El cerebro avanzado para automatizaciones complexas.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Rasberry.png' },
-        { name: 'Control Remoto Universal', description: 'Un solo mando para todos tus aparatos.', image: 'https://images.unsplash.com/photo-1601944177324-f23675a2f582?w=400&q=80' },
-        { name: 'Routers Wi-Fi Mesh', description: 'Cobertura Wi-Fi total y estable en todo tu hogar.', image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80' },
+        { name: 'Controladores Domóticos', description: 'El cerebro avanzado para automatizaciones complexas.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Controlador.png' },
+        { name: 'Control Remoto Universal', description: 'Un solo mando para todos tus aparatos.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/IR.png' },
+        { name: 'Routers Wi-Fi Mesh', description: 'Cobertura Wi-Fi total y estable en todo tu hogar.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Deco.png' },
     ]},
     { name: 'Electricidad y Energía', icon: <IconPlug style={{width: 32, height: 32}}/>, products: [
         { name: 'Interruptores Inteligentes', description: 'Moderniza tus luces sin cambiar las bombillas.', image: 'https://images.unsplash.com/photo-1617805104922-a6f6348b6c43?w=400&q=80' },
