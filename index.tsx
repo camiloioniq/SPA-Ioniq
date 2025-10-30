@@ -317,8 +317,8 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
 const catalogData: CatalogCategory[] = [
     { name: 'Control Central y Red', icon: <IconHub style={{width: 32, height: 32}}/>, products: [
         { name: 'Asistentes de Voz', description: 'Controla tu hogar con comandos de voz.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Alexa.png' },
-        { name: 'Hubs/Bridges', description: 'Unifica dispositivos de diferentes protocolos.', image: 'https://images.unsplash.com/photo-16178022813-559145610634?w=400&q=80' },
-        { name: 'Controladores Domóticos', description: 'El cerebro avanzado para automatizaciones complexas.', image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80' },
+        { name: 'Hubs/Bridges', description: 'Unifica dispositivos de diferentes protocolos.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Hub.png' },
+        { name: 'Controladores Domóticos', description: 'El cerebro avanzado para automatizaciones complexas.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Rasberry.png' },
         { name: 'Control Remoto Universal', description: 'Un solo mando para todos tus aparatos.', image: 'https://images.unsplash.com/photo-1601944177324-f23675a2f582?w=400&q=80' },
         { name: 'Routers Wi-Fi Mesh', description: 'Cobertura Wi-Fi total y estable en todo tu hogar.', image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80' },
     ]},
