@@ -210,7 +210,6 @@ interface Service {
 interface CatalogProduct {
     name: string;
     description: string;
-    image: string;
 }
 
 interface CatalogCategory {
@@ -219,14 +218,12 @@ interface CatalogCategory {
     products: CatalogProduct[];
 }
 
-type Theme = 'night' | 'day';
-
-const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
-    { 
+const getDomoticsFeaturesData = (): DomoticsFeature[] => [
+     { 
         title: 'Iluminación Inteligente', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(99, 102, 241, 0.4)' : 'rgba(250, 204, 21, 0.4)',
-        color2: theme === 'night' ? '#6366F1' : '#FACC15',
+        color1: 'rgba(99, 102, 241, 0.4)',
+        color2: '#6366F1',
         modalTitle: 'Control Lumínico Total',
         modalDescription: 'Desde la calidez de una cena romántica hasta la energía de una mañana productiva, ajusta la intensidad y el color de cada luz. Crea escenas personalizadas que se activan con tu voz, un toque en la app o automáticamente según la hora del día.',
         modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Videobanner.mp4',
@@ -240,8 +237,8 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     { 
         title: 'Climatización Avanzada', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2l2.121 2.121L12 6.243 9.879 4.121 12 2zm0 20l-2.121-2.121L12 17.757l2.121 2.122L12 22zM2 12l2.121-2.121L6.243 12l-2.122 2.121L2 12zm20 0l-2.121 2.121L17.757 12l2.122-2.121L22 12zM5.636 5.636l1.414 1.414L8.464 8.464 7.05 7.05 5.636 5.636zm12.728 12.728l-1.414-1.414L15.536 15.536l1.414 1.414-1.414-1.414zM5.636 18.364l1.414-1.414L8.464 15.536 7.05 16.95l-1.414 1.414zm12.728-12.728l-1.414 1.414L15.536 8.464l1.414-1.414 1.414 1.414z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(59, 130, 246, 0.4)' : 'rgba(56, 189, 248, 0.4)',
-        color2: theme === 'night' ? '#3B82F6' : '#38BDF8',
+        color1: 'rgba(59, 130, 246, 0.4)',
+        color2: '#3B82F6',
         modalTitle: 'Confort Climático Inteligente',
         modalDescription: 'Nuestro sistema aprende tus preferencias y se anticipa a tus necesidades. Geofencing activa el clima ideal antes de que llegues a casa y los sensores optimizan el consumo energético, garantizando confort absoluto con máxima eficiencia.',
         modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Videobanner1.mp4',
@@ -255,8 +252,8 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     { 
         title: 'Entretenimiento Inmersivo', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(236, 72, 153, 0.4)' : 'rgba(244, 63, 94, 0.4)',
-        color2: theme === 'night' ? '#EC4899' : '#F43F5E',
+        color1: 'rgba(236, 72, 153, 0.4)',
+        color2: '#EC4899',
         modalTitle: 'Cine en Casa, Sonido Envolvente',
         modalDescription: 'Crea el ambiente perfecto para cada ocasión con un solo toque. Con nuestras escenas automáticas, tu salón se transforma en una sala de cine o un estadio para ver el partido. Las luces, el sonido y las persianas se ajustan al instante para una experiencia totalmente inmersiva.',
         modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Entretenimiento/Videobanner.mp4',
@@ -270,8 +267,8 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     { 
         title: 'Seguridad Incondicional', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(139, 92, 246, 0.4)' : 'rgba(79, 70, 229, 0.4)',
-        color2: theme === 'night' ? '#8B5CF6' : '#4F46E5',
+        color1: 'rgba(139, 92, 246, 0.4)',
+        color2: '#8B5CF6',
         modalTitle: 'Tranquilidad, Donde Quiera Que Estés',
         modalDescription: 'Vigila tu hogar con cámaras de alta definición, recibe alertas de movimiento en tiempo real y controla accesos de forma remota. Simula presencia cuando estás fuera y duerme tranquilo sabiendo que tu hogar está protegido 24/7.',
         modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Seguridad/Videobanner.mp4',
@@ -285,8 +282,8 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     { 
         title: 'Eficiencia Energética', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(16, 185, 129, 0.4)' : 'rgba(74, 222, 128, 0.4)',
-        color2: theme === 'night' ? '#10B981' : '#4ADE80',
+        color1: 'rgba(16, 185, 129, 0.4)',
+        color2: '#10B981',
         modalTitle: 'Hogar Sostenible, Ahorro Inteligente',
         modalDescription: 'Monitorea tu consumo en tiempo real y deja que el sistema tome decisiones inteligentes. Apaga luces olvidadas, ajusta el termostato y optimiza el uso de electrodomésticos. Reduce tu huella de carbono y tu factura eléctrica sin esfuerzo.',
         modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Consumo/Videobanner.mp4',
@@ -300,8 +297,8 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
     { 
         title: 'Acceso por Voz y Remoto', 
         icon: <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"></path></svg>, 
-        color1: theme === 'night' ? 'rgba(217, 70, 239, 0.4)' : 'rgba(192, 132, 252, 0.4)',
-        color2: theme === 'night' ? '#D946EF' : '#C084FC',
+        color1: 'rgba(217, 70, 239, 0.4)',
+        color2: '#D946EF',
         modalTitle: 'Tu Voz es el Mando',
         modalDescription: 'Integramos los principales asistentes de voz para un control manos libres total. Desde apagar todas las luces al acostarte hasta pedir tu playlist favorita, tu hogar obedece tus palabras. Y con nuestra app, el control viaja contigo a cualquier parte del mundo.',
         modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Voz/Videobanner.mp4',
@@ -316,69 +313,69 @@ const getDomoticsFeaturesData = (theme: Theme): DomoticsFeature[] => [
 
 const catalogData: CatalogCategory[] = [
     { name: 'Control Central y Red', icon: <IconHub style={{width: 32, height: 32}}/>, products: [
-        { name: 'Asistentes de Voz', description: 'Controla tu hogar con comandos de voz.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Alexa.png' },
-        { name: 'Hubs/Bridges', description: 'Unifica dispositivos de diferentes protocolos.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Hub.png' },
-        { name: 'Controladores Domóticos', description: 'El cerebro avanzado para automatizaciones complexas.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Controlador.png' },
-        { name: 'Control Remoto Universal', description: 'Un solo mando para todos tus aparatos.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/IR.png' },
-        { name: 'Routers Wi-Fi Mesh', description: 'Cobertura Wi-Fi total y estable en todo tu hogar.', image: 'https://spa-ioniq.vercel.app/videos/Imagenes%20Catalogo/Control%20Central%20y%20Red/Deco.png' },
+        { name: 'Asistentes de Voz', description: 'Controla tu hogar con comandos de voz.' },
+        { name: 'Hubs/Bridges', description: 'Unifica dispositivos de diferentes protocolos.' },
+        { name: 'Controladores Domóticos', description: 'El cerebro avanzado para automatizaciones complexas.' },
+        { name: 'Control Remoto Universal', description: 'Un solo mando para todos tus aparatos.' },
+        { name: 'Routers Wi-Fi Mesh', description: 'Cobertura Wi-Fi total y estable en todo tu hogar.' },
     ]},
     { name: 'Electricidad y Energía', icon: <IconPlug style={{width: 32, height: 32}}/>, products: [
-        { name: 'Interruptores Inteligentes', description: 'Moderniza tus luces sin cambiar las bombillas.', image: 'https://images.unsplash.com/photo-1617805104922-a6f6348b6c43?w=400&q=80' },
-        { name: 'Módulos de Relé', description: 'Domotiza cualquier circuito desde el cajetín.', image: 'https://images.unsplash.com/photo-1580130281324-2c2192e42253?w=400&q=80' },
-        { name: 'Enchufes Inteligentes', description: 'Controla y programa cualquier electrodoméstico.', image: 'https://images.unsplash.com/photo-1620703423750-1373465a3b77?w=400&q=80' },
-        { name: 'Regletas Inteligentes', description: 'Gestiona varios dispositivos de forma individual.', image: 'https://images.unsplash.com/photo-1616423604252-4a4b2b2b2b2b?w=400&q=80' },
-        { name: 'Disyuntores Inteligentes', description: 'Control y protección desde el cuadro eléctrico.', image: 'https://images.unsplash.com/photo-1581092921462-683133a854d6?w=400&q=80' },
-        { name: 'Medidores de Consumo', description: 'Monitoriza tu gasto energético en tiempo real.', image: 'https://images.unsplash.com/photo-1624140164603-9b5527b2c5c0?w=400&q=80' },
+        { name: 'Interruptores Inteligentes', description: 'Moderniza tus luces sin cambiar las bombillas.' },
+        { name: 'Módulos de Relé', description: 'Domotiza cualquier circuito desde el cajetín.' },
+        { name: 'Enchufes Inteligentes', description: 'Controla y programa cualquier electrodoméstico.' },
+        { name: 'Regletas Inteligentes', description: 'Gestiona varios dispositivos de forma individual.' },
+        { name: 'Disyuntores Inteligentes', description: 'Control y protección desde el cuadro eléctrico.' },
+        { name: 'Medidores de Consumo', description: 'Monitoriza tu gasto energético en tiempo real.' },
     ]},
     { name: 'Iluminación', icon: <IconLightbulb style={{width: 32, height: 32}}/>, products: [
-        { name: 'Bombillas Inteligentes', description: 'Millones de colores y tonalidades de blanco.', image: 'https://images.unsplash.com/photo-1608688806945-84693994e45c?w=400&q=80' },
-        { name: 'Tiras de Luz LED', description: 'Iluminación ambiental versátil y espectacular.', image: 'https://images.unsplash.com/photo-1588275582594-e8b9319e7256?w=400&q=80' },
-        { name: 'Paneles de Luz', description: 'Crea murales de luz decorativos y dinámicos.', image: 'https://images.unsplash.com/photo-1629733239275-265142a7304f?w=400&q=80' },
-        { name: 'Controladores de LED', description: 'Haz inteligentes tus tiras LED convencionales.', image: 'https://images.unsplash.com/photo-1555543118-0c3a54ac3973?w=400&q=80' },
-        { name: 'Sensores de Luminosidad', description: 'Ajuste automático de la luz según el ambiente.', image: 'https://images.unsplash.com/photo-1543443259-b1d5e6931998?w=400&q=80' },
+        { name: 'Bombillas Inteligentes', description: 'Millones de colores y tonalidades de blanco.' },
+        { name: 'Tiras de Luz LED', description: 'Iluminación ambiental versátil y espectacular.' },
+        { name: 'Paneles de Luz', description: 'Crea murales de luz decorativos y dinámicos.' },
+        { name: 'Controladores de LED', description: 'Haz inteligentes tus tiras LED convencionales.' },
+        { name: 'Sensores de Luminosidad', description: 'Ajuste automático de la luz según el ambiente.' },
     ]},
     { name: 'Seguridad y Accesos', icon: <IconLock style={{width: 32, height: 32}}/>, products: [
-        { name: 'Cámaras de Seguridad', description: 'Vigila tu hogar desde cualquier lugar.', image: 'https://images.unsplash.com/photo-1588392523368-29388f8d976a?w=400&q=80' },
-        { name: 'Timbres con Video', description: 'Ve y habla con tus visitas estés donde estés.', image: 'https://images.unsplash.com/photo-1589394142334-02824c64391a?w=400&q=80' },
-        { name: 'Mirillas Digitales', description: 'La mirilla tradicional, ahora inteligente.', image: 'https://images.unsplash.com/photo-1611082595082-a0e28c7c2518?w=400&q=80' },
-        { name: 'Cerraduras Inteligentes', description: 'Acceso sin llaves con código, huella o móvil.', image: 'https://images.unsplash.com/photo-1563286345-564593e92591?w=400&q=80' },
-        { name: 'Abre-puertas de Garaje', description: 'Controla la puerta de tu garaje a distancia.', image: 'https://images.unsplash.com/photo-1597044079854-3c13fdd34d71?w=400&q=80' },
-        { name: 'Sensores de Vibración', description: 'Detecta roturas de cristal o golpes.', image: 'https://images.unsplash.com/photo-1614914182284-8a88185c898c?w=400&q=80' },
-        { name: 'Botones de Pánico', description: 'Alerta inmediata en caso de emergencia.', image: 'https://images.unsplash.com/photo-1510076857177-7470076d4098?w=400&q=80' },
+        { name: 'Cámaras de Seguridad', description: 'Vigila tu hogar desde cualquier lugar.' },
+        { name: 'Timbres con Video', description: 'Ve y habla con tus visitas estés donde estés.' },
+        { name: 'Mirillas Digitales', description: 'La mirilla tradicional, ahora inteligente.' },
+        { name: 'Cerraduras Inteligentes', description: 'Acceso sin llaves con código, huella o móvil.' },
+        { name: 'Abre-puertas de Garaje', description: 'Controla la puerta de tu garaje a distancia.' },
+        { name: 'Sensores de Vibración', description: 'Detecta roturas de cristal o golpes.' },
+        { name: 'Botones de Pánico', description: 'Alerta inmediata en caso de emergencia.' },
     ]},
     { name: 'Sensores Específicos', icon: <IconRadar style={{width: 32, height: 32}}/>, products: [
-        { name: 'Sensores de Movimiento', description: 'Automatiza luces y alertas con la detección de paso.', image: 'https://images.unsplash.com/photo-1628189507421-a354a8e22851?w=400&q=80' },
-        { name: 'Sensores de Presencia', description: 'Detección precisa de presencia humana, incluso inmóvil.', image: 'https://images.unsplash.com/photo-1633450793134-2e2a3952f447?w=400&q=80' },
-        { name: 'Sensores de Apertura', description: 'Recibe notificaciones de puertas y ventanas abiertas.', image: 'https://images.unsplash.com/photo-1560114999-b703a55a8f4c?w=400&q=80' },
-        { name: 'Sensores de T/H', description: 'Controla la temperatura y humedad de cada estancia.', image: 'https://images.unsplash.com/photo-1631557813637-a7541b65639a?w=400&q=80' },
-        { name: 'Detectores de Humo y Gas', description: 'Protección esencial contra incendios y fugas.', image: 'https://images.unsplash.com/photo-1593028245788-a83a15a08528?w=400&q=80' },
-        { name: 'Sensores de Fugas de Agua', description: 'Evita desastres por inundación con alertas tempranas.', image: 'https://images.unsplash.com/photo-1619177584165-2a2b34a62a6d?w=400&q=80' },
+        { name: 'Sensores de Movimiento', description: 'Automatiza luces y alertas con la detección de paso.' },
+        { name: 'Sensores de Presencia', description: 'Detección precisa de presencia humana, incluso inmóvil.' },
+        { name: 'Sensores de Apertura', description: 'Recibe notificaciones de puertas y ventanas abiertas.' },
+        { name: 'Sensores de T/H', description: 'Controla la temperatura y humedad de cada estancia.' },
+        { name: 'Detectores de Humo y Gas', description: 'Protección esencial contra incendios y fugas.' },
+        { name: 'Sensores de Fugas de Agua', description: 'Evita desastres por inundación con alertas tempranas.' },
     ]},
     { name: 'Climatización', icon: <IconThermometer style={{width: 32, height: 32}}/>, products: [
-        { name: 'Termostatos Inteligentes', description: 'Optimiza el confort y ahorra en tu factura energética.', image: 'https://images.unsplash.com/photo-1617043245431-2292029c5a4a?w=400&q=80' },
-        { name: 'Cabezales Termostáticos', description: 'Control individual de la temperatura de cada radiador.', image: 'https://images.unsplash.com/photo-1632345031110-4a87a6d89849?w=400&q=80' },
-        { name: 'Controladores para A/C', description: 'Convierte tu aire acondicionado en un dispositivo smart.', image: 'https://images.unsplash.com/photo-1618510842930-5b583f707f1f?w=400&q=80' },
-        { name: 'Calefactores Inteligentes', description: 'Calor instantáneo y controlable desde tu móvil.', image: 'https://images.unsplash.com/photo-1605503029807-f3e4554c2512?w=400&q=80' },
+        { name: 'Termostatos Inteligentes', description: 'Optimiza el confort y ahorra en tu factura energética.' },
+        { name: 'Cabezales Termostáticos', description: 'Control individual de la temperatura de cada radiador.' },
+        { name: 'Controladores para A/C', description: 'Convierte tu aire acondicionado en un dispositivo smart.' },
+        { name: 'Calefactores Inteligentes', description: 'Calor instantáneo y controlable desde tu móvil.' },
     ]},
     { name: 'Automatización', icon: <IconRobot style={{width: 32, height: 32}}/>, products: [
-        { name: 'Motores para Persianas', description: 'Sube y baja tus persianas y cortinas automáticamente.', image: 'https://images.unsplash.com/photo-1596048139327-cc9f7c87c65b?w=400&q=80' },
-        { name: 'Smart Glass', description: 'Controla la privacidad y la luz con un solo toque.', image: 'https://images.unsplash.com/photo-1617802690658-32c140a3b2b0?w=400&q=80' },
-        { name: 'Robots Aspiradores', description: 'Limpieza autónoma e inteligente para tu hogar.', image: 'https://images.unsplash.com/photo-1628335964867-ce68800f7e4f?w=400&q=80' },
-        { name: 'Válvulas de Agua y Gas', description: 'Corta el suministro a distancia en caso de fuga.', image: 'https://images.unsplash.com/photo-1616359556070-8f654b73b53c?w=400&q=80' },
-        { name: 'Controladores de Riego', description: 'Riego inteligente y eficiente para tu jardín.', image: 'https://images.unsplash.com/photo-1549488344-cbb6c144e207?w=400&q=80' },
-        { name: 'Estaciones Meteorológicas', description: 'Datos climáticos precisos para tus automatizaciones.', image: 'https://images.unsplash.com/photo-1585803279883-820885145c22?w=400&q=80' },
+        { name: 'Motores para Persianas', description: 'Sube y baja tus persianas y cortinas automáticamente.' },
+        { name: 'Smart Glass', description: 'Controla la privacidad y la luz con un solo toque.' },
+        { name: 'Robots Aspiradores', description: 'Limpieza autónoma e inteligente para tu hogar.' },
+        { name: 'Válvulas de Agua y Gas', description: 'Corta el suministro a distancia en caso de fuga.' },
+        { name: 'Controladores de Riego', description: 'Riego inteligente y eficiente para tu jardín.' },
+        { name: 'Estaciones Meteorológicas', description: 'Datos climáticos precisos para tus automatizaciones.' },
     ]},
     { name: 'Electrodomésticos', icon: <IconAppliance style={{width: 32, height: 32}}/>, products: [
-        { name: 'Cafeteras Inteligentes', description: 'Despierta con el café recién hecho a tu gusto.', image: 'https://images.unsplash.com/photo-1565452344013-a6fed67345f8?w=400&q=80' },
-        { name: 'Neveras Inteligentes', description: 'Gestiona tus alimentos y recibe recetas.', image: 'https://images.unsplash.com/photo-1629827281145-a7c87b154a26?w=400&q=80' },
-        { name: 'Lavadoras y Secadoras', description: 'Controla el ciclo de lavado desde cualquier lugar.', image: 'https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?w=400&q=80' },
-        { name: 'Robots de Cocina', description: 'Cocina guiada y control remoto para tus platos.', image: 'https://images.unsplash.com/photo-1580982823624-9a0azzi3d014?w=400&q=80' },
-        { name: 'Dispensadores para Mascotas', description: 'Alimenta a tus mascotas estés donde estés.', image: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80' },
+        { name: 'Cafeteras Inteligentes', description: 'Despierta con el café recién hecho a tu gusto.' },
+        { name: 'Neveras Inteligentes', description: 'Gestiona tus alimentos y recibe recetas.' },
+        { name: 'Lavadoras y Secadoras', description: 'Controla el ciclo de lavado desde cualquier lugar.' },
+        { name: 'Robots de Cocina', description: 'Cocina guiada y control remoto para tus platos.' },
+        { name: 'Dispensadores para Mascotas', description: 'Alimenta a tus mascotas estés donde estés.' },
     ]},
     { name: 'Audio y Video', icon: <IconSpeaker style={{width: 32, height: 32}}/>, products: [
-        { name: 'Altavoces Multi-room', description: 'Sonido sincronizado en toda la casa.', image: 'https://images.unsplash.com/photo-1593500244432-15f17a9c8b7c?w=400&q=80' },
-        { name: 'Dispositivos de Streaming', description: 'Convierte cualquier TV en una Smart TV avanzada.', image: 'https://images.unsplash.com/photo-1606334235882-f50686374828?w=400&q=80' },
-        { name: 'Switches HDMI Inteligentes', description: 'Cambia de fuente de video automáticamente.', image: 'https://images.unsplash.com/photo-1593788229497-2936742a03e1?w=400&q=80' },
+        { name: 'Altavoces Multi-room', description: 'Sonido sincronizado en toda la casa.' },
+        { name: 'Dispositivos de Streaming', description: 'Convierte cualquier TV en una Smart TV avanzada.' },
+        { name: 'Switches HDMI Inteligentes', description: 'Cambia de fuente de video automáticamente.' },
     ]},
 ];
 
@@ -662,7 +659,7 @@ const styles: { [key: string]: CSSProperties } = {
     },
     mobileMenuHeader: {
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-end',
         alignItems: 'center',
         width: '100%',
         padding: '15px 20px',
@@ -1144,12 +1141,6 @@ const styles: { [key: string]: CSSProperties } = {
         border: '1px solid var(--glass-border)',
         transition: 'transform 0.3s, box-shadow 0.3s',
     },
-    catalogProductImage: {
-        width: '100%',
-        height: '120px',
-        objectFit: 'cover',
-        display: 'block',
-    },
     catalogProductContent: {
         padding: '15px',
     },
@@ -1168,32 +1159,6 @@ const styles: { [key: string]: CSSProperties } = {
 
 const ProductCard: React.FC<{ product: ProductExample; isMobile: boolean; styles: { [key: string]: CSSProperties } }> = ({ product, isMobile, styles }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
-    const [isPaused, setIsPaused] = useState(true);
-
-    const togglePlay = () => {
-        const video = videoRef.current;
-        if (video) {
-            if (video.paused) {
-                video.play().catch(error => console.log("Video play was prevented:", error));
-            } else {
-                video.pause();
-            }
-        }
-    };
-
-    useEffect(() => {
-        const video = videoRef.current;
-        if (video) {
-            const handlePlay = () => setIsPaused(false);
-            const handlePause = () => setIsPaused(true);
-            video.addEventListener('play', handlePlay);
-            video.addEventListener('pause', handlePause);
-            return () => {
-                video.removeEventListener('play', handlePlay);
-                video.removeEventListener('pause', handlePause);
-            };
-        }
-    }, []);
 
     const handleMouseEnter = () => {
         if (!isMobile && videoRef.current) {
@@ -1214,7 +1179,6 @@ const ProductCard: React.FC<{ product: ProductExample; isMobile: boolean; styles
             className="product-card"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            onClick={isMobile ? togglePlay : undefined}
         >
             <div style={styles.productVideoContainer}>
                 {product.mediaType === 'video' ? (
@@ -1226,14 +1190,10 @@ const ProductCard: React.FC<{ product: ProductExample; isMobile: boolean; styles
                         playsInline
                         loop
                         preload="metadata"
+                        autoPlay={isMobile}
                     />
                 ) : (
                     <img src={product.media} alt={product.name} style={styles.productImage} />
-                )}
-                {product.mediaType === 'video' && isMobile && isPaused && (
-                     <div style={{...styles.productVideoOverlay, opacity: 1, backgroundColor: 'rgba(0,0,0,0.4)'}}>
-                        <IconPlay style={styles.productVideoIcon} />
-                    </div>
                 )}
             </div>
             <div style={styles.productCardContent}>
@@ -1246,7 +1206,6 @@ const ProductCard: React.FC<{ product: ProductExample; isMobile: boolean; styles
 
 
 const App: React.FC = () => {
-    const [theme, setTheme] = useState<Theme>('night');
     const [activeSection, setActiveSection] = useState('Inicio');
     const [servicesVisible, setServicesVisible] = useState(false);
     const [hoveredService, setHoveredService] = useState<number | null>(null);
@@ -1273,7 +1232,7 @@ const App: React.FC = () => {
     const projectsRef = useRef<HTMLDivElement>(null);
     const projectVideoRefs = useRef<Map<number, HTMLVideoElement>>(new Map());
 
-    const domoticsFeaturesData = useMemo(() => getDomoticsFeaturesData(theme), [theme]);
+    const domoticsFeaturesData = useMemo(() => getDomoticsFeaturesData(), []);
 
     const handleProjectGalleryNav = (direction: 'next' | 'prev') => {
         if (selectedProject) {
@@ -1287,10 +1246,6 @@ const App: React.FC = () => {
             setGalleryIndex(0);
         }
     }, [selectedProject]);
-
-    useEffect(() => {
-        document.documentElement.setAttribute('data-theme', theme);
-    }, [theme]);
     
     // FIX: Moved projectsData before its usage in the following useEffect hook to fix "used before declaration" error.
     const projectsData: Project[] = [
@@ -1602,11 +1557,15 @@ const App: React.FC = () => {
         }
     };
 
-    const toggleTheme = () => {
-        setTheme(prevTheme => (prevTheme === 'night' ? 'day' : 'night'));
-    };
-
-    const navItems = ['Inicio', 'Nosotros', 'Servicios', 'Proyectos', 'Catálogo', 'Contáctanos'];
+    const navItems = [
+        { label: 'Inicio', id: 'Inicio', type: 'scroll' },
+        { label: 'Nosotros', id: 'Nosotros', type: 'scroll' },
+        { label: 'Servicios', id: 'Servicios', type: 'scroll' },
+        { label: 'Proyectos', id: 'Proyectos', type: 'scroll' },
+        { label: 'Catálogo', id: 'Catálogo', type: 'scroll' },
+        { label: 'Propuestas', url: 'https://propuestas.ioniq.app', type: 'external' },
+        { label: 'Contáctanos', id: 'Contáctanos', type: 'scroll' },
+    ];
 
 
     return (
@@ -1640,27 +1599,24 @@ const App: React.FC = () => {
                             <IconMenu style={{width: '28px', height: '28px', cursor: 'pointer', color: 'var(--text-main)'}} onClick={() => setIsMenuOpen(true)} />
                         ) : (
                             <>
-                                <button
-                                    onClick={toggleTheme}
-                                    style={styles.themeToggleButton}
-                                    onMouseEnter={e => e.currentTarget.style.backgroundColor = 'var(--card-bg-hover)'}
-                                    onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
-                                    aria-label={`Switch to ${theme === 'night' ? 'day' : 'night'} mode`}
-                                >
-                                    {theme === 'night' ? <IconSun style={{ width: 22, height: 22 }} /> : <IconMoon style={{ width: 22, height: 22 }} />}
-                                </button>
                                 <nav style={styles.nav}>
                                     {navItems.map(item => (
                                         <a
-                                            key={item}
-                                            href={`#${item}`}
-                                            style={activeSection === item ? { ...styles.navLink, ...styles.activeNavLink } : styles.navLink}
+                                            key={item.label}
+                                            href={item.type === 'scroll' ? `#${item.id}` : item.url}
+                                            target={item.type === 'external' ? '_blank' : undefined}
+                                            rel={item.type === 'external' ? 'noopener noreferrer' : undefined}
+                                            style={activeSection === item.id ? { ...styles.navLink, ...styles.activeNavLink } : styles.navLink}
                                             onMouseOver={handleMouseOverNavLink}
                                             onMouseOut={handleMouseOutNavLink}
-                                            onClick={(e) => handleNavClick(e, item)}
-                                            aria-current={activeSection === item ? 'page' : undefined}
+                                            onClick={(e) => {
+                                                if (item.type === 'scroll' && item.id) {
+                                                    handleNavClick(e, item.id);
+                                                }
+                                            }}
+                                            aria-current={activeSection === item.id ? 'page' : undefined}
                                         >
-                                            {item}
+                                            {item.label}
                                         </a>
                                     ))}
                                 </nav>
@@ -1674,27 +1630,24 @@ const App: React.FC = () => {
                         <div className="mobile-menu-overlay" style={styles.mobileMenuOverlay} onClick={() => setIsMenuOpen(false)}></div>
                         <div className="mobile-menu-container" style={styles.mobileMenuContainer} onClick={e => e.stopPropagation()}>
                             <div style={styles.mobileMenuHeader}>
-                                <button
-                                    onClick={toggleTheme}
-                                    style={{...styles.themeToggleButton, color: 'var(--text-main)'}}
-                                    aria-label={`Switch to ${theme === 'night' ? 'day' : 'night'} mode`}
-                                >
-                                    {theme === 'night' ? <IconSun style={{ width: 22, height: 22 }} /> : <IconMoon style={{ width: 22, height: 22 }} />}
-                                </button>
                                 <IconClose style={{width: '28px', height: '28px', cursor: 'pointer', color: 'var(--text-main)'}} onClick={() => setIsMenuOpen(false)} />
                             </div>
                             <nav style={styles.mobileNav}>
                                 {navItems.map(item => (
                                     <a
-                                        key={item}
-                                        href={`#${item}`}
+                                        key={item.label}
+                                        href={item.type === 'scroll' ? `#${item.id}` : item.url}
+                                        target={item.type === 'external' ? '_blank' : undefined}
+                                        rel={item.type === 'external' ? 'noopener noreferrer' : undefined}
                                         style={{...styles.mobileNavLink, color: 'var(--text-main)'}}
                                         onClick={(e) => {
-                                            handleNavClick(e, item);
+                                            if (item.type === 'scroll' && item.id) {
+                                                handleNavClick(e, item.id);
+                                            }
                                             setIsMenuOpen(false);
                                         }}
                                     >
-                                        {item}
+                                        {item.label}
                                     </a>
                                 ))}
                             </nav>
@@ -1959,11 +1912,7 @@ const App: React.FC = () => {
                     <div style={styles.modalContent} className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button style={styles.modalCloseButton} className="modal-close-button" onClick={() => setSelectedProject(null)} aria-label="Cerrar detalles del proyecto">&times;</button>
                         <div className="modal-scroll-area" style={styles.modalInnerContent}>
-                            {selectedProject.mediaType === 'video' ? (
-                                <video src={selectedProject.media} style={styles.modalImage} autoPlay loop muted playsInline poster={selectedProject.gallery?.[0]?.thumbnail}/>
-                            ) : (
-                                <img src={selectedProject.media} alt={selectedProject.title} style={styles.modalImage}/>
-                            )}
+                            <img src={selectedProject.gallery?.[0]?.thumbnail || selectedProject.media} alt={selectedProject.title} style={styles.modalImage}/>
                             <h2 style={styles.modalTitle}>{selectedProject.title}</h2>
                             <div className="project-details-content" dangerouslySetInnerHTML={{ __html: selectedProject.details }} />
                             
@@ -2116,8 +2065,7 @@ const App: React.FC = () => {
                                  <div className="modal-scroll-area" style={{flex: 1, minHeight: 0, overflowY: 'auto'}}>
                                      <div style={styles.catalogProductGrid}>
                                         {selectedCatalogCategory.products.map((product) => (
-                                            <div key={product.name} style={styles.catalogProductCard} className="catalog-product-card">
-                                                <img src={product.image} alt={product.name} style={styles.catalogProductImage} loading="lazy" />
+                                            <div key={product.name} style={{...styles.catalogProductCard, display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '150px'}} className="catalog-product-card">
                                                 <div style={styles.catalogProductContent}>
                                                     <h4 style={styles.catalogProductName}>{product.name}</h4>
                                                     <p style={styles.catalogProductDescription}>{product.description}</p>
