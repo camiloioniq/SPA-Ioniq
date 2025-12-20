@@ -252,12 +252,12 @@ const getDomoticsFeaturesData = (): DomoticsFeature[] => [
         color2: '#6366F1',
         modalTitle: 'Control Lumínico Total',
         modalDescription: 'Desde la calidez de una cena romántica hasta la energía de una mañana productiva, ajusta la intensidad y el color de cada luz. Crea escenas personalizadas que se activan con tu voz, un toque en la app o automáticamente según la hora del día.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Videobanner.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Iluminacion/Videobanner.webm',
         modalMediaType: 'video',
         products: [
-            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Video1.mp4', mediaType: 'video' },
-            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Video2.mp4', mediaType: 'video' },
-            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Iluminacion/Video3.mp4', mediaType: 'video' },
+            { name: 'Tiras LED RGBW', description: 'Crea ambientes dinámicos y acentúa la arquitectura de tu espacio con millones de colores.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Iluminacion/Video1.webm', mediaType: 'video' },
+            { name: 'Switches Inteligentes', description: 'Controla tus luces existentes desde cualquier lugar y crea programaciones horarias.', media: 'https://spa-ioniq.vercel.app/videos/Fotos%20Ioniq/Tarjeta%20Iluminacion/Video2.webm', mediaType: 'video' },
+            { name: 'Bombillas Regulables', description: 'Ajusta el brillo y la temperatura del color para cada momento, desde luz fría para trabajar hasta cálida para relajarte.', media: 'Fotos%20Ioniq/Tarjeta%20Iluminacion/Video3.webm', mediaType: 'video' },
         ]
     },
     { 
@@ -267,12 +267,12 @@ const getDomoticsFeaturesData = (): DomoticsFeature[] => [
         color2: '#3B82F6',
         modalTitle: 'Confort Climático Inteligente',
         modalDescription: 'Nuestro sistema aprende tus preferencias y se anticipa a tus necesidades. Geofencing activa el clima ideal antes de que llegues a casa y los sensores optimizan el consumo energético, garantizando confort absoluto con máxima eficiencia.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Videobanner1.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Climatizacion/Videobanner1.webm',
         modalMediaType: 'video',
         products: [
-            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video1.mp4', mediaType: 'video' },
-            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video2.mp4', mediaType: 'video' },
-            { name: 'Sensores de Temperatura', description: 'Asegura una temperatura precisa y homogénea en cada habitación de tu hogar.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Climatizacion/Video3.mp4', mediaType: 'video' },
+            { name: 'Termostato Inteligente', description: 'Aprende tus rutinas y optimiza la calefacción y el aire acondicionado para ahorrar energía.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Climatizacion/Video1.webm', mediaType: 'video' },
+            { name: 'Controlador de A/C', description: 'Convierte tu aire acondicionado tradicional en un dispositivo inteligente controlable desde tu móvil.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Climatizacion/Video2.webm', mediaType: 'video' },
+            { name: 'Sensores de Temperatura', description: 'Asegura una temperatura precisa y homogénea en cada habitación de tu hogar.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Climatizacion/Video3.webm', mediaType: 'video' },
         ]
     },
     { 
@@ -282,12 +282,12 @@ const getDomoticsFeaturesData = (): DomoticsFeature[] => [
         color2: '#EC4899',
         modalTitle: 'Cine en Casa, Sonido Envolvente',
         modalDescription: 'Crea el ambiente perfecto para cada ocasión con un solo toque. Con nuestras escenas automáticas, tu salón se transforma en una sala de cine o un estadio para ver el partido. Las luces, el sonido y las persianas se ajustan al instante para una experiencia totalmente inmersiva.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Entretenimiento/Videobanner.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Entretenimiento/Videobanner.webm',
         modalMediaType: 'video',
         products: [
-            { name: 'Escenas Automáticas', description: 'El cerebro de tus escenas automáticas. Activa el "Modo Cine" y las luces bajarán al instante, o el "Modo Fútbol" para sincronizar el partido en las pantallas de donde te encuentres en tu hogar en perfecto 4K.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Entretenimiento/Video1.mp4', mediaType: 'video' },
-            { name: 'Altavoces Arquitectónicos', description: 'Sonido de alta fidelidad que se integra perfectamente en paredes y techos, desapareciendo visualmente.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Entretenimiento/Video2.mp4', mediaType: 'video' },
-            { name: 'Control Remoto Universal', description: 'Un solo mando para gobernarlos a todos. Controla tu TV, sistema de sonido, luces y más.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Entretenimiento/Video3.mp4', mediaType: 'video' },
+            { name: 'Escenas Automáticas', description: 'El cerebro de tus escenas automáticas. Activa el "Modo Cine" y las luces bajarán al instante, o el "Modo Fútbol" para sincronizar el partido en las pantallas de donde te encuentres en tu hogar en perfecto 4K.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Entretenimiento/Video1.webm', mediaType: 'video' },
+            { name: 'Altavoces Arquitectónicos', description: 'Sonido de alta fidelidad que se integra perfectamente en paredes y techos, desapareciendo visualmente.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Entretenimiento/Video2.webm', mediaType: 'video' },
+            { name: 'Control Remoto Universal', description: 'Un solo mando para gobernarlos a todos. Controla tu TV, sistema de sonido, luces y más.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Entretenimiento/Video3.webm', mediaType: 'video' },
         ]
     },
     { 
@@ -297,12 +297,12 @@ const getDomoticsFeaturesData = (): DomoticsFeature[] => [
         color2: '#8B5CF6',
         modalTitle: 'Tranquilidad, Donde Quiera Que Estés',
         modalDescription: 'Vigila tu hogar con cámaras de alta definición, recibe alertas de movimiento en tiempo real y controla accesos de forma remota. Simula presencia cuando estás fuera y duerme tranquilo sabiendo que tu hogar está protegido 24/7.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Seguridad/Videobanner.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Seguridad/Videobanner.webm',
         modalMediaType: 'video',
         products: [
-            { name: 'Cámaras IP con IA', description: 'Reconocimiento inteligente de personas, vehículos y paquetes para evitar falsas alarmas.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Seguridad/Video1.mp4', mediaType: 'video' },
-            { name: 'Cerradura Inteligente', description: 'Acceso sin llaves mediante código, huella dactilar o tu móvil. Otorga accesos temporales a distancia.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Seguridad/Video2.mp4', mediaType: 'video' },
-            { name: 'Sensores de Apertura', description: 'Recibe alertas instantáneas en tu móvil si una puerta o ventana se abre inesperadamente.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Seguridad/Video3.mp4', mediaType: 'video' },
+            { name: 'Cámaras IP con IA', description: 'Reconocimiento inteligente de personas, vehículos y paquetes para evitar falsas alarmas.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Seguridad/Video1.webm', mediaType: 'video' },
+            { name: 'Cerradura Inteligente', description: 'Acceso sin llaves mediante código, huella dactilar o tu móvil. Otorga accesos temporales a distancia.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Seguridad/Video2.webm', mediaType: 'video' },
+            { name: 'Sensores de Apertura', description: 'Recibe alertas instantáneas en tu móvil si una puerta o ventana se abre inesperadamente.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Seguridad/Video3.webm', mediaType: 'video' },
         ]
     },
     { 
@@ -312,12 +312,12 @@ const getDomoticsFeaturesData = (): DomoticsFeature[] => [
         color2: '#10B981',
         modalTitle: 'Hogar Sostenible, Ahorro Inteligente',
         modalDescription: 'Monitorea tu consumo en tiempo real y deja que el sistema tome decisiones inteligentes. Apaga luces olvidadas, ajusta el termostato y optimiza el uso de electrodomésticos. Reduce tu huella de carbono y tu factura eléctrica sin esfuerzo.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Consumo/Videobanner.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Consumo/Videobanner.webm',
         modalMediaType: 'video',
         products: [
-            { name: 'Medidor de Consumo', description: 'Monitorea el gasto energético de toda tu casa o de circuitos individuales en tiempo real.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Consumo/Video1.mp4', mediaType: 'video' },
-            { name: 'Enchufes Inteligentes', description: 'Controla y programa el encendido/apagado de cualquier electrodoméstico desde tu móvil.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Consumo/Video2.mp4', mediaType: 'video' },
-            { name: 'Controlador de Cargas', description: 'Gestiona dispositivos de alto consumo, como calentadores, para que funcionen en horas de menor coste energético.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Consumo/Video3.mp4', mediaType: 'video' },
+            { name: 'Medidor de Consumo', description: 'Monitorea el gasto energético de toda tu casa o de circuitos individuales en tiempo real.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Consumo/Video1.webm', mediaType: 'video' },
+            { name: 'Enchufes Inteligentes', description: 'Controla y programa el encendido/apagado de cualquier electrodoméstico desde tu móvil.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Consumo/Video1.webm', mediaType: 'video' },
+            { name: 'Controlador de Cargas', description: 'Gestiona dispositivos de alto consumo, como calentadores, para que funcionen en horas de menor coste energético.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Consumo/Video1.webm', mediaType: 'video' },
         ]
     },
     { 
@@ -327,12 +327,12 @@ const getDomoticsFeaturesData = (): DomoticsFeature[] => [
         color2: '#D946EF',
         modalTitle: 'Tu Voz es el Mando',
         modalDescription: 'Integramos los principales asistentes de voz para un control manos libres total. Desde apagar todas las luces al acostarte hasta pedir tu playlist favorita, tu hogar obedece tus palabras. Y con nuestra app, el control viaja contigo a cualquier parte del mundo.',
-        modalMedia: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Voz/Videobanner.mp4',
+        modalMedia: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Voz/Videobanner.webm',
         modalMediaType: 'video',
         products: [
-            { name: 'Hub de Automatización', description: 'El cerebro que unifica todos los dispositivos de diferentes marcas en un solo ecosistema cohesivo.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Voz/Video1.mp4', mediaType: 'video' },
-            { name: 'Asistente de Voz', description: 'Integración nativa con Amazon Alexa, Google Assistant y Apple HomeKit para un control por voz natural.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Voz/Video2.mp4', mediaType: 'video' },
-            { name: 'Interfaz Móvil Propia', description: 'Una app diseñada por y para ti, con la distribución y los controles que realmente necesitas.', media: 'https://spa-ioniq.vercel.app/videos/Tarjeta%20Voz/Video3.mp4', mediaType: 'video' },
+            { name: 'Hub de Automatización', description: 'El cerebro que unifica todos los dispositivos de diferentes marcas en un solo ecosistema cohesivo.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Voz/Video1.webm', mediaType: 'video' },
+            { name: 'Asistente de Voz', description: 'Integración nativa con Amazon Alexa, Google Assistant y Apple HomeKit para un control por voz natural.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Voz/Video2.webm', mediaType: 'video' },
+            { name: 'Interfaz Móvil Propia', description: 'Una app diseñada por y para ti, con la distribución y los controles que realmente necesitas.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Voz/Video3.webm', mediaType: 'video' },
         ]
     },
 ];
