@@ -1446,7 +1446,7 @@ const App: React.FC = () => {
         {
             title: 'Apartamento "Mónaco"',
             description: 'Integración completa de iluminación, climatización y seguridad, controlada desde una interfaz única desarrollada por ioniq.',
-            media: 'https://spa-ioniq.vercel.app/videos/Contenido%20Monaco/Monaco%20.mp4',
+            media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Contenido%20Monaco/Monaco%20.webm',
             mediaType: 'video',
             features: ['Iluminación', 'Climatización', 'Seguridad'],
             details: `
