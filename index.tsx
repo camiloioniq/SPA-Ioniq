@@ -113,6 +113,32 @@ const IconPause: React.FC<{ style: CSSProperties }> = ({ style }) => (
     </svg>
 );
 
+// New Icons for Proposal Section
+const IconApartment: React.FC<{ style: CSSProperties }> = ({ style }) => (
+    <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5M12 6.75h1.5M15 6.75h1.5M9 10.5h1.5M12 10.5h1.5M15 10.5h1.5M9 14.25h1.5M12 14.25h1.5M15 14.25h1.5M9 18h1.5M12 18h1.5M15 18h1.5" />
+    </svg>
+);
+
+const IconHome: React.FC<{ style: CSSProperties }> = ({ style }) => (
+    <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+    </svg>
+);
+
+const IconBusiness: React.FC<{ style: CSSProperties }> = ({ style }) => (
+    <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5M12 6.75h1.5M15 6.75h1.5M9 10.5h1.5M12 10.5h1.5M15 10.5h1.5M9 14.25h1.5M12 14.25h1.5M15 14.25h1.5M9 18h1.5M12 18h1.5M15 18h1.5" />
+    </svg>
+);
+
+const IconCheck: React.FC<{ style: CSSProperties }> = ({ style }) => (
+    <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+    </svg>
+);
+
+
 const IconSun: React.FC<{ style?: CSSProperties }> = ({ style }) => (
     <svg style={style} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -1155,6 +1181,132 @@ const styles: { [key: string]: CSSProperties } = {
         color: 'var(--text-secondary)',
         lineHeight: 1.4,
     },
+    // New Styles for Propuestas
+    proposalGrid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        gap: '40px',
+        width: '100%',
+        maxWidth: '1000px',
+        marginTop: '30px',
+        alignItems: 'start',
+    },
+    proposalConfigContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '30px',
+        textAlign: 'left',
+    },
+    proposalSectionLabel: {
+        fontSize: '1rem',
+        fontWeight: 600,
+        marginBottom: '15px',
+        color: 'var(--text-highlight)',
+        textTransform: 'uppercase',
+        letterSpacing: '1px',
+    },
+    proposalTypeGrid: {
+        display: 'flex',
+        gap: '15px',
+        flexWrap: 'wrap',
+    },
+    proposalOptionCard: {
+        background: 'var(--card-bg)',
+        border: '1px solid var(--glass-border)',
+        borderRadius: '12px',
+        padding: '20px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '10px',
+        cursor: 'pointer',
+        transition: 'all 0.3s ease',
+        flex: 1,
+        minWidth: '100px',
+        position: 'relative',
+    },
+    proposalOptionCardActive: {
+        background: 'rgba(139, 92, 246, 0.2)',
+        borderColor: 'var(--accent-color)',
+        boxShadow: '0 0 15px rgba(139, 92, 246, 0.3)',
+    },
+    proposalFeatureGrid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
+        gap: '12px',
+    },
+    proposalFeatureCard: {
+        background: 'var(--card-bg)',
+        border: '1px solid var(--glass-border)',
+        borderRadius: '8px',
+        padding: '10px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '8px',
+        cursor: 'pointer',
+        transition: 'all 0.2s ease',
+        textAlign: 'center',
+    },
+    proposalFeatureCardActive: {
+        background: 'rgba(139, 92, 246, 0.15)',
+        borderColor: 'var(--accent-color)',
+    },
+    proposalFeatureIcon: {
+        width: '24px',
+        height: '24px',
+        marginBottom: '2px',
+    },
+    proposalFeatureName: {
+        fontSize: '0.75rem',
+        lineHeight: 1.2,
+    },
+    proposalSummaryCard: {
+        background: 'linear-gradient(180deg, rgba(30, 30, 60, 0.9) 0%, rgba(20, 20, 40, 0.9) 100%)',
+        borderRadius: '20px',
+        border: '1px solid var(--accent-color)',
+        padding: '30px',
+        position: 'sticky',
+        top: '20px',
+        boxShadow: '0 10px 40px rgba(0,0,0,0.4)',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '20px',
+    },
+    proposalSummaryTitle: {
+        fontSize: '1.2rem',
+        fontWeight: 700,
+        marginBottom: '5px',
+        borderBottom: '1px solid var(--separator-color)',
+        paddingBottom: '15px',
+    },
+    proposalSummaryItem: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        fontSize: '0.9rem',
+        color: 'var(--text-secondary)',
+    },
+    proposalSummaryValue: {
+        color: 'var(--text-main)',
+        fontWeight: 600,
+    },
+    complexityBarContainer: {
+        width: '100%',
+        height: '8px',
+        background: 'rgba(255,255,255,0.1)',
+        borderRadius: '4px',
+        marginTop: '10px',
+        overflow: 'hidden',
+    },
+    complexityBarFill: {
+        height: '100%',
+        background: 'linear-gradient(90deg, #10B981, #F59E0B, #EF4444)',
+        transition: 'width 0.5s ease',
+    },
+    customSliderContainer: {
+        padding: '10px 0 20px 0',
+    }
 };
 
 const ProductCard: React.FC<{ product: ProductExample; isMobile: boolean; styles: { [key: string]: CSSProperties } }> = ({ product, isMobile, styles }) => {
@@ -1220,17 +1372,24 @@ const App: React.FC = () => {
     const [isCatalogOpen, setIsCatalogOpen] = useState(false);
     const [selectedCatalogCategory, setSelectedCatalogCategory] = useState<CatalogCategory | null>(null);
     
+    // Proposal State
+    const [propType, setPropType] = useState<'apartment' | 'house' | 'business'>('apartment');
+    const [propSize, setPropSize] = useState<number>(100);
+    const [propFeatures, setPropFeatures] = useState<string[]>([]);
+    
     const sectionRefs = {
         'Inicio': useRef<HTMLDivElement>(null),
         'Nosotros': useRef<HTMLDivElement>(null),
         'Servicios': useRef<HTMLDivElement>(null),
         'Proyectos': useRef<HTMLDivElement>(null),
         'Catálogo': useRef<HTMLDivElement>(null),
+        'Propuestas': useRef<HTMLDivElement>(null),
         'Contáctanos': useRef<HTMLDivElement>(null),
     };
 
     const projectsRef = useRef<HTMLDivElement>(null);
     const projectVideoRefs = useRef<Map<number, HTMLVideoElement>>(new Map());
+    const contactMessageRef = useRef<HTMLTextAreaElement>(null);
 
     const domoticsFeaturesData = useMemo(() => getDomoticsFeaturesData(), []);
 
@@ -1240,6 +1399,42 @@ const App: React.FC = () => {
             setGalleryIndex(newIndex);
         }
     };
+
+    const handleFeatureToggle = (featureName: string) => {
+        if (propFeatures.includes(featureName)) {
+            setPropFeatures(propFeatures.filter(f => f !== featureName));
+        } else {
+            setPropFeatures([...propFeatures, featureName]);
+        }
+    };
+
+    const handleRequestQuote = () => {
+        const message = `Hola, me gustaría solicitar una propuesta para un proyecto con las siguientes características:\n\n- Tipo: ${propType === 'apartment' ? 'Apartamento' : propType === 'house' ? 'Casa' : 'Negocio'}\n- Área: ${propSize} m²\n- Sistemas de interés: ${propFeatures.length > 0 ? propFeatures.join(', ') : 'No especificado'}.\n\nQuedo atento a su respuesta.`;
+        
+        if (contactMessageRef.current) {
+            contactMessageRef.current.value = message;
+        }
+
+        const contactSection = sectionRefs['Contáctanos'].current;
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const complexityLevel = useMemo(() => {
+        let score = 0;
+        if (propType === 'house') score += 20;
+        if (propType === 'business') score += 30;
+        score += (propSize / 500) * 20; // up to 20 pts for size
+        score += propFeatures.length * 10;
+        return Math.min(Math.round(score), 100);
+    }, [propType, propSize, propFeatures]);
+    
+    const complexityLabel = useMemo(() => {
+        if (complexityLevel < 30) return 'Básico';
+        if (complexityLevel < 60) return 'Avanzado';
+        return 'Premium';
+    }, [complexityLevel]);
 
     useEffect(() => {
         if (selectedProject) {
@@ -1505,6 +1700,17 @@ const App: React.FC = () => {
             ]
         }
     ];
+    
+    const proposalFeaturesData = [
+        { id: 'lighting', name: 'Iluminación', icon: <IconLightbulb style={styles.proposalFeatureIcon} /> },
+        { id: 'climate', name: 'Climatización', icon: <IconThermometer style={styles.proposalFeatureIcon} /> },
+        { id: 'security', name: 'Seguridad', icon: <IconLock style={styles.proposalFeatureIcon} /> },
+        { id: 'audio', name: 'Audio', icon: <IconSpeaker style={styles.proposalFeatureIcon} /> },
+        { id: 'video', name: 'Video', icon: <IconPlay style={styles.proposalFeatureIcon} /> },
+        { id: 'blinds', name: 'Persianas', icon: <IconHub style={styles.proposalFeatureIcon} /> },
+        { id: 'network', name: 'Red Wi-Fi', icon: <IconHub style={styles.proposalFeatureIcon} /> },
+        { id: 'access', name: 'Control Acceso', icon: <IconLock style={styles.proposalFeatureIcon} /> },
+    ];
 
     const { securitySectionContainer: securitySectionContainerBase, securityFeatureList: securityFeatureListBase, ...baseStyles } = styles;
 
@@ -1563,13 +1769,41 @@ const App: React.FC = () => {
         { label: 'Servicios', id: 'Servicios', type: 'scroll' },
         { label: 'Proyectos', id: 'Proyectos', type: 'scroll' },
         { label: 'Catálogo', id: 'Catálogo', type: 'scroll' },
-        { label: 'Propuestas', url: 'https://propuestas.ioniq.app', type: 'external' },
+        { label: 'Propuestas', id: 'Propuestas', type: 'scroll' },
         { label: 'Contáctanos', id: 'Contáctanos', type: 'scroll' },
     ];
 
 
     return (
         <main style={{...styles.mainContainer, padding: isMobile ? '0' : '2rem' }}>
+             <style>{`
+                .custom-range {
+                    -webkit-appearance: none;
+                    width: 100%;
+                    height: 6px;
+                    border-radius: 3px;
+                    background: rgba(255,255,255,0.2);
+                    outline: none;
+                }
+                .custom-range::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: #8B5CF6;
+                    cursor: pointer;
+                    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+                }
+                .custom-range::-moz-range-thumb {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: #8B5CF6;
+                    cursor: pointer;
+                    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+                }
+             `}</style>
              <div className="background">
                 {sphereData.map((sphere, index) => {
                     const { size, top, left, duration, ...cssVars } = sphere;
@@ -1603,9 +1837,7 @@ const App: React.FC = () => {
                                     {navItems.map(item => (
                                         <a
                                             key={item.label}
-                                            href={item.type === 'scroll' ? `#${item.id}` : item.url}
-                                            target={item.type === 'external' ? '_blank' : undefined}
-                                            rel={item.type === 'external' ? 'noopener noreferrer' : undefined}
+                                            href={item.type === 'scroll' ? `#${item.id}` : '#'}
                                             style={activeSection === item.id ? { ...styles.navLink, ...styles.activeNavLink } : styles.navLink}
                                             onMouseOver={handleMouseOverNavLink}
                                             onMouseOut={handleMouseOutNavLink}
@@ -1636,9 +1868,7 @@ const App: React.FC = () => {
                                 {navItems.map(item => (
                                     <a
                                         key={item.label}
-                                        href={item.type === 'scroll' ? `#${item.id}` : item.url}
-                                        target={item.type === 'external' ? '_blank' : undefined}
-                                        rel={item.type === 'external' ? 'noopener noreferrer' : undefined}
+                                        href={item.type === 'scroll' ? `#${item.id}` : '#'}
                                         style={{...styles.mobileNavLink, color: 'var(--text-main)'}}
                                         onClick={(e) => {
                                             if (item.type === 'scroll' && item.id) {
@@ -1874,6 +2104,122 @@ const App: React.FC = () => {
                             </button>
                         </div>
                         
+                         <div id="Propuestas" ref={sectionRefs['Propuestas']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'}), borderBottom: '1px solid var(--glass-border)'}}>
+                            <AnimatedText as="h2" text="Tu Proyecto en Mente" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
+                            <AnimatedText as="h1" text="Configurador de Propuesta" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
+                            <AnimatedText as="p" text="Diseña tu ecosistema ideal y obtén una estimación de complejidad. Selecciona las características de tu espacio para que podamos ofrecerte una solución a medida." style={{...styles.description, ...(isMobile && {fontSize: '0.85rem'})}} />
+                            
+                            <div style={{...styles.proposalGrid, gridTemplateColumns: isMobile ? '1fr' : '1.5fr 1fr'}}>
+                                {/* Left Side: Configurator */}
+                                <div style={styles.proposalConfigContainer}>
+                                    <div>
+                                        <h3 style={styles.proposalSectionLabel}>1. Tipo de Espacio</h3>
+                                        <div style={styles.proposalTypeGrid}>
+                                            <div 
+                                                style={{...styles.proposalOptionCard, ...(propType === 'apartment' ? styles.proposalOptionCardActive : {})}}
+                                                onClick={() => setPropType('apartment')}
+                                            >
+                                                <IconApartment style={{width: 32, height: 32, color: propType === 'apartment' ? 'var(--accent-color)' : 'var(--text-secondary)'}} />
+                                                <span>Apartamento</span>
+                                            </div>
+                                            <div 
+                                                style={{...styles.proposalOptionCard, ...(propType === 'house' ? styles.proposalOptionCardActive : {})}}
+                                                onClick={() => setPropType('house')}
+                                            >
+                                                <IconHome style={{width: 32, height: 32, color: propType === 'house' ? 'var(--accent-color)' : 'var(--text-secondary)'}} />
+                                                <span>Casa</span>
+                                            </div>
+                                            <div 
+                                                style={{...styles.proposalOptionCard, ...(propType === 'business' ? styles.proposalOptionCardActive : {})}}
+                                                onClick={() => setPropType('business')}
+                                            >
+                                                <IconBusiness style={{width: 32, height: 32, color: propType === 'business' ? 'var(--accent-color)' : 'var(--text-secondary)'}} />
+                                                <span>Negocio</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h3 style={styles.proposalSectionLabel}>2. Área Aproximada: {propSize} m²</h3>
+                                        <div style={styles.customSliderContainer}>
+                                            <input 
+                                                type="range" 
+                                                min="40" 
+                                                max="1000" 
+                                                step="10" 
+                                                value={propSize} 
+                                                onChange={(e) => setPropSize(parseInt(e.target.value))}
+                                                className="custom-range"
+                                            />
+                                            <div style={{display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '5px'}}>
+                                                <span>40m²</span>
+                                                <span>500m²</span>
+                                                <span>1000m²</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h3 style={styles.proposalSectionLabel}>3. Sistemas de Interés</h3>
+                                        <div style={styles.proposalFeatureGrid}>
+                                            {proposalFeaturesData.map(feature => (
+                                                <div 
+                                                    key={feature.id}
+                                                    style={{...styles.proposalFeatureCard, ...(propFeatures.includes(feature.name) ? styles.proposalFeatureCardActive : {})}}
+                                                    onClick={() => handleFeatureToggle(feature.name)}
+                                                >
+                                                    <div style={{color: propFeatures.includes(feature.name) ? 'var(--accent-color)' : 'var(--text-main)'}}>
+                                                        {feature.icon}
+                                                    </div>
+                                                    <span style={styles.proposalFeatureName}>{feature.name}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Right Side: Summary */}
+                                <div style={styles.proposalSummaryCard}>
+                                    <h3 style={styles.proposalSummaryTitle}>Resumen Estimado</h3>
+                                    
+                                    <div style={styles.proposalSummaryItem}>
+                                        <span>Tipo:</span>
+                                        <span style={styles.proposalSummaryValue}>{propType === 'apartment' ? 'Apartamento' : propType === 'house' ? 'Casa' : 'Negocio'}</span>
+                                    </div>
+                                    <div style={styles.proposalSummaryItem}>
+                                        <span>Área:</span>
+                                        <span style={styles.proposalSummaryValue}>{propSize} m²</span>
+                                    </div>
+                                    <div style={styles.proposalSummaryItem}>
+                                        <span>Sistemas:</span>
+                                        <span style={styles.proposalSummaryValue}>{propFeatures.length} seleccionados</span>
+                                    </div>
+
+                                    <div style={{marginTop: '10px'}}>
+                                        <div style={styles.proposalSummaryItem}>
+                                            <span>Nivel de Automatización:</span>
+                                            <span style={{color: complexityLabel === 'Premium' ? '#EF4444' : complexityLabel === 'Avanzado' ? '#F59E0B' : '#10B981', fontWeight: 700}}>{complexityLabel}</span>
+                                        </div>
+                                        <div style={styles.complexityBarContainer}>
+                                            <div style={{...styles.complexityBarFill, width: `${complexityLevel}%`}}></div>
+                                        </div>
+                                        <p style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '8px'}}>
+                                            {complexityLabel === 'Básico' && 'Ideal para iniciarse en la domótica.'}
+                                            {complexityLabel === 'Avanzado' && 'Un ecosistema conectado y eficiente.'}
+                                            {complexityLabel === 'Premium' && 'Control total y máxima exclusividad.'}
+                                        </p>
+                                    </div>
+
+                                    <button 
+                                        style={{...styles.ctaButton, marginTop: '20px', background: 'var(--accent-color)', borderColor: 'var(--accent-color)'}}
+                                        onClick={handleRequestQuote}
+                                    >
+                                        SOLICITAR PRESUPUESTO
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
                         <div id="Contáctanos" ref={sectionRefs['Contáctanos']} style={{...styles.section, ...(isMobile && {padding: '40px 10px', minHeight: 'auto'}), borderBottom: 'none'}}>
                             <AnimatedText as="h2" text="¿Listo para empezar?" style={{...styles.subtitle, ...(isMobile && {fontSize: '0.8rem'})}} />
                             <AnimatedText as="h1" text="Contáctanos" style={{...styles.sectionTitle, ...(isMobile && {fontSize: '2rem'})}} />
@@ -1881,7 +2227,7 @@ const App: React.FC = () => {
                             <form style={styles.contactForm}>
                                 <input type="text" placeholder="Nombre" style={styles.formInput} required />
                                 <input type="email" placeholder="Email" style={styles.formInput} required />
-                                <textarea placeholder="Tu mensaje" style={styles.formTextarea} required></textarea>
+                                <textarea ref={contactMessageRef} placeholder="Tu mensaje" style={styles.formTextarea} required></textarea>
                                 <button
                                     type="button"
                                     style={{...styles.ctaButton, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px'}}
