@@ -1442,7 +1442,6 @@ const App: React.FC = () => {
         }
     }, [selectedProject]);
     
-    // FIX: Moved projectsData before its usage in the following useEffect hook to fix "used before declaration" error.
     const projectsData: Project[] = [
         {
             title: 'Apartamento "Mónaco"',
@@ -1480,12 +1479,7 @@ const App: React.FC = () => {
                 <p>Este desarrollo representa el primer paso hacia una línea de productos propios que combinan ingeniería, diseño y conectividad para redefinir la manera en que vivimos nuestros espacios.</p>
             `,
             gallery: [
-                { type: 'image', src: 'https://images.unsplash.com/photo-1519974719765-e6559eac2575?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1519974719765-e6559eac2575?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1588623228456-508a3d583e74?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1588623228456-508a3d583e74?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-sofa-in-the-living-room-of-a-modern-house-4234-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-lift-bed-being-lowered-with-a-remote-control-4228-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-man-working-with-a-3d-printer-4302-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-programmer-writing-code-on-a-laptop-42240-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-bed-with-a-gray-quilt-and-many-pillows-4229-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1519974719765-e6559eac2575?auto=format&fit=crop&w=400&q=60' }
             ]
         },
         {
@@ -1503,12 +1497,7 @@ const App: React.FC = () => {
                 <p>El resultado es un hogar inteligente, escalable y visualmente impactante. Su sistema central coordina iluminación, seguridad y acceso, mientras se prepara para incorporar futuras funciones como persianas automáticas y sensores láser perimetrales. Nogales demuestra que la domótica puede combinar tecnología avanzada, diseño y confort en perfecta armonía.</p>
             `,
             gallery: [
-                { type: 'image', src: 'https://images.unsplash.com/photo-1585253393433-23988b704c44?auto=format&fit=crop&w=774&q=80', thumbnail: 'https://images.unsplash.com/photo-1585253393433-23988b704c44?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1594488518062-88543a41e9d2?auto=format&fit=crop&w=774&q=80', thumbnail: 'https://images.unsplash.com/photo-1594488518062-88543a41e9d2?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-modern-living-room-with-a-big-screen-4235-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1631603122136-e8a6d863f642?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-security-camera-of-a-house-39832-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-the-facade-of-a-modern-house-at-dusk-4237-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-family-enjoying-in-the-pool-of-a-modern-house-4239-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-modern-house-with-a-swimming-pool-4238-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=400&q=60' }
             ]
         },
         {
@@ -1526,12 +1515,7 @@ const App: React.FC = () => {
                 <p>El resultado es una vivienda con un nivel de seguridad y autonomía excepcionales. Cada dispositivo trabaja de forma coordinada, anticipándose a las necesidades del usuario. Escenas inteligentes gestionan la iluminación, la privacidad y el acceso, convirtiendo la tecnología en un asistente silencioso que protege, automatiza y optimiza el día a día del hogar.</p>
             `,
             gallery: [
-                { type: 'image', src: 'https://images.unsplash.com/photo-1617153541489-3c72a83b4e3a?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1617153541489-3c72a83b4e3a?auto=format&fit=crop&w=400&q=60' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=870&q=80', thumbnail: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-locks-a-door-with-a-key-32851-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-motion-sensor-for-a-smart-home-42207-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-smart-home-interface-on-a-tablet-42203-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=400&q=60' },
-                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-a-man-walking-and-looking-at-his-surroundings-at-dusk-4222-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=400&q=60' },
+                { type: 'video', src: 'https://assets.mixkit.co/videos/preview/mixkit-luxurious-house-in-the-middle-of-the-woods-4236-large.mp4', thumbnail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=60' }
             ]
         }
     ];
@@ -1553,7 +1537,6 @@ const App: React.FC = () => {
             { root: projectsRef.current, threshold: 0.75 }
         );
         
-        // FIX: Replaced Array.from with Map.forEach for observing video elements. This is cleaner and less prone to type errors.
         const videosMap = projectVideoRefs.current;
         videosMap.forEach(video => observer.observe(video));
 
@@ -1912,7 +1895,7 @@ const App: React.FC = () => {
                                 onMouseLeave={() => setHoveredStat(null)}
                             >
                                 <p style={styles.statLabel}>Dispositivos Conectados</p>
-                                <p style={styles.statValue}>1,200+</p>
+                                <p style={styles.statValue}>350</p>
                             </div>
                             <div style={styles.statSeparator} />
                             <div
@@ -1926,7 +1909,7 @@ const App: React.FC = () => {
                                 onMouseLeave={() => setHoveredStat(null)}
                             >
                                 <p style={styles.statLabel}>Escenas Automatizadas</p>
-                                <p style={styles.statValue}>50,000+</p>
+                                <p style={styles.statValue}>1110</p>
                             </div>
                         </div>
 
