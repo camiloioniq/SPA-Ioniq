@@ -316,8 +316,8 @@ const getDomoticsFeaturesData = (): DomoticsFeature[] => [
         modalMediaType: 'video',
         products: [
             { name: 'Medidor de Consumo', description: 'Monitorea el gasto energético de toda tu casa o de circuitos individuales en tiempo real.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Consumo/Video1.webm', mediaType: 'video' },
-            { name: 'Enchufes Inteligentes', description: 'Controla y programa el encendido/apagado de cualquier electrodoméstico desde tu móvil.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Consumo/Video1.webm', mediaType: 'video' },
-            { name: 'Controlador de Cargas', description: 'Gestiona dispositivos de alto consumo, como calentadores, para que funcionen en horas de menor coste energético.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Consumo/Video1.webm', mediaType: 'video' },
+            { name: 'Enchufes Inteligentes', description: 'Controla y programa el encendido/apagado de cualquier electrodoméstico desde tu móvil.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Consumo/Video2.webm', mediaType: 'video' },
+            { name: 'Controlador de Cargas', description: 'Gestiona dispositivos de alto consumo, como calentadores, para que funcionen en horas de menor coste energético.', media: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Tarjeta%20Consumo/Video3.webm', mediaType: 'video' },
         ]
     },
     { 
@@ -1458,7 +1458,7 @@ const App: React.FC = () => {
                 <p>El resultado es una vivienda autosuficiente y funcional que responde de manera natural a las necesidades diarias. Escenas preconfiguradas permiten ajustar iluminación, temperatura o seguridad con un solo toque, ofreciendo confort, eficiencia y tranquilidad. La integración AIIOT eleva la experiencia, logrando que la tecnología se sienta orgánica, elegante y siempre accesible.</p>
             `,
             gallery: [
-                { type: 'video', src: 'https://spa-ioniq.vercel.app/videos/Contenido%20Monaco/Monaco%20.mp4', thumbnail: 'https://spa-ioniq.vercel.app/videos/Contenido%20Monaco/Banner.png' },
+                { type: 'video', src: 'https://spa-ioniq.vercel.app/Fotos%20Ioniq/Contenido%20Monaco/Monaco%20.webm', thumbnail: 'https://spa-ioniq.vercel.app/videos/Contenido%20Monaco/Banner.png' },
             ]
         },
         {
