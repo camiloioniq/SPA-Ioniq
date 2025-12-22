@@ -2221,14 +2221,11 @@ const App: React.FC = () => {
                                 </button>
                             </form>
                              <div style={styles.socialIconsContainer}>
-                                <a href="#" className="social-icon-link" style={styles.socialIconLink} aria-label="Instagram" onMouseEnter={(e) => { e.currentTarget.style.color = '#E4405F';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
+                                <a href="https://www.instagram.com/ioniqiot/" className="social-icon-link" style={styles.socialIconLink} aria-label="Instagram" onMouseEnter={(e) => { e.currentTarget.style.color = '#E4405F';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
                                     <IconInstagram style={{ width: '28px', height: '28px' }} />
                                 </a>
-                                <a href="#" className="social-icon-link" style={styles.socialIconLink} aria-label="WhatsApp" onMouseEnter={(e) => { e.currentTarget.style.color = '#25D366';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
+                                <a href="https://wa.me/+573046401016?text=MENSAJE" className="social-icon-link" style={styles.socialIconLink} aria-label="WhatsApp" onMouseEnter={(e) => { e.currentTarget.style.color = '#25D366';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
                                     <IconWhatsApp style={{ width: '28px', height: '28px' }} />
-                                </a>
-                                <a href="#" className="social-icon-link" style={styles.socialIconLink} aria-label="X" onMouseEnter={(e) => { e.currentTarget.style.color = '#888';}} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-main)';}}>
-                                    <IconX style={{ width: '26px', height: '26px' }} />
                                 </a>
                             </div>
                         </div>
